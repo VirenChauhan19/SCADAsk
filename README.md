@@ -1,5 +1,9 @@
 # SCADask
 
+Live website: https://VirenChauhan19.github.io/SCADAsk/
+
+The Publish website workflow deploys every push to `main` to GitHub Pages. Set `SITE_BASE_PATH=/SCADAsk` when building locally to reproduce the hosted paths.
+
 GitHub Actions runs `npm ci`, `npm run check`, and `npm run build` on every push and pull request. You can also run it manually from the Actions tab. Successful runs provide a `scadask-site` build artifact, retained for 14 days.
 
 An editorial website for the applied research studio at SCAD. The site has 16 pages, a searchable research library, a shared site search, eight report overviews with original SCAD PDF destinations, a studio introduction, case studies, an event archive, and an interactive SplatGarden guide.

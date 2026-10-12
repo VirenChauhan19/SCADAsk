@@ -1,0 +1,2 @@
+import{t as e}from"./rolldown-runtime.Dh6celcD.mjs";function t(e,t){return{favicon:`https://framerusercontent.com/assets/SmV40sISi1uVwrxsSEbqnE9RUc.png`,robots:`max-image-preview:large`,socialImage:`https://framerusercontent.com/assets/uHK9d7wGPj1VpJPpmccAdoXHB0.png`,title:`SCADask`}}var n=e((()=>{}));export{t as n,n as t};
+//# sourceMappingURL=siteMetadata.d6WVUvIC.mjs.map

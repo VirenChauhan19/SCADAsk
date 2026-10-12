@@ -1,0 +1,169 @@
+import {readFile, writeFile, mkdir} from 'node:fs/promises';
+import {load} from 'cheerio';
+
+// The published captures remain untouched in source/pages. This is the editable site.
+const manifest = JSON.parse(await readFile('source/site-manifest.json', 'utf8'));
+const localize = value => {
+  for (const [remote, local] of Object.entries(manifest.assets)) value = value.replaceAll(remote, local);
+  return value;
+};
+const original = async name => load(localize(await readFile(`source/pages/${name}.html`, 'utf8')));
+const esc = value => String(value).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');
+const arrow = '<span aria-hidden="true">↗</span>';
+const assets = {
+  ai:'/mirror/5753c869da17-pL934KOHQA1Rr8juoAnYV1PKEW4.jpg',
+  dream:'/mirror/38451ca2c5ae-iQecxR0Zt2WewUDhFad5g12LMiw.png',
+  museum:'/mirror/bce36144ed0f-7TxstsjOUUL93uO7dKjH6iXHzo.png',
+  luxury:'/mirror/8d2c5616da95-acpaNzkDx2EBJuhR75AZNVZNM.png',
+  fashion:'/mirror/8642188854c2-KbuihszjGKv5bozY37LfoZuE8no.png',
+  sneaker:'/mirror/a5b32eeb74fa-5KkK4YaNPrOSDjolsI9amUNuI.png',
+  ai2025:'/mirror/61215d1d1dd1-fagSLaNknehspbr0bSMj39646AI.png',
+  ai2024:'/mirror/818a44fe61cb-i6ANQXpX2dtG8rp4qQzvbUrJEMI.png',
+  garden:'/mirror/24aa90fc33b5-h4vANWyA617zy5Anzcc8z1kZ0w.jpg'
+};
+const reports = [
+  {slug:'ai-insights-2026',title:'AI Insights 2026',category:'Technology',season:'Spring 2026',image:assets.ai,question:'What makes creative work valuable when AI can produce it?',summary:'As AI changes how work gets made, creative value is shifting toward direction, judgment, and the human decisions behind the output.'},
+  {slug:'from-collections-to-communities',title:'From Collections to Communities',category:'Culture',season:'Spring 2026',image:assets.museum,question:'What does a museum need to mean to its community?',summary:'How museums are rethinking participation, trust, and technology to connect the collections they preserve with the communities they serve.'},
+  {slug:'the-future-of-luxury-experiences',title:'The Future of Luxury Experiences',category:'Commerce',season:'Spring 2026',image:assets.luxury,question:'What will the next generation expect from luxury?',summary:'An exploration of changing expectations around trust, exclusivity, and the experiences that define the high-end consumer.'},
+  {slug:'the-future-of-american-dreams',title:'The Future of American Dreams',category:'Culture',season:'Winter 2026',image:assets.dream,question:'Who gets to participate in the American Dream?',summary:'Four scenarios for 2040 explore how choices in technology, policy, and opportunity could shape shared prosperity or deepen exclusion.'},
+  {slug:'the-evolution-of-fashion',title:'The Evolution of Fashion Resale and Retail',category:'Creativity',season:'Fall 2025',image:assets.fashion,question:'How is resale reshaping the way fashion works?',summary:'As reuse becomes part of the fashion experience, provenance, community, and new buying habits are changing how brands create value.'},
+  {slug:'from-tech-to-pack',title:'From Tech to Track: The New Era of Sneaker Innovation',category:'Creativity',season:'Spring 2025',image:assets.sneaker,question:'What can a sneaker do beyond performance?',summary:'A look at how sustainable design, recovery technology, and identity are turning footwear into a platform for innovation.'},
+  {slug:'ai-insights-2025',title:'AI Insights 2025',category:'Technology',season:'Winter 2025',image:assets.ai2025,question:'How are creative leaders putting AI into practice?',summary:'Perspectives from business, education, and the arts on the changing relationship between creative workflows, aesthetics, and authorship.'},
+  {slug:'ai-insights-2024',title:'AI Insights 2024',category:'Technology',season:'Spring 2024',image:assets.ai2024,question:'How is AI transforming the creative process?',summary:'Explore the early shifts in design practice as artificial intelligence becomes part of the creative toolkit.'}
+];
+for (const report of reports) {
+  const $ = await original(report.slug);
+  report.pdf = $('a[href]').map((i,e)=>$(e).attr('href')).get().find(h=>h.includes('.pdf'));
+}
+const reportThemes = {
+  'ai-insights-2026':['Where AI brings efficiency to research and content generation','The growing value of creative direction and human judgment','How designers adapt their workflows and skills'],
+  'from-collections-to-communities':['Community participation and the changing role of museums','Trust and relevance alongside collection preservation','Technology choices under financial constraints'],
+  'the-future-of-luxury-experiences':['Changing expectations of exclusivity','Trust between luxury brands and their audiences','Experiences for the next generation of high-end consumers'],
+  'the-future-of-american-dreams':['Four possible scenarios for the American Dream in 2040','The effects of demographic, technological, and economic change','The choices that shape access to opportunity'],
+  'the-evolution-of-fashion':['The growing role of reuse and resale','Provenance, scarcity, and access as parts of brand value','The buying habits of Gen Z and Gen Alpha'],
+  'from-tech-to-pack':['Sustainable design in the footwear market','Recovery technology and new expectations of performance','Sneakers as expressions of identity and community'],
+  'ai-insights-2025':['How creative leaders are using emerging AI tools','Changes to workflows and visual aesthetics','Questions around authorship and creative practice'],
+  'ai-insights-2024':['AI’s role in the evolving design landscape','Changes to the creative process','New possibilities for the creative toolkit']
+};
+const navItems = [['Research','/research'],['Case studies','/casestudies'],['Events','/events'],['About','/aboutus']];
+const brand = '<span class="wordmark">SCAD<span>ask</span><span class="brand-dot">.</span></span>';
+function baseShell(title, description, route, body, extra='') {
+  const active = reports.some(r=>'/'+r.slug===route) ? '/research' : route === '/splatgarden' ? '/casestudies' : route;
+  return `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="${esc(description)}"><meta name="theme-color" content="#f7f6f2"><title>${esc(title)} — SCADask</title><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/site.css"><script defer src="/site.js"></script>${extra}</head><body data-page="${esc(route)}"><a class="skip-link" href="#main">Skip to content</a><header class="site-header"><div class="header-inner"><a class="brand" href="/" aria-label="SCADask home">${brand}</a><nav id="primary-nav" aria-label="Main navigation">${navItems.map(([name,href])=>`<a href="${href}" ${href===active?'aria-current="page"':''}>${name}</a>`).join('')}</nav><div class="header-actions"><button class="search-open icon-button" aria-label="Search site"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" stroke="currentColor" stroke-width="1.6"/><path d="m16 16 5 5" stroke="currentColor" stroke-width="1.6"/></svg></button><a class="header-contact" href="mailto:research@scad.edu">Let’s talk ${arrow}</a><button class="menu-toggle icon-button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open navigation"><span></span><span></span></button></div></div></header><main id="main">${body}</main><footer class="site-footer"><div class="wrap"><div class="footer-top"><div><p class="eyebrow">START WITH A QUESTION</p><h2>What are you<br><em>curious about?</em></h2></div><div class="footer-contact"><p>Let’s turn your next question into<br>research you can act on.</p><a href="mailto:research@scad.edu" class="footer-email">research@scad.edu ${arrow}</a></div></div><div class="footer-links"><a class="brand" href="/" aria-label="SCADask home">${brand}</a><p>Applied research.<br>From the University for Creative Careers.</p><div>${navItems.map(([name,href])=>`<a href="${href}">${name}</a>`).join('')}</div><a href="https://www.scad.edu/" target="_blank" rel="noopener">Discover SCAD ${arrow}</a></div><div class="footer-bottom"><p>© 2026 Savannah College of Art and Design</p><div><a href="/privacy">Privacy</a><a href="/terms">Terms of use</a><a href="#main">Back to top ↑</a></div></div></div></footer><dialog class="search-dialog" aria-labelledby="search-title"><div class="search-heading"><h2 id="search-title">Find your next insight.</h2><button class="search-close icon-button" aria-label="Close search">×</button></div><form role="search" class="site-search"><label class="sr-only" for="site-search">Search reports and pages</label><input type="search" id="site-search" placeholder="Try AI, fashion, museums…" autocomplete="off"><button type="submit" aria-label="Search">→</button></form><p class="search-status" role="status"></p><div class="search-results"></div><p class="search-hint">Search research, case studies, and the studio. Esc to close.</p></dialog></body></html>`;
+}
+const shell = (...args) => baseShell(...args)
+  .replace('<link rel="stylesheet" href="/site.css">', '<style id="page-transitions">@view-transition { navigation: auto; }</style><script src="/motion-preference.js"></script><link rel="stylesheet" href="/site.css"><link rel="stylesheet" href="/polish.css"><link rel="stylesheet" href="/motion.css">')
+  .replace('<script defer src="/site.js"></script>', '<script defer src="/site.js"></script><script defer src="/motion.js"></script>')
+  .replace('<button class="search-open', '<button class="motion-toggle icon-button" hidden aria-label="Play animations" aria-pressed="false" title="Play animations"><span aria-hidden="true">✳</span></button><button class="search-open')
+  .replace('<p class="search-status"', '<div class="search-suggestions" aria-label="Suggested searches"><span>Try a topic</span><button type="button" data-search-term="AI">AI</button><button type="button" data-search-term="Culture">Culture</button><button type="button" data-search-term="Design">Design</button></div><p class="search-status"')
+  .replace('<p id="result-count" role="status">8 reports</p>', '<div class="library-actions"><p id="result-count" role="status">8 reports</p><button class="reset-link" data-reset-filters hidden>Reset filters</button></div>')
+  .replace('id="reset-filters"', 'data-reset-filters');
+const button = (href,text,style='') => `<a class="button ${style}" href="${href}">${text} ${arrow}</a>`;
+const meta = r => `<div class="report-meta"><span class="category category-${r.category.toLowerCase()}">${r.category}</span><span>${r.season}</span></div>`;
+function card(r) { return `<article class="report-card" data-category="${r.category}" data-year="${r.season.slice(-4)}" data-search="${esc([r.title,r.summary,r.question,r.category].join(' ').toLowerCase())}"><a href="/${r.slug}" class="report-link"><div class="report-image"><img src="${r.image}" alt="" loading="lazy" width="800" height="450"><span class="card-arrow" aria-hidden="true">↗</span></div><div class="report-body">${meta(r)}<h3>${esc(r.title)}</h3><p>${esc(r.summary)}</p><span class="read-link">Explore report <span aria-hidden="true">↗</span></span></div></a></article>`; }
+const sectionHead = (eyebrow,title,href,label) => `<div class="section-heading"><div><p class="eyebrow">${eyebrow}</p><h2>${title}</h2></div>${href?`<a class="text-link" href="${href}">${label} ${arrow}</a>`:''}</div>`;
+const topics = [
+  ['Creativity','How we make.','Design, craft, and the changing creative process.'],
+  ['Commerce','How we exchange.','Brands, experiences, and the future of value.'],
+  ['Culture','How we connect.','Communities, institutions, and the stories we share.'],
+  ['Technology','How we evolve.','Emerging tools and the human choices behind them.']
+];
+const topicLinks = () => `<div class="topic-grid">${topics.map(([name,headline,copy],i)=>`<a href="/research?category=${name.toLowerCase()}" class="topic"><div class="topic-top"><span>0${i+1} / ${name.toUpperCase()}</span>${arrow}</div><h3>${headline}</h3><p>${copy}</p></a>`).join('')}</div>`;
+const caseBanner = () => `<a href="/splatgarden" class="case-banner"><img src="${assets.garden}" alt="A digital garden rendered as a luminous cloud of points" loading="lazy" width="2048" height="1158"><div class="case-copy"><p class="eyebrow">IN PRACTICE / INTERACTIVE 3D</p><h2>A portfolio you<br>can step inside.</h2><p>SplatGarden brings student work to life in a living, interactive 3D environment.</p><span class="button light">Explore SplatGarden ${arrow}</span></div><span class="case-index">CASE STUDY 01 / SPRING 2026</span></a>`;
+const featured = reports[0];
+const home = `<section class="home-hero wrap"><div class="hero-copy"><p class="eyebrow"><span class="status-dot"></span> APPLIED RESEARCH AT SCAD</p><h1>Better questions.<br><em>Bolder futures.</em></h1><p class="hero-description">We explore what’s changing in creativity, commerce, culture, and technology—so you can decide what comes next.</p><div class="hero-actions">${button('/research','Explore the research')}<a class="text-link" href="/aboutus">Meet SCADask ${arrow}</a></div><div class="hero-note"><span class="note-mark" aria-hidden="true">✳</span><p>Creative thinking.<br>Evidence you can act on.</p></div></div><a class="hero-feature" href="/ai-insights-2026"><div class="feature-art"><img src="${assets.ai}" alt="Abstract pillars of cloud, light, and blue ink" width="2048" height="1152" fetchpriority="high"><span class="feature-label">THE LATEST PERSPECTIVE</span><span class="feature-number">01 / 08</span></div><div class="feature-copy">${meta(featured)}<h2>In the age of AI,<br>human judgment matters.</h2><div class="feature-bottom"><span>AI Insights 2026</span><span class="circle-arrow" aria-hidden="true">↗</span></div></div></a></section><section class="topics-section"><div class="wrap"><div class="topics-intro"><p class="eyebrow">FOUR LENSES. ONE CHANGING WORLD.</p><p>Find the question that moves you.</p></div>${topicLinks()}</div></section><section class="section wrap">${sectionHead('RESEARCH & PERSPECTIVES','Ideas for what’s ahead.','/research','View all research')}<div class="report-grid">${reports.slice(1,4).map(card).join('')}</div></section><section class="wrap case-section">${caseBanner()}</section><section class="section wrap studio-intro"><div><p class="eyebrow">THE STUDIO BEHIND THE QUESTIONS</p><h2>Inside the creative economy.<br><em>Looking ahead.</em></h2></div><div><p>SCADask is the applied research studio at the Savannah College of Art and Design. We work alongside students, faculty, and industry to turn emerging questions into useful perspectives.</p><a class="text-link" href="/aboutus">Get to know us ${arrow}</a></div></section>`;
+const research = `<section class="page-intro wrap"><p class="eyebrow">THE RESEARCH LIBRARY</p><h1>A fresh perspective<br><em>starts here.</em></h1><p>Explore the ideas shaping the creative economy. Find a question, follow a topic, and take a closer look.</p></section><section class="wrap library"><form class="library-controls" role="search"><div class="library-search"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" stroke="currentColor" stroke-width="1.6"/><path d="m16 16 5 5" stroke="currentColor" stroke-width="1.6"/></svg><label class="sr-only" for="research-search">Search research</label><input id="research-search" type="search" placeholder="Search by topic or question…" autocomplete="off"></div><label class="year-select">Year <select id="research-year"><option value="all">All years</option><option>2026</option><option>2025</option><option>2024</option></select></label></form><div class="library-toolbar"><div class="filter-list" role="group" aria-label="Filter research by topic">${['All','Creativity','Commerce','Culture','Technology'].map(t=>`<button type="button" data-filter="${t}" aria-pressed="${t==='All'}">${t}</button>`).join('')}</div><p id="result-count" role="status">8 reports</p></div><div class="report-grid library-grid">${reports.map(card).join('')}</div><div class="empty-state" hidden><span aria-hidden="true">↗</span><h2>A different question?</h2><p>No reports match these filters. Try another topic or a broader search.</p><button class="button" id="reset-filters">Clear filters</button></div></section>`;
+const about = `<section class="page-intro wrap"><p class="eyebrow">ABOUT SCADASK</p><h1>Curiosity is<br><em>our starting point.</em></h1><p>We’re an applied research studio working from inside the creative economy. Our work helps people understand change—and decide how to respond.</p></section><section class="about-statement wrap"><span class="statement-mark" aria-hidden="true">✳</span><div><p class="eyebrow">CREATIVE THINKING. RIGOROUS RESEARCH.</p><h2>A university’s perspective.<br>A studio’s approach.</h2><p>Based at the Savannah College of Art and Design, SCADask works alongside the students entering the creative economy and the faculty teaching them. Our design-centered research examines the future of commerce, creativity, culture, and technology.</p><p>From original research for clients to internal research and development, we produce evidence that helps leaders make informed decisions.</p></div></section><section class="section wrap">${sectionHead('WHAT WE DO','Questions become possibilities.')}<div class="service-grid"><article><span class="eyebrow">01 / ORIGINAL RESEARCH</span><h3>Understand what’s changing.</h3><p>Explore emerging behaviors, industry shifts, and the questions that matter to your organization.</p></article><article><span class="eyebrow">02 / PUBLISHED PERSPECTIVES</span><h3>Make insight accessible.</h3><p>Reports translate research into clear perspectives on the forces shaping creative careers and industries.</p></article><article><span class="eyebrow">03 / CONVERSATIONS & EXPERIMENTS</span><h3>Bring ideas into practice.</h3><p>Initiatives include SCAD’s annual AI Summit, the SCAD Signal podcast, and explorations like SplatGarden.</p></article></div></section><section class="topics-section"><div class="wrap">${sectionHead('OUR AREAS OF EXPLORATION','A connected view of the future.')}${topicLinks()}</div></section><section class="section wrap studio-intro"><div><p class="eyebrow">LET’S WORK TOGETHER</p><h2>Your question.<br><em>Our next exploration.</em></h2></div><div><p>Have a challenge that could benefit from a creative research perspective? Get in touch to discuss custom research with the SCADask studio.</p>${button('mailto:research@scad.edu','Start a conversation')}</div></section>`;
+const cases = `<section class="page-intro wrap"><p class="eyebrow">CASE STUDIES</p><h1>Ideas become<br><em>experiences.</em></h1><p>See what happens when research, creative practice, and emerging technology come together.</p></section><section class="wrap case-section">${caseBanner()}</section><section class="section wrap studio-intro"><div><p class="eyebrow">FROM QUESTION TO EXPLORATION</p><h2>What could<br>your idea become?</h2></div><div><p>Our case studies show creative research in practice. SplatGarden explores how a portfolio can become an environment, inviting visitors to interact with the work and discover how it was made.</p><a class="text-link" href="/research">Explore the research ${arrow}</a></div></section>`;
+const events = `<section class="page-intro wrap"><p class="eyebrow">EVENTS & CONVERSATIONS</p><h1>Good questions<br><em>bring us together.</em></h1><p>Conversations with researchers, creative leaders, and industry insiders about the changes shaping our work.</p></section><section class="wrap events-section"><div class="section-heading"><h2>From the event archive</h2><span class="eyebrow">PAST CONVERSATIONS</span></div><article class="event-card"><div class="event-date"><span>SEP</span><strong>17</strong></div><div><span class="category">Past event</span><h3>Research Reimagined: AI, IP & the New Rules of Discovery</h3><p class="event-meta">2:00 PM–2:30 PM · New York City · QS Back to School Summit</p><p>SCADask Executive Director Munkhtsetseg Nandigjav joined Dr. Maali Alabdulhafith and Sanjay Goel for a panel exploring how AI-enabled research is evaluated and how institutions can use AI to enhance discovery.</p></div></article><div class="event-followup"><p>Looking for the next conversation?</p><a class="text-link" href="mailto:research@scad.edu">Ask about upcoming events ${arrow}</a></div></section><section class="section wrap">${sectionHead('CONTINUE THE CONVERSATION','Explore the AI Insights series.','/research?category=technology','All technology research')}<div class="report-grid">${[reports[0],reports[6],reports[7]].map(card).join('')}</div></section>`;
+
+function reportBody(r) {
+  const other = reports.filter(x=>x.slug!==r.slug);
+  const related = [...other.filter(x=>x.category===r.category), ...other.filter(x=>x.category!==r.category)].slice(0,3);
+  return `<section class="report-hero wrap"><a class="back-link" href="/research">← Back to research</a><div class="report-hero-grid"><div>${meta(r)}<h1>${esc(r.title)}</h1><p class="report-summary">${esc(r.summary)}</p><a class="button" href="${esc(r.pdf)}" target="_blank" rel="noopener">Read the full report <span aria-hidden="true">↗</span></a><p class="pdf-note">PDF · Opens on scad.edu</p></div><div class="report-cover"><img src="${r.image}" alt="${esc(r.title)} report artwork" width="800" height="450"></div></div></section><section class="report-overview wrap"><div class="overview-label"><p class="eyebrow">THE QUESTION</p></div><div><h2>${esc(r.question)}</h2><p>${esc(r.summary)}</p><p>The full SCADask report brings together research and industry perspectives to explore this question in depth.</p><a class="text-link" href="${esc(r.pdf)}" target="_blank" rel="noopener">Explore the complete findings ${arrow}</a></div></section>${r.slug==='ai-insights-2026'?'__AI_ARTICLE__':''}<section class="section wrap">${sectionHead('KEEP EXPLORING','Another question to consider.','/research','All research')}<div class="report-grid">${related.map(card).join('')}</div></section>`;
+}
+
+// Keep the substantive text from the 2026 feature in a readable editorial format.
+const aiSource = await original('ai-insights-2026');
+const aiNodes = []; const seen = new Set(); let inArticle = false;
+aiSource('h1,h2,h3,p').each((i,e)=>{
+  const text=aiSource(e).text().trim();
+  if(text.startsWith('The gap between producing')) inArticle=true;
+  if(text==='Explore More Research') inArticle=false;
+  if(!inArticle || !text || seen.has(text) || /^of (practitioners|respondents)/.test(text) || ['Leading category','Top human skill'].includes(text)) return;
+  seen.add(text);
+  const heading = /^h/.test(e.tagName);
+  if(heading) aiNodes.push(`<h2 id="finding-${aiNodes.length}">${esc(text)}</h2>`);
+  else if(text.startsWith('“')) aiNodes.push(`<blockquote><p>${esc(text)}</p></blockquote>`);
+  else aiNodes.push(`<p>${esc(text)}</p>`);
+});
+const aiArticle = `<section class="article-section wrap"><aside><p class="eyebrow">FROM THE REPORT</p><p>AI Insights 2026</p><a class="text-link" href="${reports[0].pdf}" target="_blank" rel="noopener">Full report ${arrow}</a></aside><div class="article-prose">${aiNodes.join('')}<p class="article-note">Read the full report for survey data, charts, and contributor perspectives.</p></div></section>`;
+
+const gardenSource = await original('splatgarden');
+// Preserve the original asset-making, pipeline, and contributor content as semantic blocks.
+function plainSection(node) {
+  const root = load(gardenSource(node).html() || '');
+  root('script,style,svg').remove();
+  const blocks=[]; const known=new Set();
+  root('.ssr-variant').each((i,e)=>{if(root(e).siblings('.ssr-variant').length && root(e).prevAll('.ssr-variant').length)root(e).remove();});
+  root('h1,h2,h3,h4,p,li,video,div').each((i,e)=>{
+    if(e.tagName==='div' && (root(e).children().length || !root(e).text().trim()))return;
+    if(e.tagName==='video') {
+      const src=root(e).attr('src'); if(!src || known.has(src)) return; known.add(src);
+      blocks.push(`<video controls playsinline preload="none" src="${esc(src)}" aria-label="SplatGarden production demonstration"></video>`); return;
+    }
+    const t=root(e).text().replace(/\s+/g,' ').trim();
+    if(!t||known.has(t))return; known.add(t);
+    const tag=/^h/.test(e.tagName)|| (e.tagName==='div' && t.length<55)?'h3':'p';
+    blocks.push(`<${tag}>${esc(t.replace('Assest Creation','Asset creation'))}</${tag}>`);
+  });
+  return blocks.join('');
+}
+const production = gardenSource('[data-framer-name="Asset Creation"]').first();
+const pipeline = gardenSource('[data-framer-name="Pipeline"]').first();
+const contributors = gardenSource('.contributors-component').first();
+const creditBlocks = contributors.find('section').map((i,section)=>`<h3>${esc(gardenSource(section).find('h3').first().text())}</h3><div class="credit-list">${gardenSource(section).find('.contributor-link').map((j,link)=>`<a href="${esc(gardenSource(link).attr('href'))}" target="_blank" rel="noopener"><strong>${esc(gardenSource(link).find('.contributor-name').text())}</strong><span>${esc(gardenSource(link).find('.contributor-detail').text())}</span>${arrow}</a>`).get().join('')}</div>`).get().join('');
+const pipelineCode = await readFile('source/modules/950b6d3a3b9c-YQd1JoLc3e4qSBcOPmAX7JRIPGj5kfRKyDayxI2QjSs.YFp-l3Wq.mjs','utf8');
+const stageText = title => pipelineCode.slice(pipelineCode.indexOf(`title:\`${title}\``)).match(/children:`([^`]+)`/)?.[1];
+const pipelineBlocks = ['Capturing the Scene','Training Gaussian Splats'].map((title,i)=>`<h3>0${i+1} / ${title}</h3><p>${esc(stageText(title))}</p>`).join('')+'<h3>03 / Building WebGL</h3><p>The interactive experience is built through four technical layers.</p>'+[...pipelineCode.slice(pipelineCode.indexOf('W=['),pipelineCode.indexOf('];return',pipelineCode.indexOf('W=['))).matchAll(/title:`([^`]+)`,content:`([^`]+)`/g)].map(m=>`<h3>${esc(m[1])}</h3><p>${esc(m[2])}</p>`).join('');
+const garden = `<section class="page-intro wrap garden-intro"><a class="back-link" href="/casestudies">← Back to case studies</a><p class="eyebrow">CASE STUDY / SPRING 2026</p><h1>A living garden.<br><em>A new kind of portfolio.</em></h1><p>SplatGarden turns student work into a place you can explore. Walk through a real-time 3D environment, shape the scene, and discover the craft behind each asset.</p><div class="garden-tags"><span>Gaussian splatting</span><span>Interactive design</span><span>AI tools</span></div></section><section class="wrap garden-experience framer-14xmokj"><div class="section-heading"><div><p class="eyebrow">STEP INTO THE WORK</p><h2>Inside SplatGarden.</h2></div><a href="https://splatgarden.com/" class="text-link" target="_blank" rel="noopener">Open the live garden ${arrow}</a></div></section><section class="section wrap studio-intro"><div><p class="eyebrow">THE EXPLORATION</p><h2>What if a portfolio<br>was a place?</h2></div><div><p>The garden combines procedural plant growth, effects simulation, AI stylization, and vertex animation textures. Visitors can experience the work in context, then explore how each piece was built.</p><p>Gaussian splatting transforms photographs into a 3D scene that can be viewed from different perspectives in real time. Here, the technique becomes an accessible, interactive showcase.</p></div></section><section class="wrap making-section"><p class="eyebrow">BEHIND THE SCENE</p><h2>How the garden grows.</h2><details><summary>Asset creation <span aria-hidden="true">+</span></summary><div class="making-content">${plainSection(production)}</div></details><details><summary>The production pipeline <span aria-hidden="true">+</span></summary><div class="making-content">${plainSection(pipeline)}</div></details><details><summary>Contributors <span aria-hidden="true">+</span></summary><div class="making-content">${plainSection(contributors)}</div></details></section>`;
+
+const pages = [
+  ['home','/', 'Better questions. Bolder futures.', 'Applied research from SCAD exploring the future of creativity, commerce, culture, and technology.',home],
+  ['research','/research','Research library','Explore and search SCADask reports by topic and year.',research],
+  ['aboutus','/aboutus','About the studio','Meet SCADask, the applied research studio at the Savannah College of Art and Design.',about],
+  ['casestudies','/casestudies','Case studies','Explore creative research in practice, starting with the interactive SplatGarden.',cases],
+  ['events','/events','Events and conversations','Explore SCADask conversations and research events.',events],
+  ['splatgarden','/splatgarden','SplatGarden','Explore a living interactive 3D portfolio and the creative process behind it.',garden]
+];
+await mkdir('public/pages',{recursive:true});
+for (let [name,route,title,description,body] of pages) {
+  if(name==='home')body=body.replace('<span class="feature-number">01 / 08</span>','');
+  if(name==='splatgarden')body=body.replace(plainSection(pipeline),pipelineBlocks).replace(plainSection(contributors),creditBlocks);
+  await writeFile(`public/pages/${name}.html`,shell(title,description,route,body,name==='splatgarden'?'<script defer src="/garden.js"></script>':''));
+}
+for (const r of reports) await writeFile(`public/pages/${r.slug}.html`,shell(r.title,r.summary,'/'+r.slug,reportBody(r).replace('__AI_ARTICLE__',aiArticle)));
+// Give each overview useful signposts instead of repeating its opening summary.
+for (const r of reports) {
+  const path=`public/pages/${r.slug}.html`;
+  let html=await readFile(path,'utf8');
+  const repeated=`<p>${esc(r.summary)}</p><p>The full SCADask report brings together research and industry perspectives to explore this question in depth.</p>`;
+  html=html.replace(repeated,`<p class="eyebrow overview-subtitle">WHAT YOU’LL EXPLORE</p><ul class="report-themes">${reportThemes[r.slug].map(t=>`<li>${esc(t)}</li>`).join('')}</ul>`);
+  await writeFile(path,html);
+}
+for (const name of ['privacy','terms']) {
+  const $ = await original(name);
+  const legal = $('[data-framer-name="Body"]').first();
+  const blocks=[];const known=new Set();
+  legal.find('h1,h2,h3,h4,p,li').each((i,e)=>{
+    const t=$(e).text().trim(); if(!t||known.has(t))return;known.add(t);
+    let tag=/^h/.test(e.tagName)?'h2':'p';
+    if(!blocks.length) tag='h1';
+    const copy=$(e).clone(); copy.find('*').each((j,c)=>{for(const key of Object.keys(c.attribs||{}))if(key!=='href')copy.find(c).removeAttr(key);});
+    blocks.push(`<${tag}>${copy.html().replaceAll('\u00a0',' ').replaceAll('&nbsp;',' ')}</${tag}>`);
+  });
+  await writeFile(`public/pages/${name}.html`,shell(name==='privacy'?'Privacy policy':'Terms of use','SCAD '+(name==='privacy'?'privacy policy':'terms of use'),'/' + name,`<section class="legal-page wrap"><a class="back-link" href="/">← Home</a><div class="article-prose">${blocks.join('')}</div></section>`));
+}
+await writeFile('index.html', await readFile('public/pages/home.html','utf8'));
+await writeFile('public/search-data.json',JSON.stringify([...reports.map(r=>({title:r.title,description:r.summary,category:r.category,url:'/'+r.slug})),{title:'SplatGarden',description:'Explore the interactive 3D garden and its production process.',category:'Case study',url:'/splatgarden'},{title:'About SCADask',description:'Meet the applied research studio and discuss custom research.',category:'Studio',url:'/aboutus'},{title:'Events and conversations',description:'Explore the event archive and ask about upcoming conversations.',category:'Events',url:'/events'}]));
+console.log(`Created ${manifest.routes.length} editorial pages with local media and original PDF destinations.`);

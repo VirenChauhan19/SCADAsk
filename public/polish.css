@@ -1,0 +1,278 @@
+/* Shared finishing layer: comfortable reading, soft surfaces, consistent controls. */
+:root {
+  --paper: #f8f7f3;
+  --muted: #59635c;
+  --line: #dfe2d9;
+  --surface: #fffefa;
+  --radius: 20px;
+  --small-radius: 10px;
+}
+html { scrollbar-gutter: stable; }
+body { text-rendering: optimizeLegibility; }
+h1, h2, h3 { text-wrap: balance; }
+p { text-wrap: pretty; }
+:focus-visible { outline-width: 2px; outline-offset: 4px; }
+button, a, input, select, summary { touch-action: manipulation; }
+.header-inner { height: 84px; }
+.site-header { border-bottom-color: #dfe2d9aa; }
+.site-header nav { gap: 32px; margin-right: 24px; }
+.site-header nav a { font-size: 13px; }
+.header-actions { gap: 14px; }
+.icon-button { border-radius: 50%; }
+.header-contact { min-height: 44px; padding: 0 17px; border: 1px solid var(--line); border-radius: 999px; font-size: 12px; }
+.button { border-radius: var(--small-radius); min-height: 54px; font-size: 13px; padding: 15px 23px; }
+.text-link { min-height: 44px; font-size: 13px; }
+.eyebrow { font-size: 11px; letter-spacing: .12em; }
+.home-hero { padding-block: 68px 72px; gap: 64px; }
+.hero-copy h1 { line-height: 1.1; }
+.hero-description { max-width: 475px; font-size: 17px; line-height: 1.8; }
+.hero-actions { gap: 24px; }
+.hero-note { margin-top: 37px; padding-top: 21px; }
+.hero-note p { font-size: 12px; }
+.hero-feature { border-radius: var(--radius); background: var(--surface); box-shadow: 0 12px 32px #24352c08; }
+.feature-art { height: 310px; border-radius: 19px 19px 0 0; background: #eff0eb; }
+.feature-label { border-radius: 5px; font-size: 10px; max-width: none; white-space: nowrap; }
+.feature-copy { padding: 25px 30px; }
+.feature-copy h2 { font-size: 32px; }
+.feature-bottom { font-size: 12px; margin-top: 22px; }
+.circle-arrow { width: 40px; height: 40px; }
+.report-meta, .category { font-size: 11px; }
+.category { border-radius: 5px; padding: 5px 9px; }
+.topics-section { padding-block: 38px 42px; background: #eff1e9; }
+.topics-intro { margin-bottom: 29px; }
+.topic-top { font-size: 10px; }
+.topic p { font-size: 13px; max-width: 255px; }
+.topic h3 { font-size: 23px; }
+.section { padding-block: 88px; }
+.section-heading { margin-bottom: 35px; }
+.section-heading h2 { letter-spacing: -.045em; }
+.section-heading .eyebrow { margin-bottom: 14px; }
+.report-grid { gap: 26px; align-items: stretch; }
+.report-link { border: 1px solid var(--line); border-radius: 16px; padding: 0; background: var(--surface); }
+.report-image { border-radius: 15px 15px 0 0; aspect-ratio: 1.75; }
+.card-arrow { border-radius: 50%; width: 39px; height: 39px; opacity: 1; transform: none; box-shadow: 0 3px 12px #1d262418; }
+.report-body { padding: 23px; }
+.report-body h3 { font-size: 24px; line-height: 1.24; letter-spacing: -.04em; margin-top: 17px; }
+.report-body > p { font-size: 13px; line-height: 1.8; margin-block: 16px 24px; }
+.read-link { font-size: 12px; border-top: 1px solid var(--line); padding-top: 16px; }
+.case-banner { border-radius: 24px; min-height: 500px; }
+.case-copy { padding: 62px; max-width: 600px; }
+.case-copy h2 { font-size: 49px; }
+.case-copy > p:not(.eyebrow) { font-size: 15px; max-width: 375px; }
+.case-index { font-size: 10px; right: 32px; bottom: 30px; }
+.studio-intro h2 { font-size: 42px; }
+.studio-intro > div:last-child p { font-size: 16px; line-height: 1.85; }
+.site-footer { padding-top: 72px; border-radius: 28px 28px 0 0; }
+.footer-top { padding-bottom: 58px; }
+.footer-contact p { font-size: 15px; }
+.footer-email { font-size: 23px; }
+.footer-links { gap: 28px; }
+.footer-links p, .footer-links > div, .footer-links > a:last-child { font-size: 12px; }
+.footer-bottom { font-size: 11px; padding-block: 25px; }
+.page-intro { padding-block: 68px 48px; }
+.page-intro > p:last-of-type { font-size: 17px; max-width: 645px; }
+.library-controls { border: 1px solid var(--line); border-radius: 14px; background: var(--surface); padding: 12px 19px; gap: 24px; }
+.library-search input { font-size: 15px; padding-block: 12px; }
+.library-search input::placeholder { color: #737b73; }
+.year-select { font-size: 12px; }
+.year-select select { border-radius: 8px; min-height: 44px; background: var(--paper); font-size: 13px; }
+.library-toolbar { padding-block: 21px 28px; align-items: center; }
+.filter-list { gap: 8px; }
+.filter-list button { border-radius: 999px; min-height: 44px; padding: 10px 18px; font-size: 12px; }
+.library-actions { display: flex; align-items: center; gap: 18px; }
+#result-count { font-size: 12px; }
+.reset-link { background: transparent; border: 0; color: var(--blue); padding: 8px 0; min-height: 44px; font-size: 12px; white-space: nowrap; text-decoration: underline; text-underline-offset: 4px; }
+.library-grid { row-gap: 30px; }
+.empty-state { margin-top: 15px; background: #f0f2ec; border-radius: var(--radius); }
+.empty-state p { font-size: 14px; }
+.about-statement { border-radius: 24px; background: linear-gradient(125deg, #e6f58f, #eef7bb); }
+.about-statement p:not(.eyebrow) { font-size: 15px; }
+.service-grid { gap: 24px; }
+.service-grid article { padding: 30px; border: 1px solid var(--line); background: var(--surface); border-radius: 16px; }
+.service-grid h3 { max-width: none; font-size: 29px; }
+.service-grid p { font-size: 14px; }
+.event-card { border: 1px solid var(--line); border-radius: var(--radius); padding: 32px; background: var(--surface); }
+.event-date { border-radius: 12px; background: #edf1e4; }
+.event-card p { font-size: 14px; }
+.event-card .event-meta { font-size: 12px; }
+.report-hero { padding-block: 30px 64px; }
+.back-link { min-height: 40px; display: inline-flex; align-items: center; margin-bottom: 24px; font-size: 12px; }
+.report-hero-grid { gap: 65px; }
+.report-hero h1 { letter-spacing: -.045em; }
+.report-summary { font-size: 16px; }
+.pdf-note { font-size: 11px; }
+.report-cover { border-radius: 20px; overflow: hidden; }
+.report-cover img { aspect-ratio: 1.4; }
+.report-overview { padding-block: 48px; }
+.report-themes li { font-size: 15px; padding-block: 16px; }
+.report-themes li::before { top: 16px; }
+.article-prose { max-width: 760px; }
+.article-prose p { font-size: 16px; line-height: 1.9; }
+.article-prose h2 { font-size: 34px; line-height: 1.22; }
+.article-prose blockquote { border-radius: 0 14px 14px 0; padding: 27px 32px; }
+.article-prose blockquote p { font-size: 25px; }
+.legal-page .article-prose { max-width: 800px; }
+.legal-page p { text-wrap: wrap; word-break: break-word; }
+.search-dialog { border-radius: 22px; padding: 30px; max-height: min(85dvh, 850px); overscroll-behavior: contain; }
+.search-heading h2 { font-size: 31px; }
+.site-search { border: 1px solid var(--line); border-radius: 11px; overflow: hidden; background: var(--surface); }
+.site-search:focus-within { border-color: var(--blue); box-shadow: 0 0 0 3px #2447ec12; }
+.site-search input { padding: 16px; }
+.site-search input:focus-visible { outline: none; }
+.site-search button { min-height: 52px; }
+.search-suggestions { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 15px; }
+.search-suggestions > span { color: var(--muted); font-size: 11px; margin-right: 3px; }
+.search-suggestions button { min-height: 36px; border-radius: 999px; border: 1px solid var(--line); background: transparent; color: var(--ink); padding: 6px 13px; font-size: 11px; }
+.search-suggestions button:hover { background: #e7ecd9; }
+.search-status { font-size: 12px; margin-top: 24px; }
+.search-results a { padding: 18px 10px; border-radius: 9px; }
+.search-results a > span { font-size: 10px; }
+.search-results h3 { font-size: 20px; }
+.search-results p { font-size: 13px; }
+.search-hint { font-size: 11px; }
+.garden-tags span { border-radius: 999px; font-size: 11px; }
+.garden-studio { border-radius: 20px; overflow: hidden; background: #f0f2eb; }
+.garden-guide { padding: 32px; }
+.garden-guide-intro, .garden-feature-panel > div { font-size: 14px; }
+.garden-feature-tabs button { border-radius: 999px; min-height: 44px; font-size: 12px; padding: 10px 16px; }
+.garden-feature-panel { border-radius: 12px; }
+.garden-enter { min-height: 52px; border-radius: 10px; }
+.garden-card { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; }
+.garden-media { overflow: hidden; border-radius: 15px 15px 0 0; }
+.garden-caption { font-size: 14px; padding: 20px; }
+.garden-number { border-radius: 5px; }
+.garden-controls button, .garden-controls a { border-radius: 6px; min-height: 36px; }
+.making-section summary { min-height: 76px; }
+.making-content p { font-size: 15px; }
+.making-content video { border-radius: 14px; }
+.credit-list a { font-size: 14px; padding-block: 20px; }
+.credit-list span { font-size: 12px; }
+
+@media (max-width: 1100px) {
+  .home-hero { gap: 40px; }
+  .header-inner { gap: 20px; }
+  .site-header nav { gap: 22px; margin-right: 5px; }
+  .header-contact { padding-inline: 13px; }
+  .header-actions { gap: 8px; }
+  .report-body { padding: 20px; }
+  .report-body h3 { font-size: 23px; }
+  .feature-copy h2 { font-size: 29px; }
+  .footer-links > div { gap: 16px; }
+  .service-grid article { padding: 24px; }
+}
+@media (max-width: 360px) {
+  .header-inner { gap: 10px; }
+  .wordmark { font-size: 23px; }
+  .header-actions { gap: 0; }
+  .header-actions .icon-button { width: 42px; }
+  .hero-actions { gap: 10px; }
+  .hero-actions .button { font-size: 11px; padding-inline: 14px; }
+}
+@media (max-width: 800px) {
+  .header-inner { height: 72px; }
+  .site-header nav { margin: 0; padding: 14px 24px 22px; border-radius: 0 0 18px 18px; }
+  .site-header nav a { min-height: 53px; font-size: 16px; }
+  .header-actions { gap: 6px; }
+  .home-hero { padding-block: 44px 48px; gap: 32px; }
+  .hero-description { font-size: 15px; }
+  .hero-actions .button { font-size: 12px; min-height: 52px; }
+  .hero-actions .text-link { font-size: 12px; }
+  .feature-art { height: 100%; border-radius: 19px 0 0 19px; }
+  .feature-copy { padding: 25px; }
+  .topics-section { padding-block: 30px; }
+  .topic-top { font-size: 9px; }
+  .topic p { font-size: 12px; }
+  .section { padding-block: 58px; }
+  .section-heading h2 { font-size: 33px; }
+  .section-heading .eyebrow { font-size: 10px; }
+  .section-heading .text-link { font-size: 12px; }
+  .case-copy { padding: 38px; }
+  .case-copy h2 { font-size: 43px; }
+  .case-copy > p:not(.eyebrow) { font-size: 14px; }
+  .studio-intro h2 { font-size: 35px; }
+  .studio-intro > div:last-child p { font-size: 15px; }
+  .site-footer { padding-top: 48px; border-radius: 22px 22px 0 0; }
+  .footer-links > div { flex-wrap: wrap; gap: 16px; }
+  .footer-email { font-size: 20px; }
+  .footer-bottom { font-size: 10px; }
+  .page-intro { padding-block: 44px 36px; }
+  .page-intro > p:last-of-type { font-size: 15px; }
+  .library-search input { font-size: 14px; }
+  .library-toolbar { flex-wrap: wrap; gap: 16px; }
+  .library-toolbar #result-count { font-size: 12px; padding: 0; }
+  .filter-list button { padding: 9px 15px; font-size: 11px; }
+  .report-hero-grid { gap: 32px; }
+  .report-hero { padding-block: 22px 42px; }
+  .report-summary { font-size: 15px; }
+  .report-cover img { aspect-ratio: 1.6; }
+  .article-prose p { font-size: 15px; }
+  .article-prose h2 { font-size: 30px; }
+  .article-prose blockquote p { font-size: 23px; }
+  .garden-guide { padding: 25px; }
+  .garden-feature-tabs button { font-size: 11px; padding-inline: 14px; }
+}
+@media (max-width: 520px) {
+  .hero-copy h1 { font-size: clamp(36px, 10.1vw, 52px); }
+  .hero-description { font-size: 15px; max-width: none; }
+  .hero-actions { gap: 15px; }
+  .hero-actions .text-link { gap: 10px; font-size: 11px; }
+  .hero-actions .button { padding-inline: 17px; gap: 17px; }
+  .feature-art { height: 235px; border-radius: 19px 19px 0 0; }
+  .feature-copy { padding: 24px; }
+  .feature-copy h2 { font-size: 28px; }
+  .report-meta, .category { font-size: 10px; }
+  .topic h3 { font-size: 20px; }
+  .topic-top { font-size: 8px; }
+  .topic p { font-size: 12px; line-height: 1.7; }
+  .section-heading { gap: 10px; margin-bottom: 26px; }
+  .report-body { padding: 23px; }
+  .report-body h3 { font-size: 25px; }
+  .report-body > p { font-size: 14px; }
+  .case-banner { min-height: 490px; border-radius: 18px; }
+  .case-copy { padding: 32px 25px; }
+  .case-copy h2 { font-size: 37px; }
+  .case-copy > p:not(.eyebrow) { max-width: 280px; }
+  .case-index { font-size: 9px; }
+  .studio-intro h2 { font-size: 32px; }
+  .footer-top h2 { font-size: 44px; }
+  .footer-email { font-size: 18px; gap: 20px; }
+  .footer-contact p { font-size: 14px; }
+  .footer-bottom > div { flex-wrap: wrap; gap: 20px; }
+  .page-intro h1 { font-size: clamp(37px, 11.1vw, 48px); }
+  .library-controls { padding: 10px 14px; gap: 10px; }
+  .library-search { gap: 12px; }
+  .year-select { margin-left: 0; width: 100%; justify-content: space-between; border-top: 1px solid var(--line); padding-top: 12px; }
+  .year-select select { min-width: 145px; }
+  .library-toolbar { padding-block: 17px 24px; gap: 12px; }
+  .filter-list { gap: 6px; }
+  .filter-list button { font-size: 10px; padding: 8px 11px; }
+  .library-actions { width: 100%; justify-content: space-between; }
+  .about-statement { padding: 28px; border-radius: 18px; }
+  .about-statement p:not(.eyebrow) { font-size: 14px; }
+  .service-grid article { padding: 28px; }
+  .event-card { padding: 25px; }
+  .event-card h3 { font-size: 27px; }
+  .event-card p { font-size: 14px; }
+  .event-followup { margin-top: 20px; }
+  .report-hero h1 { font-size: clamp(33px, 10vw, 41px); }
+  .report-overview h2 { font-size: 29px; }
+  .report-themes li { font-size: 14px; }
+  .article-prose h2 { font-size: 28px; }
+  .article-prose blockquote { padding: 22px; }
+  .article-prose blockquote p { font-size: 22px; }
+  .legal-page h1 { font-size: 38px; }
+  .search-dialog { padding: 22px; border-radius: 18px; width: calc(100% - 24px); }
+  .search-heading h2 { font-size: 25px; }
+  .search-heading { gap: 10px; margin-bottom: 20px; }
+  .search-close { flex-shrink: 0; }
+  .site-search input { font-size: 14px; padding: 14px 12px; }
+  .search-results h3 { font-size: 19px; }
+  .search-results p { font-size: 12px; }
+  .garden-tags span { font-size: 10px; }
+  .garden-guide { padding: 23px 17px; }
+  .garden-feature-tabs { gap: 7px; }
+  .garden-feature-tabs button { font-size: 10px; padding-inline: 12px; }
+  .garden-feature-panel > div { font-size: 13px; }
+  .making-content p { font-size: 14px; }
+  .credit-list a { font-size: 13px; }
+}

@@ -1,0 +1,2 @@
+import{t as e}from"/mirror/bd988158b1cc-rolldown-runtime.Dh6celcD.mjs";function t(e,t){return{favicon:`/mirror/2add4f08c8c7-SmV40sISi1uVwrxsSEbqnE9RUc.png`,robots:`max-image-preview:large`,socialImage:`/mirror/658caefb2ec7-uHK9d7wGPj1VpJPpmccAdoXHB0.png`,title:`SCADask`}}var n=e((()=>{}));export{t as n,n as t};
+//# sourceMappingURL=siteMetadata.d6WVUvIC.mjs.map

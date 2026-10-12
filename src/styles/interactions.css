@@ -1,0 +1,37 @@
+/* The reference stylesheet controls the layout. These rules restore controls
+   that originally depended on the hosted Framer runtime. */
+html { scroll-behavior: smooth; }
+.skip-link { position: fixed; left: 16px; top: -80px; padding: 12px 18px; background: #262729; color: white; z-index: 10001; font: 14px 'Gotham Book', sans-serif; }
+.skip-link:focus { top: 12px; }
+a:focus-visible, button:focus-visible, [role="button"]:focus-visible { outline: 2px solid #0079c9; outline-offset: 5px; }
+
+[data-framer-name="Colored Ticker"] ul { opacity: 1 !important; }
+.logo-ticker { width: max-content !important; max-width: none !important; animation: ticker-scroll 35s linear infinite; }
+.logo-ticker:hover { animation-play-state: paused; }
+@keyframes ticker-scroll { from { transform: translateX(0); } to { transform: translateX(calc(-50% - 25px)); } }
+.framer-3ZT7Z.menu-open { height: auto !important; padding-bottom: 28px; overflow: visible !important; background: rgba(245,247,250,.98) !important; }
+[data-menu-toggle] { cursor: pointer; }
+[data-menu-toggle] .framer-1gzv4gn, [data-menu-toggle] .framer-1dg82r0 { transition: transform 180ms ease; }
+[data-menu-toggle][aria-expanded="true"] .framer-1gzv4gn { transform: translateY(3px) rotate(45deg); }
+[data-menu-toggle][aria-expanded="true"] .framer-1dg82r0 { transform: translateY(-3px) rotate(-45deg); }
+
+.desktop-search-toggle { width: 34px; min-width: 34px; height: 32px; border: 0; padding: 0; background: transparent; display: flex; align-items: center; justify-content: center; color: #0009; cursor: pointer; }
+.desktop-search.search-open { width: 340px !important; }
+.desktop-search.search-open > div:first-child { background: #fff !important; border-color: #d5d8db !important; }
+.desktop-search.search-open input { opacity: 1 !important; pointer-events: auto !important; font-family: 'Gotham Book', sans-serif !important; }
+.desktop-search-results { display: none; background: #fff; border: 1px solid #e1e4e7; border-radius: 12px; margin-top: 8px; padding: 8px; box-shadow: 0 8px 28px #00000012; max-height: 400px; overflow-y: auto; }
+.search-open .desktop-search-results { display: block; }
+.search-hint { font: 12px/1.6 'Gotham Book', sans-serif; color: #727272; margin: 8px 10px; }
+.search-result { display: block; padding: 12px 10px; border-radius: 6px; color: #262729; text-decoration: none; font: 14px/1.5 'Gotham Medium', sans-serif; }
+.search-result:hover, .search-result:focus-visible { background: #e3f0f9; }
+.mobile-search-dialog { width: min(560px, calc(100% - 32px)); max-height: 80dvh; margin: 90px auto auto; padding: 24px; border: 1px solid #e1e4e7; border-radius: 14px; box-shadow: 0 20px 70px #0003; color: #262729; }
+.mobile-search-dialog::backdrop { background: #17232c66; backdrop-filter: blur(3px); }
+.search-dialog-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+.search-dialog-header h2 { font: 18px 'Gotham Medium', sans-serif; margin: 0; }
+.close-search { background: transparent; border: 0; width: 34px; height: 34px; font-size: 28px; color: #555; cursor: pointer; }
+.mobile-search-input { box-sizing: border-box; width: 100%; border: 1px solid #cdd3d7; border-radius: 24px; padding: 13px 18px; font: 14px 'Gotham Book', sans-serif; outline-offset: 3px; }
+.mobile-search-results { margin-top: 16px; }
+.framer-1c4tp48 a, .framer-6xgjmy a { transition: box-shadow 200ms ease, transform 200ms ease; }
+.framer-1c4tp48 a:hover, .framer-6xgjmy a:hover { box-shadow: 0 4px 16px #0002 !important; transform: translateY(-2px); }
+[data-framer-name="Explore research"]:hover, [data-framer-name="About"]:hover, [data-framer-name="View All"]:hover { filter: brightness(.95); }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }

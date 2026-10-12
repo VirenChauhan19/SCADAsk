@@ -1,0 +1,82 @@
+[
+  {
+    "route": "/",
+    "title": "SCADask",
+    "content": 5528
+  },
+  {
+    "route": "/research",
+    "title": "SCADask Research",
+    "content": 5518
+  },
+  {
+    "route": "/splatgarden",
+    "title": "SplatGarden",
+    "content": 8490
+  },
+  {
+    "route": "/events",
+    "title": "SCADask Events",
+    "content": 2473
+  },
+  {
+    "route": "/aboutus",
+    "title": "About SCADask",
+    "content": 2317
+  },
+  {
+    "route": "/ai-insights-2026",
+    "title": "AI Insights 2026",
+    "content": 12159
+  },
+  {
+    "route": "/casestudies",
+    "title": "SCADask Case Studies",
+    "content": 1708
+  },
+  {
+    "route": "/the-future-of-american-dreams",
+    "title": "The Future of American Dreams",
+    "content": 6269
+  },
+  {
+    "route": "/from-collections-to-communities",
+    "title": "From Collections to Communities",
+    "content": 5771
+  },
+  {
+    "route": "/the-evolution-of-fashion",
+    "title": "The Evolution of Fashion Resale and Retail",
+    "content": 5955
+  },
+  {
+    "route": "/from-tech-to-pack",
+    "title": "From Tech to Track: The New Era of Sneaker Innovation",
+    "content": 5827
+  },
+  {
+    "route": "/the-future-of-luxury-experiences",
+    "title": "The Future of Luxury Experiences",
+    "content": 5868
+  },
+  {
+    "route": "/ai-insights-2025",
+    "title": "AI Insights 2025",
+    "content": 6334
+  },
+  {
+    "route": "/ai-insights-2024",
+    "title": "AI Insights 2024",
+    "content": 6065
+  },
+  {
+    "route": "/privacy",
+    "title": "SCAD Privacy",
+    "content": 24368
+  },
+  {
+    "route": "/terms",
+    "title": "SCAD Terms",
+    "content": 45588
+  }
+]

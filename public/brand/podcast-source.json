@@ -1,0 +1,21 @@
+{
+  "source": "https://www.scadask.com/podcast",
+  "links": [
+    {
+      "label": "Watch on YouTube",
+      "href": "https://www.youtube.com/watch?v=kuHgt9zeiPQ"
+    },
+    {
+      "label": "Apple Podcast",
+      "href": "https://podcasts.apple.com/us/podcast/brooke-hopper-on-design-judgment-when-ai-can-make-anything/id6820796759?i=1000793972979"
+    },
+    {
+      "label": "Spotify",
+      "href": "https://open.spotify.com/episode/3LkZWUsqALaJVhKMxcUXaZ?si=w5YH3qg3TAeHNO3Sfw6kXQ&utm_source=copy-link"
+    },
+    {
+      "label": "Amazon Music",
+      "href": "https://music.amazon.com/podcasts/05a96213-7ce7-407d-ab2e-c859e5bca17c/episodes/c97893e9-514d-4444-9c32-feef6d716b1e/scad-signal-brooke-hopper-on-design-judgment-when-ai-can-make-anything"
+    }
+  ]
+}

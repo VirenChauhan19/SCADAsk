@@ -1,0 +1,33 @@
+{
+  "source": "https://www.scadask.com/",
+  "awards": [
+    {
+      "name": "Hermes Creative Awards logo",
+      "src": "/brand/awards/award-1.png",
+      "href": "https://hermesawards.com/",
+      "width": 2475,
+      "height": 798
+    },
+    {
+      "name": "TITAN Brand Awards logo",
+      "src": "/brand/awards/award-2.png",
+      "href": "https://titanbrandawards.com/",
+      "width": 356,
+      "height": 112
+    },
+    {
+      "name": "LIT Advertising Awards logo",
+      "src": "/brand/awards/award-3.png",
+      "href": "https://litadvertisingawards.com/",
+      "width": 2399,
+      "height": 499
+    },
+    {
+      "name": "MUSE Creative Awards logo",
+      "src": "/brand/awards/award-4.png",
+      "href": "https://museaward.com/winner-info.php?id=237382",
+      "width": 1912,
+      "height": 630
+    }
+  ]
+}

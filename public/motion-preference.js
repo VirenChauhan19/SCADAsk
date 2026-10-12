@@ -1,10 +1,8 @@
-// Apply the visitor's choice before the first paint and navigation reveal.
+// Site motion is explicitly enabled for this design, before first paint.
 (() => {
-  let saved;
-  try { saved = sessionStorage.getItem('scadask-motion'); } catch {}
-  const full = saved === 'full' || (saved !== 'reduced' && !matchMedia('(prefers-reduced-motion: reduce)').matches);
+  const full = true;
   document.documentElement.dataset.motion = full ? 'full' : 'reduced';
-  document.querySelector('#page-transitions').media = full ? 'all' : 'not all';
+  document.querySelector('#page-transitions').media = 'not all';
   const handle = event => {
     if (!event.viewTransition) return;
     event.viewTransition.ready.catch(() => {});

@@ -1,0 +1,71 @@
+{
+  "source": "https://www.scadask.com/",
+  "logos": [
+    {
+      "name": "Netflix",
+      "src": "/brand/trusted/netflix.svg",
+      "width": 71,
+      "height": 20
+    },
+    {
+      "name": "Deloitte",
+      "src": "/brand/trusted/deloitte.svg",
+      "width": 84,
+      "height": 16
+    },
+    {
+      "name": "NVIDIA",
+      "src": "/brand/trusted/nvidia.svg",
+      "width": 98,
+      "height": 19
+    },
+    {
+      "name": "Autodesk",
+      "src": "/brand/trusted/autodesk.svg",
+      "width": 137,
+      "height": 15
+    },
+    {
+      "name": "Jewelers Mutual",
+      "src": "/brand/trusted/jewelersmutual.svg",
+      "width": 140.824,
+      "height": 19
+    },
+    {
+      "name": "USA TODAY",
+      "src": "/brand/trusted/usatoday.svg",
+      "width": 120.23,
+      "height": 18
+    },
+    {
+      "name": "Fast Company",
+      "src": "/brand/trusted/brand-7.svg",
+      "width": 104.363,
+      "height": 15
+    },
+    {
+      "name": "Paste",
+      "src": "/brand/trusted/brand-8.svg",
+      "width": 61.389,
+      "height": 17
+    },
+    {
+      "name": "Associated Press",
+      "src": "/brand/trusted/brand-9.svg",
+      "width": 139.778,
+      "height": 25
+    },
+    {
+      "name": "Yahoo! Finance",
+      "src": "/brand/trusted/brand-10.svg",
+      "width": 149.148,
+      "height": 21
+    },
+    {
+      "name": "California Business Journal",
+      "src": "/brand/trusted/brand-11.svg",
+      "width": 208.431,
+      "height": 17
+    }
+  ]
+}

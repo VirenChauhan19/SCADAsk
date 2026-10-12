@@ -3,7 +3,6 @@
   --motion-soft: cubic-bezier(.25, .46, .45, .94);
 }
 .heading-token { display: inline-block; }
-.motion-progress { position: fixed; inset: 0 0 auto; height: 2px; background: var(--blue); transform: scaleX(0); transform-origin: left; z-index: 101; pointer-events: none; }
 .details-animating { overflow: hidden; }
 .making-section details[data-expanded="false"] summary > span { transform: none; }
 
@@ -18,9 +17,9 @@
   ::view-transition-old(research-grid) { animation: grid-out 180ms ease-out both; }
   ::view-transition-new(research-grid) { animation: grid-in 420ms var(--motion-ease) both; }
 
-  .motion-reveal { transition: opacity 650ms var(--motion-ease), translate 650ms var(--motion-ease); transition-delay: var(--reveal-delay, 0ms); }
-  .motion-pending { opacity: 0; translate: 0 22px; }
-  .motion-visible { opacity: 1; translate: 0 0; filter: none; }
+  .motion-reveal { transition: opacity 320ms var(--motion-ease), transform 320ms var(--motion-ease); }
+  .motion-pending { opacity: 0; transform: translateY(10px); }
+  .motion-visible { opacity: 1; transform: none; }
 
   .site-header { transition: box-shadow 350ms, background 350ms; }
   .site-header.is-scrolled { box-shadow: 0 5px 22px #1d26240b; background: color-mix(in srgb, var(--paper) 97%, transparent); }
@@ -94,6 +93,7 @@
   .credit-list a:hover { padding-left: 9px; background: #eeefe9; }
 
   @media (max-width: 800px) {
+    .motion-pending { transform: translateY(8px); }
     .site-header nav.is-open { animation: menu-in 300ms var(--motion-ease) both; transform-origin: top; }
     .site-header nav.is-closing { animation: menu-out 220ms ease-in both; }
     .site-header nav.is-closing a { animation: none; }
@@ -126,4 +126,4 @@
   .hero-feature { transform: none; }
   .report-link:hover, .garden-card:hover { transform: none; }
 }
-/* This stylesheet is enabled only when the visitor allows motion. */
+/* The site's requested motion profile. Content remains available without JavaScript. */

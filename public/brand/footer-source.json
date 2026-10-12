@@ -1,0 +1,15 @@
+{
+  "source": "https://www.scadask.com/",
+  "socials": [
+    {
+      "href": "https://www.instagram.com/scadask",
+      "label": "Instagram",
+      "icon": "/brand/instagram.png"
+    },
+    {
+      "href": "https://www.linkedin.com/showcase/scadask/",
+      "label": "LinkedIn",
+      "icon": "/brand/linkedin.png"
+    }
+  ]
+}

@@ -37,7 +37,13 @@ for(const match of css.matchAll(/url\(['"]?(\/[^)'"\s]+)/g))assert((await stat('
 const garden=await readFile('public/garden.js','utf8');
 for(const match of garden.matchAll(/['"]([a-z0-9]{12}-[^'"\s]+\.mp4)['"]/g))assert((await stat('public/mirror/'+match[1])).size>0,`Missing garden film: ${match[1]}`);
 const search=JSON.parse(await readFile('public/search-data.json','utf8'));
-assert.equal(search.length,11,'Every report, studio, event, and case study should be searchable');
+assert.equal(search.length,12,'Every report, studio, event, podcast, and case study should be searchable');
 for(const item of search)assert(routes.includes(item.url),`Search result has missing route: ${item.url}`);
 assert.equal(reportCount,8,'All eight report pages need a PDF destination');
+const home=load(await readFile('public/pages/home.html','utf8'));
+assert.equal(home('.trust-group:not([aria-hidden]) img').length,11,'Keep all original Trusted by logos');
+assert(home('.trust-group[aria-hidden] img').toArray().every(e=>home(e).attr('alt')===''),'Duplicated marquee logos must be decorative');
+assert.equal(home('.award-strip a').length,4,'Keep the four original award destinations');
+const podcast=load(await readFile('public/pages/podcast.html','utf8'));
+assert.equal(podcast('.podcast-platforms a').length,4,'Keep every original podcast listening platform');
 console.log(`Verified all ${routes.length} pages, ${reportCount} report PDFs, ${imageCount} image placements, navigation, search index, fonts, and garden films.`);

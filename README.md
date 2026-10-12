@@ -20,10 +20,8 @@ Open http://localhost:5173/.
 ## Edit and build
 
 - `scripts/create-editorial-site.mjs`: page templates, report metadata, and content. Run `npm run generate` after edits.
-- `scripts/studio-home.mjs`: the redesigned homepage layout and featured research sections.
-- `public/studio.css`: the active studio design across all 16 pages, with cobalt, warm white, orange accents, and responsive layouts. The SCADask wordmark retains its lettering and blue dot.
 - `public/site.css`: responsive design, local Gotham fonts, and reduced-motion support.
-- `public/polish.css`: retained styles from the previous editorial design; not loaded by the redesigned pages.
+- `public/polish.css`: shared surface styles, readable typography, comfortable controls, and responsive spacing across all pages.
 - `public/site.js`: accessible search dialog, mobile navigation, research search, topic/year filters, and URL state.
 - `public/motion.css` and `public/motion.js`: staggered heading entrances, scroll reveals, artwork drift and desktop tilt, hover effects, page/filter transitions, dialog motion, accordion expansion, and a reading progress line. Motion respects the system reduced-motion preference, pauses when the tab is hidden, and keeps keyboard-focused content visible. Native view transitions enhance supported browsers; ordinary navigation and filter updates remain available elsewhere.
 - `public/motion-preference.js`: applies the saved motion choice before the first paint and sets page transition preferences before navigation reveals.

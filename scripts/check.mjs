@@ -12,7 +12,7 @@ for(const route of routes) {
   assert.equal($('h1').length,1,`One page title required: ${route}`);
   assert($('h1').text().trim(),`Empty title: ${route}`);
   assert($('meta[name=description]').attr('content'),`Missing description: ${route}`);
-  assert.equal($('nav[aria-label]').length,1,`Missing navigation: ${route}`);
+  assert.equal($('header.site-header nav[aria-label="Main navigation"]').length,1,`Missing navigation: ${route}`);
   assert.equal($('dialog[aria-labelledby]').length,1,`Missing search: ${route}`);
   const ids=$('[id]').map((i,e)=>$(e).attr('id')).get();
   assert.equal(new Set(ids).size,ids.length,`Duplicate IDs: ${route}`);
@@ -31,6 +31,8 @@ for(const route of routes) {
   if($('.report-hero').length) {
     const pdf=$('.report-hero .button').attr('href');
     assert(pdf.startsWith('https://www.scad.edu/')&&pdf.includes('.pdf'),`Missing original report PDF: ${route}`);reportCount++;
+    assert.equal($('iframe').length,0,`Report PDFs should open in a new tab, without an embedded reader: ${route}`);
+    for(const link of $('a[href]').toArray())if($(link).attr('href').includes('.pdf'))assert.equal($(link).attr('target'),'_blank',`PDF links must open in a new tab: ${route}`);
   }
 }
 const css=await readFile('public/site.css','utf8');
@@ -41,6 +43,26 @@ const search=JSON.parse(await readFile('public/search-data.json','utf8'));
 assert.equal(search.length,12,'Every report, studio, event, podcast, and case study should be searchable');
 for(const item of search)assert(routes.includes(item.url),`Search result has missing route: ${item.url}`);
 assert.equal(reportCount,8,'All eight report pages need a PDF destination');
+const ai=load(await readFile('public/pages/ai-insights-2026.html','utf8'));
+const aiOriginal=load(await readFile('source/pages/ai-insights-2026.html','utf8'));
+const originalSections=aiOriginal('.aii-root').first().find('section[id]');
+assert.equal(ai('.report-finding').length,5,'Preserve all five AI report findings');
+originalSections.each((i,section)=>{
+  const id=aiOriginal(section).attr('id');
+  const restored=ai(`.report-finding[id="${id}"]`);
+  assert.equal(restored.find('[data-chart-item]').length,aiOriginal(section).find('[data-chart-item]').length,`Preserve chart marks: ${id}`);
+  for(const block of aiOriginal(section).find('p,cite').toArray()) {
+    const text=aiOriginal(block).text().trim();
+    assert(restored.text().includes(text),`Preserve caption or quote: ${id}: ${text}`);
+  }
+  for(const block of restored.find('[style]').toArray())assert(!/(?:^|;)\s*(?:opacity\s*:\s*0|transform\s*:|transition\s*:)/.test(ai(block).attr('style')),`Chart content must be visible without Framer: ${id}: ${ai(block).attr('style')}`);
+});
+assert.equal(ai('#transformation [data-chart-item]').length,100,'Time-saved waffle chart has 100 respondents');
+assert.equal(ai('#transformation [data-chart-item]').filter((i,e)=>ai(e).attr('style').includes('background:#1D338F')).length,63,'Time-saved chart highlights exactly 63 percent');
+assert.equal(ai('#emergence .chart-legend li').length,5,'Efficiency chart labels must be visible');
+assert.equal(ai('.report-index nav a').length,5,'All report sections have working index links');
+assert(ai('#horizon .chart-legend').text().includes('15% Creative AI Co-authorship'),'Small bubble categories must have visible labels');
+for(const row of ai('.creative-output-row').toArray())assert(ai(row).children('div').first().attr('style').includes(`width:${ai(row).children('span').first().text()}`),'Creative output bar widths must reflect their percentages');
 const {items:answers}=JSON.parse(await readFile('public/ask-answers.json','utf8'));
 assert(answers.length>=40,'The Ask chat needs its pre-written answers (npm run ask:answers)');
 for(const item of answers){

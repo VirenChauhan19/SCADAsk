@@ -6,7 +6,7 @@ The Publish website workflow deploys every push to `main` to GitHub Pages. Set `
 
 GitHub Actions runs `npm ci`, `npm run check`, and `npm run build` on every push and pull request. You can also run it manually from the Actions tab. Successful runs provide a `scadask-site` build artifact, retained for 14 days.
 
-An editorial website for the applied research studio at SCAD. The site has 17 pages, a searchable research library, a shared site search, eight report overviews with original SCAD PDF destinations, a studio introduction, case studies, an event archive, and an interactive SplatGarden guide.
+An editorial website for the applied research studio at SCAD. The site has 17 pages, a searchable research library, a shared site search, eight report pages with original SCAD PDFs that open in a new tab, a studio introduction, case studies, an event archive, and an interactive SplatGarden guide. AI Insights 2026 also preserves all five detailed findings, survey charts, statistic captions, and contributor quotes directly in HTML.
 
 ## Run locally
 
@@ -20,6 +20,8 @@ Open http://localhost:5173/.
 ## Edit and build
 
 - `scripts/create-editorial-site.mjs`: page templates, report metadata, and content. Run `npm run generate` after edits.
+- `scripts/report-content.mjs` and `public/reports.css`: full AI Insights 2026 article, original survey graphics, responsive section index, and visible chart keys. Chart content works without JavaScript or the original Framer runtime. Full report links open PDFs in new tabs.
+- `public/reports.js`: scroll-triggered chart animation: staggered column and bar growth, waffle marks, radar expansion, and bubble reveals. Charts play once as they enter view; report text and legends reveal separately. The section index tracks the current finding. Final data stays visible without JavaScript, and active animations finish when the tab is hidden.
 - `scripts/about.mjs`: studio introduction, services, recognition, and research areas; the official university logo appears in the shared footer.
 - `scripts/events.mjs` and `public/events.css`: event archive with a featured panel, readable date and venue details, an upcoming-event contact link, and related AI research.
 - `scripts/publication-home.mjs`: homepage with a featured report, varied publication hierarchy, and project overview.
@@ -51,7 +53,7 @@ Responsive layouts use available browser width, including the effective width pr
 
 Site animations are explicitly enabled for this design. Offscreen sections reveal once over 320 ms, starting before they enter the viewport. Initial content is immediately visible. The Trusted by row scrolls automatically; publication and podcast links use short hover and keyboard feedback. Animations stop when the tab is hidden; content remains available without JavaScript.
 
-The live SplatGarden loads only after the visitor chooses Enter. It requires an internet connection. The original SCAD PDF reports and contributor profiles remain external links. The event listing is an archive; it does not imply registration or future scheduling. No contact submission backend is configured; contact links open an email application.
+The live SplatGarden loads only after the visitor chooses Enter. It requires an internet connection. Full report links open original publications from scad.edu in a new tab. AI Insights 2026's HTML article and charts are local. Contributor profiles remain external links. The event listing is an archive; it does not imply registration or future scheduling. No contact submission backend is configured; contact links open an email application.
 
 ## Ask chat
 

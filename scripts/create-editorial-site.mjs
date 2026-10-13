@@ -5,6 +5,7 @@ import {publicationHome} from './publication-home.mjs';
 import {podcastPage} from './podcast.mjs';
 import {aboutPage} from './about.mjs';
 import {eventsPage} from './events.mjs';
+import {aiReportArticle} from './report-content.mjs';
 
 // The published captures remain untouched in source/pages. This is the editable site.
 const manifest = JSON.parse(await readFile('source/site-manifest.json', 'utf8'));
@@ -59,6 +60,8 @@ const brand = '<img class="brand-logo" src="/brand/scadask-primary.png" alt="SCA
 const footerBrand = '<img class="brand-logo" src="/brand/scadask-white.png" alt="SCADask" width="182" height="32">';
 function baseShell(title, description, route, body, extra='') {
   if (route === '/events') extra += '<link rel="stylesheet" href="/events.css">';
+  if (reports.some(r=>'/'+r.slug===route)) extra += '<link rel="stylesheet" href="/reports.css">';
+  if (route === '/ai-insights-2026') extra += '<script defer src="/reports.js"></script>';
   const active = reports.some(r=>'/'+r.slug===route) ? '/research' : route === '/splatgarden' ? '/casestudies' : route;
   return `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="${esc(description)}"><meta name="theme-color" content="#f7f6f2"><title>${esc(title)} — SCADask</title><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/site.css"><script defer src="/site.js"></script>${extra}</head><body data-page="${esc(route)}"><a class="skip-link" href="#main">Skip to content</a><header class="site-header"><div class="header-inner"><a class="brand" href="/" aria-label="SCADask home">${brand}</a><nav id="primary-nav" aria-label="Main navigation">${navItems.map(([name,href])=>`<a href="${href}" ${href===active?'aria-current="page"':''}>${name}</a>`).join('')}</nav><div class="header-actions"><button class="search-open icon-button" aria-label="Search site"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" stroke="currentColor" stroke-width="1.6"/><path d="m16 16 5 5" stroke="currentColor" stroke-width="1.6"/></svg></button><a class="header-contact" href="mailto:research@scad.edu">Let’s talk ${arrow}</a><button class="menu-toggle icon-button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open navigation"><span></span><span></span></button></div></div></header><main id="main">${body}</main><footer class="site-footer"><div class="wrap"><div class="footer-top"><div><p class="eyebrow">START WITH A QUESTION</p><h2>What are you<br><em>curious about?</em></h2></div><div class="footer-contact"><p>Let’s turn your next question into<br>research you can act on.</p><a href="mailto:research@scad.edu" class="footer-email">research@scad.edu ${arrow}</a></div></div><div class="footer-links"><a class="brand" href="/" aria-label="SCADask home">${brand}</a><p>Applied research.<br>From the University for Creative Careers.</p><div>${navItems.map(([name,href])=>`<a href="${href}">${name}</a>`).join('')}</div><a href="https://www.scad.edu/" target="_blank" rel="noopener">Discover SCAD ${arrow}</a></div><div class="footer-bottom"><p>© 2026 Savannah College of Art and Design</p><div><a href="/privacy">Privacy</a><a href="/terms">Terms of use</a><a href="#main">Back to top ↑</a></div></div></div></footer><dialog class="search-dialog" aria-labelledby="search-title"><div class="search-heading"><h2 id="search-title">Find your next insight.</h2><button class="search-close icon-button" aria-label="Close search">×</button></div><form role="search" class="site-search"><label class="sr-only" for="site-search">Search reports and pages</label><input type="search" id="site-search" placeholder="Try AI, fashion, museums…" autocomplete="off"><button type="submit" aria-label="Search">→</button></form><p class="search-status" role="status"></p><div class="search-results"></div><p class="search-hint">Search research, case studies, and the studio. Esc to close.</p></dialog></body></html>`;
 }
@@ -113,21 +116,9 @@ function reportBody(r) {
   return `<section class="report-hero wrap"><a class="back-link" href="/research">← Back to research</a><div class="report-hero-grid"><div>${meta(r)}<h1>${esc(r.title)}</h1><p class="report-summary">${esc(r.summary)}</p><a class="button" href="${esc(r.pdf)}" target="_blank" rel="noopener">Read the full report <span aria-hidden="true">↗</span></a><p class="pdf-note">PDF · Opens on scad.edu</p></div><div class="report-cover"><img src="${r.image}" alt="${esc(r.title)} report artwork" width="800" height="450"></div></div></section><section class="report-overview wrap"><div class="overview-label"><p class="eyebrow">THE QUESTION</p></div><div><h2>${esc(r.question)}</h2><p>${esc(r.summary)}</p><p>The full SCADask report brings together research and industry perspectives to explore this question in depth.</p><a class="text-link" href="${esc(r.pdf)}" target="_blank" rel="noopener">Explore the complete findings ${arrow}</a></div></section>${r.slug==='ai-insights-2026'?'__AI_ARTICLE__':''}<section class="section wrap">${sectionHead('KEEP EXPLORING','Another question to consider.','/research','All research')}<div class="report-grid">${related.map(card).join('')}</div></section>`;
 }
 
-// Keep the substantive text from the 2026 feature in a readable editorial format.
+// Preserve the complete 2026 article, including the original survey graphics.
 const aiSource = await original('ai-insights-2026');
-const aiNodes = []; const seen = new Set(); let inArticle = false;
-aiSource('h1,h2,h3,p').each((i,e)=>{
-  const text=aiSource(e).text().trim();
-  if(text.startsWith('The gap between producing')) inArticle=true;
-  if(text==='Explore More Research') inArticle=false;
-  if(!inArticle || !text || seen.has(text) || /^of (practitioners|respondents)/.test(text) || ['Leading category','Top human skill'].includes(text)) return;
-  seen.add(text);
-  const heading = /^h/.test(e.tagName);
-  if(heading) aiNodes.push(`<h2 id="finding-${aiNodes.length}">${esc(text)}</h2>`);
-  else if(text.startsWith('“')) aiNodes.push(`<blockquote><p>${esc(text)}</p></blockquote>`);
-  else aiNodes.push(`<p>${esc(text)}</p>`);
-});
-const aiArticle = `<section class="article-section wrap"><aside><p class="eyebrow">FROM THE REPORT</p><p>AI Insights 2026</p><a class="text-link" href="${reports[0].pdf}" target="_blank" rel="noopener">Full report ${arrow}</a></aside><div class="article-prose">${aiNodes.join('')}<p class="article-note">Read the full report for survey data, charts, and contributor perspectives.</p></div></section>`;
+const aiArticle = aiReportArticle(aiSource);
 
 const gardenSource = await original('splatgarden');
 // Preserve the original asset-making, pipeline, and contributor content as semantic blocks.
@@ -173,7 +164,10 @@ for (let [name,route,title,description,body] of pages) {
   if(name==='splatgarden')body=body.replace(plainSection(pipeline),pipelineBlocks).replace(plainSection(contributors),creditBlocks);
   await writeFile(`public/pages/${name}.html`,shell(title,description,route,body,name==='splatgarden'?'<script defer src="/garden.js"></script>':name==='home'?'<script defer src="/trusted-by.js"></script>':''));
 }
-for (const r of reports) await writeFile(`public/pages/${r.slug}.html`,shell(r.title,r.summary,'/'+r.slug,reportBody(r).replace('__AI_ARTICLE__',aiArticle)));
+for (const r of reports) {
+  const body=reportBody(r).replace('__AI_ARTICLE__',aiArticle);
+  await writeFile(`public/pages/${r.slug}.html`,shell(r.title,r.summary,'/'+r.slug,body));
+}
 // Give each overview useful signposts instead of repeating its opening summary.
 for (const r of reports) {
   const path=`public/pages/${r.slug}.html`;

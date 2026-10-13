@@ -120,14 +120,6 @@
     if(!mark)return;
     const chart=mark.closest('svg') || mark.parentElement;
     chart.setAttribute('data-report-chart',section.id);chartObserver.observe(chart);
-    const controls=document.createElement('div');controls.className='report-chart-controls';
-    const replay=document.createElement('button');replay.type='button';replay.className='report-chart-replay';
-    replay.textContent='Replay chart';replay.setAttribute('aria-label','Replay '+section.querySelector('h2').textContent+' animation');
-    replay.addEventListener('click',()=>{
-      finish();for(const motion of chart.getAnimations({subtree:true}))motion.cancel();
-      played.add(chart);chartObserver.unobserve(chart);draw(chart);
-    });
-    controls.append(replay);chart.after(controls);
     chart.querySelectorAll('[data-chart-item]:not([aria-hidden])').forEach(item=>{
       item.addEventListener('pointerenter',event=>showTip(item,event));
       item.addEventListener('pointermove',event=>tipPosition(event.clientX,event.clientY));

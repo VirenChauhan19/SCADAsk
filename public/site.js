@@ -1,4 +1,10 @@
 (() => {
+  const arrowIcon = (right=false) => {
+    const icon=document.createElementNS('http://www.w3.org/2000/svg','svg');
+    icon.setAttribute('class','ui-arrow');icon.setAttribute('viewBox','0 0 24 24');icon.setAttribute('aria-hidden','true');icon.setAttribute('focusable','false');
+    icon.innerHTML=`<path d="${right?'M5 12h14m-6-6 6 6-6 6':'M6 18 18 6M6 6h12v12'}" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>`;
+    return icon;
+  };
   const menu = document.querySelector('.menu-toggle');
   const nav = document.querySelector('#primary-nav');
   let menuTimer;
@@ -57,7 +63,7 @@
       for(const item of found) {
         const link=document.createElement('a'); link.href=item.url;
         const label=document.createElement('span');label.textContent=item.category;
-        const title=document.createElement('h3');title.textContent=item.title+' ↗';
+        const title=document.createElement('h3');title.textContent=item.title+' ';title.append(arrowIcon());
         const description=document.createElement('p');description.textContent=item.description;
         link.append(label,title,description);results.append(link);
       }
@@ -65,7 +71,7 @@
       document.dispatchEvent(new CustomEvent('scadask:results',{detail:results}));
     }catch{
       status.textContent='Search is temporarily unavailable.';results.replaceChildren();
-      const fallback=document.createElement('a');fallback.href='/research';fallback.className='search-error-link';fallback.textContent='Browse the research library →';results.append(fallback);
+      const fallback=document.createElement('a');fallback.href='/research';fallback.className='search-error-link';fallback.textContent='Browse the research library ';fallback.append(arrowIcon(true));results.append(fallback);
     }finally{if(query===input.value.trim())results.setAttribute('aria-busy','false');}
   }
   let closeTimer;

@@ -14,7 +14,11 @@ const localize = value => {
 };
 const original = async name => load(localize(await readFile(`source/pages/${name}.html`, 'utf8')));
 const esc = value => String(value).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');
-const arrow = '<span aria-hidden="true">↗</span>';
+const arrowSvg = (direction='diagonal') => {
+  const paths = {diagonal:'M6 18 18 6M6 6h12v12',right:'M5 12h14m-6-6 6 6-6 6',down:'M12 5v14m-6-6 6 6 6-6',up:'M12 19V5m-6 6 6-6 6 6',left:'M19 12H5m6-6-6 6 6 6'};
+  return `<svg class="ui-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="${paths[direction]}" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+};
+const arrow = `<span aria-hidden="true">${arrowSvg()}</span>`;
 const assets = {
   ai:'/mirror/5753c869da17-pL934KOHQA1Rr8juoAnYV1PKEW4.jpg',
   dream:'/mirror/38451ca2c5ae-iQecxR0Zt2WewUDhFad5g12LMiw.png',
@@ -82,7 +86,9 @@ const shell = (...args) => baseShell(...args)
   .replace('A connected view of the future.', 'Research areas.')
   .replace('Another question to consider.', 'Related publications.')
   .replace('Your question.<br><em>Our next exploration.</em>', 'Commission research<br><em>with SCADask.</em>')
-  .replace(/<footer class="site-footer">[\s\S]*?<\/footer>/, renderFooter({navItems,footerBrand,arrow}));
+  .replace(/<footer class="site-footer">[\s\S]*?<\/footer>/, renderFooter({navItems,footerBrand,arrow}))
+  .replaceAll('↗', arrowSvg()).replaceAll('→', arrowSvg('right')).replaceAll('↓', arrowSvg('down'))
+  .replaceAll('↑', arrowSvg('up')).replaceAll('←', arrowSvg('left'));
 const button = (href,text,style='') => `<a class="button ${style}" href="${href}">${text} ${arrow}</a>`;
 const meta = r => `<div class="report-meta"><span class="category category-${r.category.toLowerCase()}">${r.category}</span><span>${r.season}</span></div>`;
 function card(r) { return `<article class="report-card" data-category="${r.category}" data-year="${r.season.slice(-4)}" data-search="${esc([r.title,r.summary,r.question,r.category].join(' ').toLowerCase())}"><a href="/${r.slug}" class="report-link"><div class="report-image"><img src="${r.image}" alt="" loading="lazy" width="800" height="450"><span class="card-arrow" aria-hidden="true">↗</span></div><div class="report-body">${meta(r)}<h3>${esc(r.title)}</h3><p>${esc(r.summary)}</p><span class="read-link">Explore report <span aria-hidden="true">↗</span></span></div></a></article>`; }

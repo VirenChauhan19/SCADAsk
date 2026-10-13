@@ -390,5 +390,7 @@ html{scroll-padding-top:88px}
 .site-footer .footer-bottom{font-size:13px;line-height:1.7}
 .site-footer .footer-signature p{font-size:11px;color:#bcbcbc;line-height:1.7}
 .site-footer .footer-bottom>div:last-child{font-size:13px}
+.ui-arrow{display:inline-block;width:18px;height:18px;flex:none;vertical-align:-3px;overflow:visible}
+.text-link>span:has(>.ui-arrow),.button>span:has(>.ui-arrow),.event-agenda>span:has(>.ui-arrow){display:inline-flex;align-items:center;justify-content:center;line-height:1}
 .site-footer .footer-links a:hover,.site-footer .footer-bottom a:hover{color:var(--blue-light)}
 @media(max-width:600px){.site-footer .footer-email{font-size:18px}.site-footer .footer-scad img{width:148px}.site-footer .footer-links>.footer-university{justify-content:start;gap:0 20px}.site-footer .footer-links>.footer-navigation{gap:0 12px}.site-footer .footer-bottom>div:last-child{gap:20px}.site-footer .footer-signature p{max-width:290px}}

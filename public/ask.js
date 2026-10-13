@@ -67,7 +67,13 @@
   };
 
   const el = (tag, className, text) => { const node = document.createElement(tag); if (className) node.className = className; if (text) node.textContent = text; return node; };
-  const link = (href, text, external) => { const a = el('a', '', text + ' ↗'); a.href = href; if (external) { a.target = '_blank'; a.rel = 'noopener'; } return a; };
+  const link = (href, text, external) => {
+    const a = el('a', '', text + ' ');
+    const icon = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+    icon.setAttribute('class', 'ask-link-arrow'); icon.setAttribute('viewBox', '0 0 24 24'); icon.setAttribute('width', '12'); icon.setAttribute('height', '12'); icon.setAttribute('aria-hidden', 'true'); icon.setAttribute('focusable', 'false');
+    icon.innerHTML = '<path d="M6 18 18 6M6 6h12v12" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>';
+    a.append(icon); a.href = href; if (external) { a.target = '_blank'; a.rel = 'noopener'; } return a;
+  };
   const chips = list => {
     const wrap = el('div', 'ask-suggestions');
     for (const text of list) { const chip = el('button', '', text); chip.type = 'button'; chip.addEventListener('click', () => ask(text)); wrap.append(chip); }

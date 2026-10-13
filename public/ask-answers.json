@@ -1,0 +1,2164 @@
+{
+ "model": "gpt-6-astra",
+ "generated": "2026-10-12",
+ "items": [
+  {
+   "id": "a1",
+   "q": "What is SCADask?",
+   "alt": [
+    "What does SCADask do?",
+    "Tell me about SCADask.",
+    "What is this studio?",
+    "Is SCADask part of SCAD?",
+    "Who’s behind SCADask?"
+   ],
+   "kw": [
+    "SCADask",
+    "SCAD",
+    "studio",
+    "applied research",
+    "creative economy"
+   ],
+   "a": "SCADask is the applied research studio at the Savannah College of Art and Design. It works with students, faculty, and industry on original research, published reports, and emerging technology experiments. Its research examines creativity, commerce, culture, and technology.",
+   "sources": [
+    {
+     "title": "About the studio",
+     "url": "/aboutus"
+    },
+    {
+     "title": "Research for the creative economy",
+     "url": "/"
+    }
+   ]
+  },
+  {
+   "id": "a2",
+   "q": "What does AI Insights 2026 find?",
+   "alt": [
+    "What are the 2026 AI findings?",
+    "What’s the takeaway from AI Insights 2026?",
+    "Summarize the latest AI report.",
+    "What did the 2026 AI research reveal?"
+   ],
+   "kw": [
+    "AI Insights 2026",
+    "judgment",
+    "creative direction",
+    "research synthesis",
+    "content generation",
+    "efficiency"
+   ],
+   "a": "AI Insights 2026 identifies research synthesis and content generation as the highest-impact areas for AI adoption. As AI handles more production tasks, creative value shifts toward human judgment and direction, with creative direction identified as the human skill growing most in value. The full findings, survey data, and contributor perspectives are in the report PDF.",
+   "sources": [
+    {
+     "title": "AI Insights 2026",
+     "url": "/ai-insights-2026",
+     "pdf": "https://www.scad.edu/sites/default/files/scadask/scad-ai-insights-2026_0.pdf"
+    }
+   ]
+  },
+  {
+   "id": "a3",
+   "q": "How was SplatGarden made?",
+   "alt": [
+    "How did you build SplatGarden?",
+    "What tools power the garden?",
+    "How was the 3D garden created?",
+    "What’s behind SplatGarden?",
+    "How did student work become an interactive garden?"
+   ],
+   "kw": [
+    "SplatGarden",
+    "Houdini",
+    "Unreal Engine",
+    "Gaussian splatting",
+    "PostShot",
+    "Three.js",
+    "AI stylization"
+   ],
+   "a": "SplatGarden combines procedural plant growth, simulation, and AI-stylized textures using tools including Houdini and Unreal Engine. The team captured 990 images of the garden and trained them into roughly 3 million Gaussian splats for real-time playback. A browser-based experience built with Spark and Three.js adds gesture controls, interactive effects, and painterly styling.",
+   "sources": [
+    {
+     "title": "SplatGarden",
+     "url": "/splatgarden"
+    }
+   ]
+  },
+  {
+   "id": "a4",
+   "q": "What reports has SCADask published?",
+   "alt": [
+    "What’s in the research library?",
+    "Show me all eight reports.",
+    "Which reports are available?",
+    "What publications do you have?",
+    "List all your reports",
+    "Show me all the reports",
+    "Reports",
+    "All reports"
+   ],
+   "kw": [
+    "reports",
+    "publications",
+    "research library",
+    "AI Insights",
+    "fashion",
+    "sneakers",
+    "luxury",
+    "museums"
+   ],
+   "a": "Spring 2026 publications are AI Insights 2026, From Collections to Communities, and The Future of Luxury Experiences. Winter 2026 features The Future of American Dreams, while Fall 2025 features The Evolution of Fashion Resale and Retail. Spring 2025 features From Tech to Track: The New Era of Sneaker Innovation, Winter 2025 features AI Insights 2025, and Spring 2024 features AI Insights 2024. The site provides summaries; the full findings are in each report PDF.",
+   "sources": [
+    {
+     "title": "Research library",
+     "url": "/research"
+    },
+    {
+     "title": "AI Insights 2026",
+     "url": "/ai-insights-2026",
+     "pdf": "https://www.scad.edu/sites/default/files/scadask/scad-ai-insights-2026_0.pdf"
+    },
+    {
+     "title": "AI Insights 2024",
+     "url": "/ai-insights-2024",
+     "pdf": "https://www.scad.edu/sites/default/files/scadask/SCAD%20AI%20Insights%202024.pdf"
+    }
+   ]
+  },
+  {
+   "id": "a5",
+   "q": "Are there any upcoming events?",
+   "alt": [
+    "What events are coming up?",
+    "Any events soon?",
+    "When’s the next conversation?",
+    "Do you have an upcoming event schedule?",
+    "How can I hear about future events?"
+   ],
+   "kw": [
+    "events",
+    "upcoming",
+    "conversations",
+    "schedule",
+    "research@scad.edu"
+   ],
+   "a": "The events page does not list any upcoming events; it shows a past conversation. For information about the next conversation, contact research@scad.edu.",
+   "sources": [
+    {
+     "title": "Events and conversations",
+     "url": "/events"
+    }
+   ]
+  },
+  {
+   "id": "a6",
+   "q": "What is SCADask’s email address?",
+   "alt": [
+    "How do I email SCADask?",
+    "What’s your email?",
+    "How can I contact the studio?",
+    "Who do I email about custom research?",
+    "Where can I send a research inquiry?"
+   ],
+   "kw": [
+    "email",
+    "contact",
+    "research@scad.edu",
+    "custom research",
+    "SCADask"
+   ],
+   "a": "SCADask’s email address is research@scad.edu. You can contact the studio to discuss custom research or ask about upcoming events.",
+   "sources": [
+    {
+     "title": "About the studio",
+     "url": "/aboutus"
+    },
+    {
+     "title": "Events and conversations",
+     "url": "/events"
+    }
+   ]
+  },
+  {
+   "id": "a7",
+   "q": "Is AI replacing designers?",
+   "alt": [
+    "Will AI take designers’ jobs?",
+    "Do we still need designers?",
+    "Are designers becoming obsolete?",
+    "Is AI taking over design?",
+    "What happens to designers as AI improves?",
+    "Does AI make human designers less valuable?"
+   ],
+   "kw": [
+    "AI",
+    "designers",
+    "replacement",
+    "human judgment",
+    "creative direction",
+    "design workflows"
+   ],
+   "a": "The AI Insights 2026 overview describes a shift in designers’ work rather than establishing that AI is replacing designers. As AI handles more production tasks, it highlights the growing value of human judgment, creative direction, and individual perspective. The full findings are in the report PDF.",
+   "sources": [
+    {
+     "title": "AI Insights 2026",
+     "url": "/ai-insights-2026",
+     "pdf": "https://www.scad.edu/sites/default/files/scadask/scad-ai-insights-2026_0.pdf"
+    }
+   ]
+  },
+  {
+   "id": "a8",
+   "q": "Who is behind SCADask?",
+   "alt": [
+    "Who runs SCADask?",
+    "Who leads the studio?",
+    "Is this part of SCAD?",
+    "Who works on the research?",
+    "Which university is behind this?"
+   ],
+   "kw": [
+    "SCAD",
+    "Savannah College of Art and Design",
+    "Munkhtsetseg Nandigjav",
+    "leadership",
+    "faculty",
+    "students"
+   ],
+   "a": "SCADask is based at the Savannah College of Art and Design and brings together research from students, faculty, and industry. The events page identifies Munkhtsetseg Nandigjav as SCADask’s Executive Director.",
+   "sources": [
+    {
+     "title": "Research for the creative economy",
+     "url": "/"
+    },
+    {
+     "title": "Events and conversations",
+     "url": "/events"
+    }
+   ]
+  },
+  {
+   "id": "a9",
+   "q": "What subjects does SCADask research?",
+   "alt": [
+    "What do you study?",
+    "What are your research areas?",
+    "What topics do you cover?",
+    "Do you research AI and consumer behavior?",
+    "What is the studio focused on?"
+   ],
+   "kw": [
+    "creativity",
+    "commerce",
+    "culture",
+    "technology",
+    "consumer behavior",
+    "museums",
+    "AI"
+   ],
+   "a": "SCADask researches creativity, commerce, culture, and technology. Its topics include design and craft, consumer behavior and retail, museums and communities, and AI’s impact on creative work.",
+   "sources": [
+    {
+     "title": "About the studio",
+     "url": "/aboutus"
+    },
+    {
+     "title": "Research for the creative economy",
+     "url": "/"
+    }
+   ]
+  },
+  {
+   "id": "a10",
+   "q": "Can I commission research from SCADask?",
+   "alt": [
+    "Can we work with SCADask?",
+    "Do you do custom research?",
+    "Can you research a challenge for my organization?",
+    "How do I commission a study?",
+    "Do you take on client research?"
+   ],
+   "kw": [
+    "commission",
+    "custom research",
+    "clients",
+    "organization",
+    "industry shifts",
+    "collaboration"
+   ],
+   "a": "SCADask conducts original research for clients on emerging behaviors, industry shifts, and questions that matter to their organizations. To discuss custom research, use “Start a conversation” in the “Let’s work together” section of the About the studio page.",
+   "sources": [
+    {
+     "title": "About the studio",
+     "url": "/aboutus"
+    }
+   ]
+  },
+  {
+   "id": "a11",
+   "q": "How can I get in touch with SCADask?",
+   "alt": [
+    "How do I contact the studio?",
+    "Where can I send an inquiry?",
+    "Can I talk to someone?",
+    "How do I reach you?",
+    "Where is the contact option?"
+   ],
+   "kw": [
+    "contact",
+    "inquiry",
+    "conversation",
+    "About the studio",
+    "get in touch"
+   ],
+   "a": "The About the studio page has a “Start a conversation” option under “Let’s work together.” Use it to get in touch about custom research with SCADask.",
+   "sources": [
+    {
+     "title": "About the studio",
+     "url": "/aboutus"
+    }
+   ]
+  },
+  {
+   "id": "a12",
+   "q": "Which SCADask reports are available for 2026?",
+   "alt": [
+    "What are your 2026 reports?",
+    "What research came out in 2026?",
+    "Show me the latest publications.",
+    "Any new reports?",
+    "What can I read from 2026?"
+   ],
+   "kw": [
+    "2026",
+    "AI Insights",
+    "Collections to Communities",
+    "Luxury Experiences",
+    "American Dreams",
+    "reports"
+   ],
+   "a": "The library lists AI Insights 2026 and From Collections to Communities. It also includes The Future of Luxury Experiences and The Future of American Dreams. The library provides summaries; the full findings are in the report PDFs.",
+   "sources": [
+    {
+     "title": "Research library",
+     "url": "/research"
+    }
+   ]
+  },
+  {
+   "id": "a13",
+   "q": "Which reports are available from 2025 and 2024?",
+   "alt": [
+    "Do you have older reports?",
+    "What did SCADask publish in 2025?",
+    "Is there research from 2024?",
+    "What came before the 2026 reports?",
+    "Show me earlier publications."
+   ],
+   "kw": [
+    "2025",
+    "2024",
+    "fashion resale",
+    "sneaker innovation",
+    "AI Insights",
+    "publications"
+   ],
+   "a": "The 2025 reports include The Evolution of Fashion Resale and Retail and From Tech to Track: The New Era of Sneaker Innovation. The library also lists AI Insights 2025 and AI Insights 2024. The library provides summaries; the full findings are in the report PDFs.",
+   "sources": [
+    {
+     "title": "Research library",
+     "url": "/research"
+    }
+   ]
+  },
+  {
+   "id": "a14",
+   "q": "How do I find research by topic?",
+   "alt": [
+    "Can I search for a subject?",
+    "Where can I find AI research?",
+    "How do I browse research areas?",
+    "Search by topic?",
+    "How can I find reports about retail?"
+   ],
+   "kw": [
+    "search",
+    "topic",
+    "subject",
+    "research library",
+    "filters",
+    "retail",
+    "AI"
+   ],
+   "a": "Use the Research library to search by topic or filter by Creativity, Commerce, Culture, or Technology. If no reports match, try a broader search or clear the filters.",
+   "sources": [
+    {
+     "title": "Research library",
+     "url": "/research"
+    }
+   ]
+  },
+  {
+   "id": "a15",
+   "q": "How do I find research by year?",
+   "alt": [
+    "Can I filter reports by date?",
+    "Where is the year filter?",
+    "How do I see only 2025 research?",
+    "Browse by year?",
+    "Can I view all publication years?"
+   ],
+   "kw": [
+    "year",
+    "2026",
+    "2025",
+    "2024",
+    "All years",
+    "research library",
+    "filters"
+   ],
+   "a": "The Research library has a year filter with options for 2026, 2025, and 2024. Choose “All years” to browse across those years, or combine a year with a subject filter.",
+   "sources": [
+    {
+     "title": "Research library",
+     "url": "/research"
+    }
+   ]
+  },
+  {
+   "id": "a16",
+   "q": "What does SCADask offer besides reports?",
+   "alt": [
+    "Do you have podcasts or events?",
+    "What else does the studio do?",
+    "Are there research experiments?",
+    "Any case studies?",
+    "Where can I explore research in practice?"
+   ],
+   "kw": [
+    "SCAD Signal",
+    "SplatGarden",
+    "AI Summit",
+    "case studies",
+    "podcast",
+    "events"
+   ],
+   "a": "SCADask’s initiatives include SCAD’s annual AI Summit, the SCAD Signal podcast, and experiments such as SplatGarden. The Case studies page presents SplatGarden as an interactive 3D environment for exploring student work. SCAD Signal features conversations with industry insiders about creative change.",
+   "sources": [
+    {
+     "title": "About the studio",
+     "url": "/aboutus"
+    },
+    {
+     "title": "Case studies",
+     "url": "/casestudies"
+    },
+    {
+     "title": "SCAD Signal podcast",
+     "url": "/podcast"
+    }
+   ]
+  },
+  {
+   "id": "a17",
+   "q": "What can I find in the SCADask research library?",
+   "alt": [
+    "What research do you publish?",
+    "What's in the library?",
+    "What topics do the reports cover?",
+    "Can I browse SCADask publications?",
+    "What kind of research is here?"
+   ],
+   "kw": [
+    "library",
+    "publications",
+    "creative practice",
+    "consumer behavior",
+    "cultural institutions",
+    "emerging technology"
+   ],
+   "a": "The research library lists eight reports covering creative practice, consumer behavior, cultural institutions, and emerging technology. The page provides short summaries; the full findings are in each report PDF.",
+   "sources": [
+    {
+     "title": "Research library",
+     "url": "/research"
+    }
+   ]
+  },
+  {
+   "id": "a18",
+   "q": "How can I find a report in the research library?",
+   "alt": [
+    "How do I search research?",
+    "Can I filter by year?",
+    "Can I browse by subject?",
+    "Where are the topic filters?",
+    "Why aren't any reports showing?",
+    "How do I clear my filters?"
+   ],
+   "kw": [
+    "search",
+    "filters",
+    "year",
+    "Creativity",
+    "Commerce",
+    "Culture",
+    "Technology",
+    "reset"
+   ],
+   "a": "You can search by topic or filter by subject and year. Subjects include Creativity, Commerce, Culture, and Technology, with year filters for 2026, 2025, and 2024. If no reports match, try a broader search or clear the filters.",
+   "sources": [
+    {
+     "title": "Research library",
+     "url": "/research"
+    }
+   ]
+  },
+  {
+   "id": "a19",
+   "q": "What are the newest reports, and when were they published?",
+   "alt": [
+    "What's the latest research?",
+    "Which reports came out in spring 2026?",
+    "Any new reports?",
+    "What are the most recent publications?",
+    "When were the newest reports published?"
+   ],
+   "kw": [
+    "Spring 2026",
+    "AI Insights 2026",
+    "From Collections to Communities",
+    "luxury",
+    "trust",
+    "participation"
+   ],
+   "a": "The newest reports listed are dated Spring 2026: AI Insights 2026, From Collections to Communities, and The Future of Luxury Experiences. They explore human direction and judgment in AI-assisted work, museums' relationships with communities, and changing expectations of high-end experiences. The full findings are in each report PDF.",
+   "sources": [
+    {
+     "title": "Research library",
+     "url": "/research"
+    }
+   ]
+  },
+  {
+   "id": "a20",
+   "q": "Which AI reports are available, and what do they cover?",
+   "alt": [
+    "Do you have AI research?",
+    "What is AI Insights about?",
+    "Which years of AI Insights are listed?",
+    "How do the AI reports differ?",
+    "When did the AI reports come out?"
+   ],
+   "kw": [
+    "AI Insights",
+    "Spring 2024",
+    "Winter 2025",
+    "Spring 2026",
+    "authorship",
+    "aesthetics",
+    "judgment",
+    "design practice"
+   ],
+   "a": "AI Insights 2026, dated Spring 2026, explores creative value shifting toward direction, judgment, and human decisions. AI Insights 2025, dated Winter 2025, covers creative workflows, aesthetics, and authorship through perspectives from business, education, and the arts. AI Insights 2024, dated Spring 2024, explores early shifts in design practice as AI enters the creative toolkit. The full findings are in each report PDF.",
+   "sources": [
+    {
+     "title": "Research library",
+     "url": "/research"
+    }
+   ]
+  },
+  {
+   "id": "a21",
+   "q": "What reports cover future prosperity, fashion, and sneaker innovation?",
+   "alt": [
+    "Do you research fashion resale?",
+    "Is there a sneaker report?",
+    "What's The Future of American Dreams about?",
+    "What research covers reuse and footwear?",
+    "When were the fashion and American Dreams reports published?"
+   ],
+   "kw": [
+    "American Dreams",
+    "2040",
+    "fashion resale",
+    "sneaker innovation",
+    "provenance",
+    "sustainable design",
+    "recovery technology",
+    "prosperity"
+   ],
+   "a": "The Future of American Dreams, dated Winter 2026, presents four scenarios for 2040 exploring how technology, policy, and opportunity could shape prosperity or exclusion. The Evolution of Fashion Resale and Retail, dated Fall 2025, examines reuse, provenance, community, and changing buying habits. From Tech to Track: The New Era of Sneaker Innovation, dated Spring 2025, explores sustainable design, recovery technology, and identity in footwear. The full findings are in each report PDF.",
+   "sources": [
+    {
+     "title": "Research library",
+     "url": "/research"
+    }
+   ]
+  },
+  {
+   "id": "a22",
+   "q": "What is SplatGarden, and when was the case study published?",
+   "alt": [
+    "What is SplatGarden?",
+    "What's the garden project?",
+    "When was SplatGarden published?",
+    "Is SplatGarden a portfolio?",
+    "Tell me about SplatGarden",
+    "What does the Spring 2026 case study cover?"
+   ],
+   "kw": [
+    "SplatGarden",
+    "portfolio",
+    "student",
+    "interactive",
+    "Spring",
+    "2026"
+   ],
+   "a": "SplatGarden turns student work into an interactive, real-time 3D garden where visitors can explore the scene and discover how its assets were made. The case study is labeled Spring 2026.",
+   "sources": [
+    {
+     "title": "SplatGarden",
+     "url": "/splatgarden"
+    }
+   ]
+  },
+  {
+   "id": "a23",
+   "q": "How can visitors interact with SplatGarden?",
+   "alt": [
+    "What can I do in the garden?",
+    "Can I control it with my hands?",
+    "How do the gestures work?",
+    "How do I zoom?",
+    "What happens when I click?",
+    "Can I open the live garden?"
+   ],
+   "kw": [
+    "gestures",
+    "pinch",
+    "zoom",
+    "MediaPipe",
+    "click",
+    "live",
+    "garden"
+   ],
+   "a": "The page offers an “Open the live garden” option to explore the interactive scene. In-browser hand tracking lets a single-hand pinch orbit the scene, a quick pinch-tap trigger a click effect, and a two-hand spread or contract adjust zoom. Clicks and gestures also trigger effects in the garden.",
+   "sources": [
+    {
+     "title": "SplatGarden",
+     "url": "/splatgarden"
+    }
+   ]
+  },
+  {
+   "id": "a24",
+   "q": "How does SplatGarden use Gaussian splatting?",
+   "alt": [
+    "What's Gaussian splatting?",
+    "How was the garden turned into 3D?",
+    "How many images were used?",
+    "How were the splats trained?",
+    "What is the capture pipeline?",
+    "How many Gaussians are in the scene?"
+   ],
+   "kw": [
+    "Gaussian",
+    "splatting",
+    "PostShot",
+    "990",
+    "capture",
+    "Unreal"
+   ],
+   "a": "Gaussian splatting transforms photographs into a 3D scene that can be viewed from different perspectives in real time. For SplatGarden, the team rendered 990 images from different angles inside the original Unreal Engine environment. Training those images in PostShot produced approximately 3 million Gaussians optimized for real-time playback.",
+   "sources": [
+    {
+     "title": "SplatGarden",
+     "url": "/splatgarden"
+    }
+   ]
+  },
+  {
+   "id": "a25",
+   "q": "How were the garden's flowers and growing vines created?",
+   "alt": [
+    "How do the plants grow?",
+    "How were the daffodils made?",
+    "What drives the vine animation?",
+    "How was the grape hyacinth built?",
+    "What plant tools did the team use?",
+    "Are the flowers procedural?"
+   ],
+   "kw": [
+    "Houdini",
+    "hyacinth",
+    "daffodil",
+    "vines",
+    "KineFX",
+    "Vellum",
+    "Unreal"
+   ],
+   "a": "Two custom Houdini tools recreated grape hyacinth and daffodil growth, using golden-angle floret placement for hyacinths and KineFX rigging with Vellum simulation for daffodil petal motion. In Unreal Engine, a real-time GPU workflow controls vine stem growth and deformation. The Motion Design plugin adds flowers and leaves, with Sequencer and Blueprint driving the blooming sequence.",
+   "sources": [
+    {
+     "title": "SplatGarden",
+     "url": "/splatgarden"
+    }
+   ]
+  },
+  {
+   "id": "a26",
+   "q": "How were AI tools used to create the garden's painterly look?",
+   "alt": [
+    "Where does AI fit in?",
+    "Were the textures AI stylized?",
+    "How did they make painterly textures?",
+    "What does the AI stylization tool do?",
+    "How were the textures refined?",
+    "How was the style reference used?"
+   ],
+   "kw": [
+    "AI",
+    "stylization",
+    "textures",
+    "painterly",
+    "Houdini",
+    "COP",
+    "Substance"
+   ],
+   "a": "A custom AI stylization tool combined shapes and structure from realistic textures with the look of a chosen style reference. This produced painterly textures while preserving underlying detail. The results were then refined in Houdini's COP Network and Substance Painter.",
+   "sources": [
+    {
+     "title": "SplatGarden",
+     "url": "/splatgarden"
+    }
+   ]
+  },
+  {
+   "id": "a27",
+   "q": "How was foliage built and placed throughout the garden?",
+   "alt": [
+    "How was the environment populated?",
+    "What was SpeedTree used for?",
+    "How did they place the plants?",
+    "Why use both PCG and foliage painting?",
+    "How was foliage optimized?",
+    "What tools made the environment assets?"
+   ],
+   "kw": [
+    "SpeedTree",
+    "foliage",
+    "PCG",
+    "Substance Designer",
+    "polygon",
+    "painting"
+   ],
+   "a": "The team procedurally modeled foliage in SpeedTree, optimizing polygon counts for real-time performance, then created painterly textures in Substance Designer. Procedural Content Generation handled large-scale distribution across the environment. Unreal Engine's Foliage Painting Tool allowed hand-crafted placement where finer detail and artistic control were needed.",
+   "sources": [
+    {
+     "title": "SplatGarden",
+     "url": "/splatgarden"
+    }
+   ]
+  },
+  {
+   "id": "a28",
+   "q": "What visual effects and artistic modes does SplatGarden use?",
+   "alt": [
+    "What effects are in the garden?",
+    "Does it have painting filters?",
+    "What's the Monet mode?",
+    "How are the splats animated?",
+    "What do the click effects look like?",
+    "Are there Matisse and Seurat styles?"
+   ],
+   "kw": [
+    "effects",
+    "Monet",
+    "Matisse",
+    "Seurat",
+    "GSOPs",
+    "ripples",
+    "Houdini"
+   ],
+   "a": "In Houdini, the team manipulated splat attributes and applied particle and pyro simulations with the GSOPs plugin. The interactive experience includes eight effects, such as dissolves, slime molds, vortex drift, chromatic ripples, and scan lines. Three full-screen painterly modes create Monet-style wet paint, Matisse-style posterized color with bold edges, and Seurat-style pointillist dots.",
+   "sources": [
+    {
+     "title": "SplatGarden",
+     "url": "/splatgarden"
+    }
+   ]
+  },
+  {
+   "id": "a29",
+   "q": "What technology powers SplatGarden in the browser?",
+   "alt": [
+    "How does the web version work?",
+    "What's the WebGL stack?",
+    "What renders the splats?",
+    "Does SplatGarden use Three.js?",
+    "What handles hand tracking?",
+    "What tools power the live experience?"
+   ],
+   "kw": [
+    "WebGL",
+    "Three.js",
+    "Spark",
+    "Vite",
+    "OpenUSD",
+    "MediaPipe",
+    "EffectComposer"
+   ],
+   "a": "The browser experience uses the Spark splat renderer with Three.js, Vite 6 for builds, and OpenUSD for scene data. MediaPipe handles gesture recognition, while GPU shaders create interactive particle and click effects. An EffectComposer applies full-screen visual styling.",
+   "sources": [
+    {
+     "title": "SplatGarden",
+     "url": "/splatgarden"
+    }
+   ]
+  },
+  {
+   "id": "a30",
+   "q": "Who created SplatGarden?",
+   "alt": [
+    "Who worked on the garden?",
+    "Who is on the SplatGarden team?",
+    "Who supervised the project?",
+    "Who are the contributors?",
+    "Which students made this?",
+    "Who was the supervising professor?"
+   ],
+   "kw": [
+    "contributors",
+    "Ben Jones",
+    "Itim Kongsakulvatanasook",
+    "Xinyi Liang",
+    "Yiyi Long",
+    "Danci Shen",
+    "Yichen Shi",
+    "Yiqi Zheng",
+    "Deborah R. Fowler"
+   ],
+   "a": "The team includes Ben Jones, Itim Kongsakulvatanasook, Xinyi Liang, Yiyi Long, Danci Shen, Yichen Shi, and Yiqi Zheng. Their listed programs span visual effects, interactive design and game development, and animation. Dr. Deborah R. Fowler served as supervising professor.",
+   "sources": [
+    {
+     "title": "SplatGarden",
+     "url": "/splatgarden"
+    }
+   ]
+  },
+  {
+   "id": "a31",
+   "q": "What are SCADask’s events and conversations about?",
+   "alt": [
+    "What kinds of conversations does SCADask host?",
+    "What is the events page about?",
+    "Who takes part in these conversations?",
+    "What topics do the events cover?",
+    "Tell me about SCADask events."
+   ],
+   "kw": [
+    "events",
+    "conversations",
+    "researchers",
+    "creative leaders",
+    "industry insiders"
+   ],
+   "a": "SCADask features conversations with researchers, creative leaders, and industry insiders about changes shaping our work. The events page includes past conversations and an invitation to ask about upcoming events.",
+   "sources": [
+    {
+     "title": "Events and conversations",
+     "url": "/events"
+    }
+   ]
+  },
+  {
+   "id": "a32",
+   "q": "What did the Research Reimagined panel explore, and who participated?",
+   "alt": [
+    "What was Research Reimagined about?",
+    "Who spoke on the AI research panel?",
+    "What did the AI and IP event cover?",
+    "Was Munkhtsetseg Nandigjav on the panel?",
+    "Who joined the discussion about AI-enabled research?"
+   ],
+   "kw": [
+    "Research Reimagined",
+    "AI",
+    "IP",
+    "discovery",
+    "Munkhtsetseg Nandigjav",
+    "Maali Alabdulhafith",
+    "Sanjay Goel"
+   ],
+   "a": "Research Reimagined: AI, IP & the New Rules of Discovery explored how AI-enabled research is evaluated and how institutions can use AI to enhance discovery. SCADask Executive Director Munkhtsetseg Nandigjav joined Dr. Maali Alabdulhafith and Sanjay Goel for the panel.",
+   "sources": [
+    {
+     "title": "Events and conversations",
+     "url": "/events"
+    }
+   ]
+  },
+  {
+   "id": "a33",
+   "q": "When and where was the Research Reimagined event?",
+   "alt": [
+    "When was the AI panel?",
+    "Where did Research Reimagined take place?",
+    "What time was the panel?",
+    "Was the event in New York City?",
+    "Which summit featured Research Reimagined?"
+   ],
+   "kw": [
+    "Research Reimagined",
+    "September 17",
+    "New York City",
+    "QS Back to School Summit",
+    "2:00 PM"
+   ],
+   "a": "The archive lists Research Reimagined as a past event on September 17, from 2:00 PM to 2:30 PM, in New York City at the QS Back to School Summit. The page does not state the event’s year.",
+   "sources": [
+    {
+     "title": "Events and conversations",
+     "url": "/events"
+    }
+   ]
+  },
+  {
+   "id": "a34",
+   "q": "Which AI Insights reports are featured, and when were they published?",
+   "alt": [
+    "What can I read after the events?",
+    "Which AI reports are linked here?",
+    "What is the AI Insights series about?",
+    "When did the featured AI Insights reports come out?",
+    "How do the 2024, 2025, and 2026 reports differ?",
+    "Any more reading on AI?"
+   ],
+   "kw": [
+    "AI Insights",
+    "Spring 2026",
+    "Winter 2025",
+    "Spring 2024",
+    "creative value",
+    "authorship",
+    "design practice"
+   ],
+   "a": "AI Insights 2026, listed as Spring 2026, focuses on creative value shifting toward direction, judgment, and human decisions. AI Insights 2025, listed as Winter 2025, explores creative workflows, aesthetics, and authorship through perspectives from business, education, and the arts. AI Insights 2024, listed as Spring 2024, explores early shifts in design practice as AI enters the creative toolkit. The page only summarizes these reports; the full findings are in each report PDF.",
+   "sources": [
+    {
+     "title": "Events and conversations",
+     "url": "/events"
+    }
+   ]
+  },
+  {
+   "id": "a35",
+   "q": "What topics does SCADask research?",
+   "alt": [
+    "What are your research areas?",
+    "What subjects do you explore?",
+    "Do you research AI?",
+    "Does SCADask study consumer behavior?",
+    "What does your research focus on?",
+    "What topics do you cover?"
+   ],
+   "kw": [
+    "creativity",
+    "commerce",
+    "culture",
+    "technology",
+    "AI",
+    "retail",
+    "museums",
+    "design"
+   ],
+   "a": "SCADask explores creativity, commerce, culture, and technology. Its research spans design and craft, consumer behavior and retail, museums and communities, and emerging technologies such as AI and creative tools.",
+   "sources": [
+    {
+     "title": "About the studio",
+     "url": "/aboutus"
+    }
+   ]
+  },
+  {
+   "id": "a36",
+   "q": "What kinds of work does SCADask produce?",
+   "alt": [
+    "Does SCADask publish reports?",
+    "What are the studio's initiatives?",
+    "Do you run conversations or experiments?",
+    "What does the studio make?",
+    "Does SCADask have a podcast?",
+    "What work happens at SCADask?"
+   ],
+   "kw": [
+    "publications",
+    "reports",
+    "initiatives",
+    "AI Summit",
+    "SCAD Signal",
+    "SplatGarden",
+    "original research"
+   ],
+   "a": "SCADask conducts original research for clients and publishes reports on changes shaping creative careers and industries. Its initiatives include SCAD’s annual AI Summit, the SCAD Signal podcast, and experiments such as SplatGarden.",
+   "sources": [
+    {
+     "title": "About the studio",
+     "url": "/aboutus"
+    }
+   ]
+  },
+  {
+   "id": "a37",
+   "q": "Where has SCADask research been featured?",
+   "alt": [
+    "Has SCADask received media coverage?",
+    "Who has covered your research?",
+    "Which publications have featured SCADask?",
+    "Has your work been in the news?",
+    "Where has the studio's research appeared?"
+   ],
+   "kw": [
+    "recognition",
+    "USA Today",
+    "Fast Company",
+    "Paste Magazine",
+    "AP News",
+    "Yahoo! Finance",
+    "California Business Journal"
+   ],
+   "a": "SCADask research and publications have been featured in USA Today, Fast Company, and Paste Magazine. Other outlets include AP News, Yahoo! Finance, and California Business Journal.",
+   "sources": [
+    {
+     "title": "About the studio",
+     "url": "/aboutus"
+    }
+   ]
+  },
+  {
+   "id": "a38",
+   "q": "What is AI Insights 2026 about?",
+   "alt": [
+    "What does the 2026 AI report cover?",
+    "What's AI Insights 2026?",
+    "How is AI changing creative value?"
+   ],
+   "kw": [
+    "AI Insights",
+    "2026",
+    "creative value",
+    "judgment",
+    "knowledge work"
+   ],
+   "a": "AI Insights 2026 asks what makes creative work valuable when AI can produce it. It explores AI’s efficiency gains, the growing value of creative direction and human judgment, and how designers adapt their workflows and skills. The full findings are in the report PDF.",
+   "sources": [
+    {
+     "title": "AI Insights 2026",
+     "url": "/ai-insights-2026",
+     "pdf": "https://www.scad.edu/sites/default/files/scadask/scad-ai-insights-2026_0.pdf"
+    }
+   ]
+  },
+  {
+   "id": "a39",
+   "q": "When was AI Insights 2026 published?",
+   "alt": [
+    "What's the publication date?",
+    "Is this the spring 2026 report?",
+    "How recent is AI Insights 2026?",
+    "What season was it published?"
+   ],
+   "kw": [
+    "publication",
+    "Spring",
+    "2026",
+    "Technology",
+    "AI Insights"
+   ],
+   "a": "The page lists AI Insights 2026 as a Spring 2026 publication in the Technology category. It does not give an exact publication date.",
+   "sources": [
+    {
+     "title": "AI Insights 2026",
+     "url": "/ai-insights-2026",
+     "pdf": "https://www.scad.edu/sites/default/files/scadask/scad-ai-insights-2026_0.pdf"
+    }
+   ]
+  },
+  {
+   "id": "a40",
+   "q": "Who did SCADask survey for AI Insights 2026?",
+   "alt": [
+    "Who took part in the survey?",
+    "How many leaders were surveyed?",
+    "What industries did the survey cover?",
+    "What's the research based on?",
+    "Who did SCADask ask about AI?"
+   ],
+   "kw": [
+    "survey",
+    "100+",
+    "leaders",
+    "design",
+    "tech",
+    "enterprise"
+   ],
+   "a": "In 2026, SCADask surveyed more than 100 leaders across design, tech, and enterprise. The survey explored AI’s impact on knowledge work and design workflows, as well as barriers to adoption. The full findings are in the report PDF.",
+   "sources": [
+    {
+     "title": "AI Insights 2026",
+     "url": "/ai-insights-2026",
+     "pdf": "https://www.scad.edu/sites/default/files/scadask/scad-ai-insights-2026_0.pdf"
+    }
+   ]
+  },
+  {
+   "id": "a41",
+   "q": "Where does AI bring the biggest efficiency gains?",
+   "alt": [
+    "Where is AI most useful?",
+    "What tasks benefit most from AI?",
+    "Does AI help with research?",
+    "How useful is AI for content generation?",
+    "Where does AI save effort?"
+   ],
+   "kw": [
+    "efficiency",
+    "research synthesis",
+    "content generation",
+    "adoption",
+    "industries"
+   ],
+   "a": "The page identifies research synthesis and content generation as the highest-impact areas for AI adoption across industries in 2026. The full findings are in the report PDF.",
+   "sources": [
+    {
+     "title": "AI Insights 2026",
+     "url": "/ai-insights-2026",
+     "pdf": "https://www.scad.edu/sites/default/files/scadask/scad-ai-insights-2026_0.pdf"
+    }
+   ]
+  },
+  {
+   "id": "a42",
+   "q": "Which human skills are growing in value as AI handles more production?",
+   "alt": [
+    "What skills matter more with AI?",
+    "Is creative direction becoming more valuable?",
+    "Why does human judgment still matter?",
+    "What can creatives bring beyond output?",
+    "What makes designers valuable now?"
+   ],
+   "kw": [
+    "creative direction",
+    "human judgment",
+    "production",
+    "skills",
+    "value"
+   ],
+   "a": "Creative direction is identified as the human skill with the highest growing value as AI handles more production tasks. The page distinguishes producing work from understanding why it works, emphasizing direction and human judgment. The full findings are in the report PDF.",
+   "sources": [
+    {
+     "title": "AI Insights 2026",
+     "url": "/ai-insights-2026",
+     "pdf": "https://www.scad.edu/sites/default/files/scadask/scad-ai-insights-2026_0.pdf"
+    }
+   ]
+  },
+  {
+   "id": "a43",
+   "q": "How is AI changing designers’ workflows and skills?",
+   "alt": [
+    "How are designers adapting to AI?",
+    "Where does AI fit in the design process?",
+    "Does knowing AI make designers more valuable?",
+    "What happens to a designer's own voice?",
+    "How is creative work changing?"
+   ],
+   "kw": [
+    "workflows",
+    "designers",
+    "exploration",
+    "polish",
+    "perspective",
+    "AI skills"
+   ],
+   "a": "The page highlights AI’s usefulness during early exploration and final polish, while emphasizing personal voice and perspective in the middle of the process. It also includes a perspective that skills in using AI at work and building it into products command a premium. The full findings are in the report PDF.",
+   "sources": [
+    {
+     "title": "AI Insights 2026",
+     "url": "/ai-insights-2026",
+     "pdf": "https://www.scad.edu/sites/default/files/scadask/scad-ai-insights-2026_0.pdf"
+    }
+   ]
+  },
+  {
+   "id": "a44",
+   "q": "What gap emerged at the SCAD AI Summit?",
+   "alt": [
+    "What came up at the summit?",
+    "What did the summit reveal about creative work?",
+    "What's the gap between production and direction?",
+    "Why isn't faster output enough?",
+    "What do classrooms and boardrooms reward?"
+   ],
+   "kw": [
+    "SCAD AI Summit",
+    "direction",
+    "production",
+    "classrooms",
+    "boardrooms"
+   ],
+   "a": "The page describes a consistent gap between those who produce work and those who shape its direction. It says most classrooms and boardrooms still reward output and speed, while emphasizing the decisions that happen before production. The full findings are in the report PDF.",
+   "sources": [
+    {
+     "title": "AI Insights 2026",
+     "url": "/ai-insights-2026",
+     "pdf": "https://www.scad.edu/sites/default/files/scadask/scad-ai-insights-2026_0.pdf"
+    }
+   ]
+  },
+  {
+   "id": "a45",
+   "q": "Where can I read the full AI Insights 2026 findings?",
+   "alt": [
+    "Is there a full report?",
+    "Where's the PDF?",
+    "Can I see the survey data?",
+    "Where are the charts?",
+    "How do I read contributor perspectives?"
+   ],
+   "kw": [
+    "PDF",
+    "full report",
+    "survey data",
+    "charts",
+    "contributor perspectives"
+   ],
+   "a": "The page offers a full report PDF that opens on scad.edu. The full findings, including survey data, charts, and contributor perspectives, are in that PDF.",
+   "sources": [
+    {
+     "title": "AI Insights 2026",
+     "url": "/ai-insights-2026",
+     "pdf": "https://www.scad.edu/sites/default/files/scadask/scad-ai-insights-2026_0.pdf"
+    }
+   ]
+  },
+  {
+   "id": "a46",
+   "q": "What are the SCADask case studies about?",
+   "alt": [
+    "What is the case studies page?",
+    "What do these case studies show?",
+    "How does SCADask put research into practice?",
+    "What's the focus here?",
+    "What kind of work is featured in the case studies?"
+   ],
+   "kw": [
+    "case studies",
+    "research",
+    "creative practice",
+    "emerging technology"
+   ],
+   "a": "SCADask’s case studies show creative research in practice. They explore what happens when research, creative practice, and emerging technology come together.",
+   "sources": [
+    {
+     "title": "Case studies",
+     "url": "/casestudies"
+    }
+   ]
+  },
+  {
+   "id": "a47",
+   "q": "What is SplatGarden?",
+   "alt": [
+    "What's SplatGarden about?",
+    "What is the featured case study?",
+    "What is the interactive 3D project?",
+    "How does SplatGarden present student work?",
+    "Is SplatGarden a portfolio?"
+   ],
+   "kw": [
+    "SplatGarden",
+    "student work",
+    "portfolio",
+    "interactive",
+    "3D"
+   ],
+   "a": "SplatGarden brings student work to life in a living, interactive 3D environment. It explores how a portfolio can become an environment visitors can step inside.",
+   "sources": [
+    {
+     "title": "Case studies",
+     "url": "/casestudies"
+    }
+   ]
+  },
+  {
+   "id": "a48",
+   "q": "What can visitors do in SplatGarden?",
+   "alt": [
+    "How can I explore SplatGarden?",
+    "Can I interact with the student work?",
+    "Can I learn how the work was made?",
+    "What's there to do in SplatGarden?",
+    "How do visitors experience the portfolio?"
+   ],
+   "kw": [
+    "SplatGarden",
+    "interact",
+    "explore",
+    "portfolio",
+    "process"
+   ],
+   "a": "SplatGarden invites visitors to interact with the work in a 3D environment. Visitors can also discover how the work was made.",
+   "sources": [
+    {
+     "title": "Case studies",
+     "url": "/casestudies"
+    }
+   ]
+  },
+  {
+   "id": "a49",
+   "q": "What date is listed for the SplatGarden case study?",
+   "alt": [
+    "When was the SplatGarden case study published?",
+    "What year is Case Study 01 from?",
+    "When did this case study come out?",
+    "Is there a date for SplatGarden?",
+    "Which season is the first case study dated?"
+   ],
+   "kw": [
+    "SplatGarden",
+    "Case Study 01",
+    "Spring 2026",
+    "date",
+    "published"
+   ],
+   "a": "The page labels Case Study 01 as Spring 2026. It does not give an exact publication date.",
+   "sources": [
+    {
+     "title": "Case studies",
+     "url": "/casestudies"
+    }
+   ]
+  },
+  {
+   "id": "a50",
+   "q": "What is The Future of American Dreams about?",
+   "alt": [
+    "What's the American Dreams report about?",
+    "Who gets to participate in the American Dream?",
+    "American Dreams report overview?"
+   ],
+   "kw": [
+    "American Dream",
+    "participation",
+    "prosperity",
+    "exclusion",
+    "opportunity"
+   ],
+   "a": "The Future of American Dreams asks who gets to participate in the American Dream. It explores how choices in technology, policy, and opportunity could shape shared prosperity or deepen exclusion. The full findings are in the report PDF.",
+   "sources": [
+    {
+     "title": "The Future of American Dreams",
+     "url": "/the-future-of-american-dreams",
+     "pdf": "https://www.scad.edu/sites/default/files/scadask/SCADask-The-American-Dream-Report-2026.pdf"
+    }
+   ]
+  },
+  {
+   "id": "a51",
+   "q": "What future scenarios does The Future of American Dreams explore?",
+   "alt": [
+    "What could the American Dream look like in 2040?",
+    "What year do the scenarios look ahead to?",
+    "Tell me about the 2040 scenarios.",
+    "Does it explore different possible futures?"
+   ],
+   "kw": [
+    "2040",
+    "four scenarios",
+    "American Dream",
+    "possible futures",
+    "report PDF"
+   ],
+   "a": "The report explores four possible scenarios for the American Dream in 2040. The page does not describe the individual scenarios; the full findings are in the report PDF.",
+   "sources": [
+    {
+     "title": "The Future of American Dreams",
+     "url": "/the-future-of-american-dreams",
+     "pdf": "https://www.scad.edu/sites/default/files/scadask/SCADask-The-American-Dream-Report-2026.pdf"
+    }
+   ]
+  },
+  {
+   "id": "a52",
+   "q": "What changes could shape access to the American Dream?",
+   "alt": [
+    "What affects access to opportunity?",
+    "What forces could change the American Dream?",
+    "Does it cover demographic and economic change?"
+   ],
+   "kw": [
+    "demographic",
+    "technological",
+    "economic",
+    "policy",
+    "opportunity",
+    "access"
+   ],
+   "a": "The report explores the effects of demographic, technological, and economic change. It also examines choices in technology, policy, and opportunity that could shape shared prosperity or deepen exclusion. The full findings are in the report PDF.",
+   "sources": [
+    {
+     "title": "The Future of American Dreams",
+     "url": "/the-future-of-american-dreams",
+     "pdf": "https://www.scad.edu/sites/default/files/scadask/SCADask-The-American-Dream-Report-2026.pdf"
+    }
+   ]
+  },
+  {
+   "id": "a53",
+   "q": "When was The Future of American Dreams published?",
+   "alt": [
+    "What's the publication date?",
+    "Which season was it published in?",
+    "How old is the American Dreams report?"
+   ],
+   "kw": [
+    "Winter",
+    "2026",
+    "publication",
+    "Culture",
+    "American Dreams"
+   ],
+   "a": "The page lists The Future of American Dreams as a Winter 2026 publication. It is in the Culture category.",
+   "sources": [
+    {
+     "title": "The Future of American Dreams",
+     "url": "/the-future-of-american-dreams",
+     "pdf": "https://www.scad.edu/sites/default/files/scadask/SCADask-The-American-Dream-Report-2026.pdf"
+    }
+   ]
+  },
+  {
+   "id": "a54",
+   "q": "What is From Collections to Communities about?",
+   "alt": [
+    "What does this museum report cover?",
+    "What's Collections to Communities about?",
+    "How are museums connecting with their communities?",
+    "Give me a quick overview of this research."
+   ],
+   "kw": [
+    "museums",
+    "collections",
+    "communities",
+    "participation",
+    "trust",
+    "technology"
+   ],
+   "a": "From Collections to Communities explores how museums are rethinking participation, trust, and technology to connect their collections with the communities they serve. Its central question is what a museum needs to mean to its community. The full findings are in the report PDF.",
+   "sources": [
+    {
+     "title": "From Collections to Communities",
+     "url": "/from-collections-to-communities",
+     "pdf": "https://www.scad.edu/sites/default/files/scadask/2026-SCADask-Museums-From-Collections-To-Communities-Report.pdf"
+    }
+   ]
+  },
+  {
+   "id": "a55",
+   "q": "What does From Collections to Communities explore about participation and trust in museums?",
+   "alt": [
+    "How is the role of museums changing?",
+    "What about trust in museums?",
+    "Does it look at museum relevance?",
+    "How do collections fit with serving communities?"
+   ],
+   "kw": [
+    "participation",
+    "trust",
+    "relevance",
+    "preservation",
+    "community",
+    "museums"
+   ],
+   "a": "The page highlights community participation and the changing role of museums. It also identifies trust and relevance alongside collection preservation as topics the report explores. The full findings are in the report PDF.",
+   "sources": [
+    {
+     "title": "From Collections to Communities",
+     "url": "/from-collections-to-communities",
+     "pdf": "https://www.scad.edu/sites/default/files/scadask/2026-SCADask-Museums-From-Collections-To-Communities-Report.pdf"
+    }
+   ]
+  },
+  {
+   "id": "a56",
+   "q": "Does From Collections to Communities cover museum technology and financial constraints?",
+   "alt": [
+    "What does it say about museum technology?",
+    "Does it discuss museum budgets?",
+    "Technology on a tight budget?",
+    "Are financial constraints part of the research?"
+   ],
+   "kw": [
+    "technology",
+    "financial",
+    "constraints",
+    "museums",
+    "choices"
+   ],
+   "a": "Yes, technology choices under financial constraints are one of the report's featured topics. The page does not detail those choices; the full findings are in the report PDF.",
+   "sources": [
+    {
+     "title": "From Collections to Communities",
+     "url": "/from-collections-to-communities",
+     "pdf": "https://www.scad.edu/sites/default/files/scadask/2026-SCADask-Museums-From-Collections-To-Communities-Report.pdf"
+    }
+   ]
+  },
+  {
+   "id": "a57",
+   "q": "When was From Collections to Communities published?",
+   "alt": [
+    "What's the publication date?",
+    "Which season is this research from?",
+    "How recent is the museums report?"
+   ],
+   "kw": [
+    "Collections",
+    "Communities",
+    "Spring",
+    "2026",
+    "Culture",
+    "publication"
+   ],
+   "a": "The page labels From Collections to Communities as a Spring 2026 publication in the Culture category. It does not state an exact publication date.",
+   "sources": [
+    {
+     "title": "From Collections to Communities",
+     "url": "/from-collections-to-communities",
+     "pdf": "https://www.scad.edu/sites/default/files/scadask/2026-SCADask-Museums-From-Collections-To-Communities-Report.pdf"
+    }
+   ]
+  },
+  {
+   "id": "a58",
+   "q": "Where can I read the full From Collections to Communities report?",
+   "alt": [
+    "Is there a full report?",
+    "Where's the PDF?",
+    "How can I read the complete findings?",
+    "How do I open the museum report?"
+   ],
+   "kw": [
+    "PDF",
+    "report",
+    "findings",
+    "Collections",
+    "Communities",
+    "scad.edu"
+   ],
+   "a": "The page provides a Read the full report PDF link that opens on scad.edu. The page summarizes the topics covered; the full findings are in the report PDF.",
+   "sources": [
+    {
+     "title": "From Collections to Communities",
+     "url": "/from-collections-to-communities",
+     "pdf": "https://www.scad.edu/sites/default/files/scadask/2026-SCADask-Museums-From-Collections-To-Communities-Report.pdf"
+    }
+   ]
+  },
+  {
+   "id": "a59",
+   "q": "What is The Evolution of Fashion Resale and Retail about?",
+   "alt": [
+    "What's the fashion resale report about?",
+    "How is resale reshaping fashion?",
+    "What's the main topic?",
+    "Why is reuse important to fashion?"
+   ],
+   "kw": [
+    "fashion",
+    "resale",
+    "retail",
+    "reuse",
+    "creativity"
+   ],
+   "a": "The report explores how resale is reshaping fashion as reuse becomes part of the fashion experience. The page highlights provenance, community, and new buying habits as factors changing how brands create value. The full findings are in the report PDF.",
+   "sources": [
+    {
+     "title": "The Evolution of Fashion Resale and Retail",
+     "url": "/the-evolution-of-fashion",
+     "pdf": "https://www.scad.edu/sites/default/files/scadask/SCADask-style-in-motion-the-evolution-of-resale-and-retail.pdf"
+    }
+   ]
+  },
+  {
+   "id": "a60",
+   "q": "What does The Evolution of Fashion Resale and Retail explore about fashion brand value?",
+   "alt": [
+    "How is brand value changing?",
+    "What do scarcity and access have to do with fashion?",
+    "What makes fashion brands valuable in resale?",
+    "Does community play a role in brand value?"
+   ],
+   "kw": [
+    "provenance",
+    "scarcity",
+    "access",
+    "community",
+    "brand value",
+    "resale"
+   ],
+   "a": "The page identifies provenance, scarcity, and access as parts of brand value that the report explores. It also highlights community as a factor changing how brands create value. The full findings are in the report PDF.",
+   "sources": [
+    {
+     "title": "The Evolution of Fashion Resale and Retail",
+     "url": "/the-evolution-of-fashion",
+     "pdf": "https://www.scad.edu/sites/default/files/scadask/SCADask-style-in-motion-the-evolution-of-resale-and-retail.pdf"
+    }
+   ]
+  },
+  {
+   "id": "a61",
+   "q": "Which generations' buying habits does The Evolution of Fashion Resale and Retail explore?",
+   "alt": [
+    "Does it cover Gen Z shoppers?",
+    "What about Gen Alpha?",
+    "Whose shopping habits are covered?",
+    "Is Gen Z buying behavior a topic?"
+   ],
+   "kw": [
+    "Gen Z",
+    "Gen Alpha",
+    "buying habits",
+    "shopping",
+    "fashion"
+   ],
+   "a": "The report explores the buying habits of Gen Z and Gen Alpha. The page does not detail those habits; the full findings are in the report PDF.",
+   "sources": [
+    {
+     "title": "The Evolution of Fashion Resale and Retail",
+     "url": "/the-evolution-of-fashion",
+     "pdf": "https://www.scad.edu/sites/default/files/scadask/SCADask-style-in-motion-the-evolution-of-resale-and-retail.pdf"
+    }
+   ]
+  },
+  {
+   "id": "a62",
+   "q": "When was The Evolution of Fashion Resale and Retail published?",
+   "alt": [
+    "What's the publication date?",
+    "Which season was it published in?",
+    "How old is the fashion resale report?"
+   ],
+   "kw": [
+    "Fall 2025",
+    "publication",
+    "date",
+    "Creativity",
+    "fashion resale"
+   ],
+   "a": "The page lists The Evolution of Fashion Resale and Retail as a Fall 2025 publication in the Creativity category. It provides a summary, with the full findings in the report PDF.",
+   "sources": [
+    {
+     "title": "The Evolution of Fashion Resale and Retail",
+     "url": "/the-evolution-of-fashion",
+     "pdf": "https://www.scad.edu/sites/default/files/scadask/SCADask-style-in-motion-the-evolution-of-resale-and-retail.pdf"
+    }
+   ]
+  },
+  {
+   "id": "a63",
+   "q": "What is From Tech to Track: The New Era of Sneaker Innovation about?",
+   "alt": [
+    "What is the sneaker report about?",
+    "What does From Tech to Track cover?",
+    "What's the focus of this research?",
+    "What can sneakers do beyond performance?",
+    "Tell me about the sneaker innovation report."
+   ],
+   "kw": [
+    "sneakers",
+    "innovation",
+    "footwear",
+    "performance",
+    "From Tech to Track"
+   ],
+   "a": "The report explores what a sneaker can do beyond performance. It looks at how sustainable design, recovery technology, and identity are turning footwear into a platform for innovation. The full findings are in the report PDF.",
+   "sources": [
+    {
+     "title": "From Tech to Track: The New Era of Sneaker Innovation",
+     "url": "/from-tech-to-pack",
+     "pdf": "https://www.scad.edu/sites/default/files/scadask/scadask-from-tech-to-track-sprint-2025-v2.pdf"
+    }
+   ]
+  },
+  {
+   "id": "a64",
+   "q": "What design and technology topics does the sneaker report explore?",
+   "alt": [
+    "Does it cover sustainable footwear?",
+    "Is recovery technology included?",
+    "What does it cover about sneaker performance?",
+    "Any research on sustainable sneaker design?"
+   ],
+   "kw": [
+    "sustainable design",
+    "recovery technology",
+    "footwear market",
+    "performance",
+    "sneakers"
+   ],
+   "a": "The page highlights sustainable design in the footwear market, along with recovery technology and new expectations of performance. It summarizes these topics rather than presenting detailed results. The full findings are in the report PDF.",
+   "sources": [
+    {
+     "title": "From Tech to Track: The New Era of Sneaker Innovation",
+     "url": "/from-tech-to-pack",
+     "pdf": "https://www.scad.edu/sites/default/files/scadask/scadask-from-tech-to-track-sprint-2025-v2.pdf"
+    }
+   ]
+  },
+  {
+   "id": "a65",
+   "q": "Does From Tech to Track: The New Era of Sneaker Innovation explore sneakers as expressions of identity and community?",
+   "alt": [
+    "Does it discuss sneaker identity?",
+    "What about sneaker communities?",
+    "Does the research go beyond athletic performance?",
+    "Does it look at how sneakers express who we are?"
+   ],
+   "kw": [
+    "identity",
+    "community",
+    "sneakers",
+    "expression",
+    "footwear"
+   ],
+   "a": "Yes, sneakers as expressions of identity and community are one of the report's featured topics. The page introduces this theme, and the full findings are in the report PDF.",
+   "sources": [
+    {
+     "title": "From Tech to Track: The New Era of Sneaker Innovation",
+     "url": "/from-tech-to-pack",
+     "pdf": "https://www.scad.edu/sites/default/files/scadask/scadask-from-tech-to-track-sprint-2025-v2.pdf"
+    }
+   ]
+  },
+  {
+   "id": "a66",
+   "q": "When was From Tech to Track published, and where can I read the full report?",
+   "alt": [
+    "When did the sneaker report come out?",
+    "Is this the Spring 2025 report?",
+    "Where's the full sneaker report?",
+    "Can I read the PDF?",
+    "What's the publication date and how do I access it?"
+   ],
+   "kw": [
+    "Spring 2025",
+    "Creativity",
+    "PDF",
+    "publication",
+    "From Tech to Track"
+   ],
+   "a": "The page labels From Tech to Track as a Creativity publication from Spring 2025. The full findings are in the report PDF, available through the page's “Read the full report PDF” link, which opens on SCAD's website.",
+   "sources": [
+    {
+     "title": "From Tech to Track: The New Era of Sneaker Innovation",
+     "url": "/from-tech-to-pack",
+     "pdf": "https://www.scad.edu/sites/default/files/scadask/scadask-from-tech-to-track-sprint-2025-v2.pdf"
+    }
+   ]
+  },
+  {
+   "id": "a67",
+   "q": "What is The Future of Luxury Experiences about?",
+   "alt": [
+    "What's the luxury report about?",
+    "What does this research cover?",
+    "What is the focus of The Future of Luxury Experiences?",
+    "Do you have research on luxury consumers?",
+    "What will the next generation expect from luxury?"
+   ],
+   "kw": [
+    "luxury",
+    "experiences",
+    "expectations",
+    "consumers",
+    "next generation"
+   ],
+   "a": "The Future of Luxury Experiences explores what the next generation will expect from luxury. It focuses on changing expectations around trust, exclusivity, and experiences for high-end consumers. The full findings are in the report PDF.",
+   "sources": [
+    {
+     "title": "The Future of Luxury Experiences",
+     "url": "/the-future-of-luxury-experiences",
+     "pdf": "https://www.scad.edu/sites/default/files/scadask/SCADask-The-Future-of-Luxury-Experiences-Insights-Report-Spring-2026.pdf"
+    }
+   ]
+  },
+  {
+   "id": "a68",
+   "q": "What key topics does the luxury report explore?",
+   "alt": [
+    "What are the main themes?",
+    "Is trust part of the luxury research?",
+    "What does it explore about luxury brands and audiences?",
+    "Does it look at experiences for future luxury consumers?"
+   ],
+   "kw": [
+    "exclusivity",
+    "trust",
+    "brands",
+    "audiences",
+    "high-end",
+    "experiences"
+   ],
+   "a": "The page highlights changing expectations of exclusivity, trust between luxury brands and their audiences, and experiences for the next generation of high-end consumers. It summarizes these themes; the full findings are in the report PDF.",
+   "sources": [
+    {
+     "title": "The Future of Luxury Experiences",
+     "url": "/the-future-of-luxury-experiences",
+     "pdf": "https://www.scad.edu/sites/default/files/scadask/SCADask-The-Future-of-Luxury-Experiences-Insights-Report-Spring-2026.pdf"
+    }
+   ]
+  },
+  {
+   "id": "a69",
+   "q": "When was The Future of Luxury Experiences published?",
+   "alt": [
+    "When did the luxury report come out?",
+    "Is this a Spring 2026 report?",
+    "How recent is the luxury research?",
+    "What's the publication date?"
+   ],
+   "kw": [
+    "luxury",
+    "published",
+    "Spring",
+    "2026",
+    "Commerce"
+   ],
+   "a": "The page lists The Future of Luxury Experiences as a Spring 2026 publication in the Commerce category. It does not state an exact publication date.",
+   "sources": [
+    {
+     "title": "The Future of Luxury Experiences",
+     "url": "/the-future-of-luxury-experiences",
+     "pdf": "https://www.scad.edu/sites/default/files/scadask/SCADask-The-Future-of-Luxury-Experiences-Insights-Report-Spring-2026.pdf"
+    }
+   ]
+  },
+  {
+   "id": "a70",
+   "q": "Where can I read the complete luxury research findings?",
+   "alt": [
+    "Is there a full report?",
+    "Can I read the luxury report PDF?",
+    "Where are the complete findings?",
+    "How do I access the full luxury study?"
+   ],
+   "kw": [
+    "luxury",
+    "PDF",
+    "report",
+    "findings",
+    "complete",
+    "SCAD"
+   ],
+   "a": "The page provides a “Read the full report PDF” link that opens on SCAD's website. The page is a summary; the full findings are in the report PDF.",
+   "sources": [
+    {
+     "title": "The Future of Luxury Experiences",
+     "url": "/the-future-of-luxury-experiences",
+     "pdf": "https://www.scad.edu/sites/default/files/scadask/SCADask-The-Future-of-Luxury-Experiences-Insights-Report-Spring-2026.pdf"
+    }
+   ]
+  },
+  {
+   "id": "a71",
+   "q": "What is AI Insights 2025 about?",
+   "alt": [
+    "What does AI Insights 2025 cover?",
+    "Give me an overview of AI Insights 2025.",
+    "What is the focus of the 2025 AI report?",
+    "Which perspectives does AI Insights 2025 include?"
+   ],
+   "kw": [
+    "AI Insights 2025",
+    "business",
+    "education",
+    "arts",
+    "creative workflows",
+    "aesthetics",
+    "authorship"
+   ],
+   "a": "AI Insights 2025 brings together perspectives from business, education, and the arts on the changing relationship between creative workflows, aesthetics, and authorship. The page summarizes the report’s scope; the full findings are in the report PDF.",
+   "sources": [
+    {
+     "title": "AI Insights 2025",
+     "url": "/ai-insights-2025",
+     "pdf": "https://www.scad.edu/sites/default/files/scadask/scad-ai-insights-2025.pdf"
+    }
+   ]
+  },
+  {
+   "id": "a72",
+   "q": "What can I learn about how creative leaders are using AI?",
+   "alt": [
+    "How are creative leaders putting AI into practice?",
+    "Does it cover AI and creative workflows?",
+    "Does it discuss AI and authorship?",
+    "What about AI's effect on visual aesthetics?",
+    "AI in creative practice?"
+   ],
+   "kw": [
+    "creative leaders",
+    "emerging AI tools",
+    "workflows",
+    "visual aesthetics",
+    "authorship",
+    "creative practice"
+   ],
+   "a": "The report explores how creative leaders are using emerging AI tools, changes to workflows and visual aesthetics, and questions around authorship and creative practice. The page does not detail specific findings; the full findings are in the report PDF.",
+   "sources": [
+    {
+     "title": "AI Insights 2025",
+     "url": "/ai-insights-2025",
+     "pdf": "https://www.scad.edu/sites/default/files/scadask/scad-ai-insights-2025.pdf"
+    }
+   ]
+  },
+  {
+   "id": "a73",
+   "q": "When was AI Insights 2025 published?",
+   "alt": [
+    "When did the 2025 AI report come out?",
+    "What's the publication date?",
+    "Is this the Winter 2025 report?",
+    "How is AI Insights 2025 dated?",
+    "What season was it published?"
+   ],
+   "kw": [
+    "AI Insights 2025",
+    "Winter 2025",
+    "publication",
+    "date",
+    "Technology"
+   ],
+   "a": "AI Insights 2025 is listed as Winter 2025 in the Technology category. The page does not state an exact publication date.",
+   "sources": [
+    {
+     "title": "AI Insights 2025",
+     "url": "/ai-insights-2025",
+     "pdf": "https://www.scad.edu/sites/default/files/scadask/scad-ai-insights-2025.pdf"
+    }
+   ]
+  },
+  {
+   "id": "a74",
+   "q": "Where can I read the full AI Insights 2025 report?",
+   "alt": [
+    "Is there a PDF?",
+    "How do I access the complete findings?",
+    "Where's the full report?",
+    "Can I read more than the summary?"
+   ],
+   "kw": [
+    "AI Insights 2025",
+    "PDF",
+    "full report",
+    "complete findings",
+    "SCAD"
+   ],
+   "a": "The page offers a “Read the full report PDF” link that opens on SCAD’s website. The full findings are in the report PDF, rather than the page summary.",
+   "sources": [
+    {
+     "title": "AI Insights 2025",
+     "url": "/ai-insights-2025",
+     "pdf": "https://www.scad.edu/sites/default/files/scadask/scad-ai-insights-2025.pdf"
+    }
+   ]
+  },
+  {
+   "id": "a75",
+   "q": "What is AI Insights 2024 about?",
+   "alt": [
+    "What's AI Insights 2024?",
+    "What does the 2024 AI report cover?",
+    "Tell me about AI Insights 2024."
+   ],
+   "kw": [
+    "AI",
+    "Insights",
+    "2024",
+    "design",
+    "creative",
+    "process"
+   ],
+   "a": "AI Insights 2024 explores early shifts in design practice as artificial intelligence becomes part of the creative toolkit. Its central question is how AI is transforming the creative process. The full findings are in the report PDF.",
+   "sources": [
+    {
+     "title": "AI Insights 2024",
+     "url": "/ai-insights-2024",
+     "pdf": "https://www.scad.edu/sites/default/files/scadask/SCAD%20AI%20Insights%202024.pdf"
+    }
+   ]
+  },
+  {
+   "id": "a76",
+   "q": "What topics will I explore in AI Insights 2024?",
+   "alt": [
+    "Does it cover changes to design?",
+    "What aspects of AI and creativity does it explore?"
+   ],
+   "kw": [
+    "AI",
+    "design",
+    "landscape",
+    "toolkit",
+    "creativity",
+    "2024"
+   ],
+   "a": "The report explores AI’s role in the evolving design landscape, changes to the creative process, and new possibilities for the creative toolkit. The page outlines these topics; the full findings are in the report PDF.",
+   "sources": [
+    {
+     "title": "AI Insights 2024",
+     "url": "/ai-insights-2024",
+     "pdf": "https://www.scad.edu/sites/default/files/scadask/SCAD%20AI%20Insights%202024.pdf"
+    }
+   ]
+  },
+  {
+   "id": "a77",
+   "q": "When was AI Insights 2024 published?",
+   "alt": [
+    "What's the publication date?",
+    "Is this the spring 2024 report?",
+    "How old is AI Insights 2024?",
+    "What season was the 2024 AI report published?"
+   ],
+   "kw": [
+    "AI",
+    "Insights",
+    "2024",
+    "Spring",
+    "published",
+    "Technology"
+   ],
+   "a": "AI Insights 2024 is listed as a Spring 2024 publication. It appears in the Technology category.",
+   "sources": [
+    {
+     "title": "AI Insights 2024",
+     "url": "/ai-insights-2024",
+     "pdf": "https://www.scad.edu/sites/default/files/scadask/SCAD%20AI%20Insights%202024.pdf"
+    }
+   ]
+  },
+  {
+   "id": "a78",
+   "q": "Where can I read the full AI Insights 2024 report?",
+   "alt": [
+    "Is there a full report?",
+    "Where's the PDF?",
+    "How do I read the complete findings?",
+    "Can I open the 2024 AI report?"
+   ],
+   "kw": [
+    "AI",
+    "Insights",
+    "2024",
+    "PDF",
+    "report",
+    "findings"
+   ],
+   "a": "The page offers a full report PDF through the “Read the full report PDF” link, which opens on SCAD’s website. The page provides an overview; the full findings are in the report PDF.",
+   "sources": [
+    {
+     "title": "AI Insights 2024",
+     "url": "/ai-insights-2024",
+     "pdf": "https://www.scad.edu/sites/default/files/scadask/SCAD%20AI%20Insights%202024.pdf"
+    }
+   ]
+  },
+  {
+   "id": "a79",
+   "q": "What is the SCAD Signal podcast?",
+   "alt": [
+    "What's SCAD Signal?",
+    "Tell me about the podcast.",
+    "What does SCAD Signal cover?",
+    "Does SCADask have a podcast?",
+    "What kind of conversations are on SCAD Signal?"
+   ],
+   "kw": [
+    "SCAD",
+    "Signal",
+    "podcast",
+    "creative",
+    "change",
+    "insiders"
+   ],
+   "a": "SCAD Signal is a podcast from the SCADask studio featuring conversations on creative change. It offers in-depth discussions with industry insiders.",
+   "sources": [
+    {
+     "title": "SCAD Signal podcast",
+     "url": "/podcast"
+    }
+   ]
+  },
+  {
+   "id": "a80",
+   "q": "What is the first SCAD Signal episode about, and who is featured?",
+   "alt": [
+    "What's episode 001 about?",
+    "Who's in the first episode?",
+    "What does Brooke Hopper discuss?",
+    "Does the podcast talk about AI and design?",
+    "Tell me about Changing Responsibilities of Designers."
+   ],
+   "kw": [
+    "Brooke",
+    "Hopper",
+    "designers",
+    "AI",
+    "judgment",
+    "responsibilities",
+    "001"
+   ],
+   "a": "Episode 001, Changing Responsibilities of Designers, features Brooke Hopper. It explores design judgment and the changing responsibilities of designers in an age of AI.",
+   "sources": [
+    {
+     "title": "SCAD Signal podcast",
+     "url": "/podcast"
+    }
+   ]
+  },
+  {
+   "id": "a81",
+   "q": "Where can I watch or listen to SCAD Signal?",
+   "alt": [
+    "Where can I find the podcast?",
+    "Is SCAD Signal on Spotify?",
+    "Can I watch it on YouTube?",
+    "Can I listen on Apple Podcast?",
+    "Is it available on Amazon Music?"
+   ],
+   "kw": [
+    "YouTube",
+    "Apple",
+    "Podcast",
+    "Spotify",
+    "Amazon",
+    "Music",
+    "watch",
+    "listen"
+   ],
+   "a": "The page offers a Watch on YouTube option. It also lists Apple Podcast, Spotify, and Amazon Music.",
+   "sources": [
+    {
+     "title": "SCAD Signal podcast",
+     "url": "/podcast"
+    }
+   ]
+  }
+ ]
+}

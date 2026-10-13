@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import {readFile,stat} from 'node:fs/promises';
 import {load} from 'cheerio';
+import {createMatcher} from '../public/ask-engine.js';
 const {routes} = JSON.parse(await readFile('source/site-manifest.json','utf8'));
 let imageCount=0;let reportCount=0;
 for(const route of routes) {
@@ -40,6 +41,33 @@ const search=JSON.parse(await readFile('public/search-data.json','utf8'));
 assert.equal(search.length,12,'Every report, studio, event, podcast, and case study should be searchable');
 for(const item of search)assert(routes.includes(item.url),`Search result has missing route: ${item.url}`);
 assert.equal(reportCount,8,'All eight report pages need a PDF destination');
+const {items:answers}=JSON.parse(await readFile('public/ask-answers.json','utf8'));
+assert(answers.length>=40,'The Ask chat needs its pre-written answers (npm run ask:answers)');
+for(const item of answers){
+  assert(item.q&&item.a&&Array.isArray(item.alt)&&Array.isArray(item.kw),`Incomplete Ask answer: ${item.id}`);
+  assert(item.sources.length,`Ask answer without a source: ${item.id}`);
+  for(const source of item.sources){
+    assert(routes.includes(source.url),`Ask answer links a missing route ${source.url}: ${item.id}`);
+    if(source.pdf)assert(source.pdf.startsWith('https://www.scad.edu/'),`Ask answer links an unexpected PDF: ${item.id}`);
+  }
+}
+const askScript=await readFile('public/ask.js','utf8');
+const matcher=createMatcher(answers);
+for(const answer of answers) assert.equal(matcher.answer(answer.q).text,answer.a,`Ask must recognize its own question: ${answer.q}`);
+const latest=matcher.answer('What does AI Insights 2026 find?');
+const suggestionHistory=[{role:'user',text:'What does AI Insights 2026 find?'},{role:'assistant',...latest}];
+const nextSuggestions=matcher.answer('tell me more',latest,suggestionHistory).related;
+assert(nextSuggestions.length,'Continue offering fresh questions while answers remain');
+assert(nextSuggestions.every(q=>!latest.related.includes(q) && q!=='What does AI Insights 2026 find?'),'Suggestions must skip displayed and answered questions');
+assert.equal(matcher.suggest(null,[],answers.flatMap(a=>[a.q,...a.alt])).length,0,'Exhausted suggestions must not recycle old options');
+assert.equal(matcher.answer('What is this studio?',latest).text,matcher.answer('What is SCADask?').text,'Known studio question must start a new topic');
+assert.equal(matcher.answer('tell me more',latest).sources[0].url,'/ai-insights-2026','Ask follow-ups must stay on topic');
+assert(matcher.answer('where can I download it?',latest).sources?.some(s=>s.url==='/ai-insights-2026' && s.pdf),'Contextual download must keep the report year');
+assert(!matcher.answer('AI').answerId,'Broad AI query should offer choices');
+assert(!matcher.answer('Who won the football game?').answerId,'Unrelated queries must not receive a research answer');
+assert(!matcher.answer('tell me more').answerId,'Follow-up without context must ask for a topic');
+assert(!matcher.answer('AI Insights 2099').answerId,'Unknown report years must not match a different year');
+for(const match of askScript.matchAll(/const starters = \[([^\]]+)\]/g))for(const q of match[1].match(/'[^']+'/g))assert(answers.some(a=>a.q===q.slice(1,-1)),`Starter question has no answer: ${q}`);
 const home=load(await readFile('public/pages/home.html','utf8'));
 assert.equal(home('.trust-group:not([aria-hidden]) img').length,11,'Keep all original Trusted by logos');
 assert(home('.trust-group[aria-hidden] img').toArray().every(e=>home(e).attr('alt')===''),'Duplicated marquee logos must be decorative');

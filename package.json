@@ -10,7 +10,8 @@
     "check": "node scripts/check.mjs",
     "build": "node scripts/build-site.mjs",
     "mirror": "node scripts/mirror-site.mjs",
-    "preview": "vite preview --host 127.0.0.1"
+    "preview": "vite preview --host 127.0.0.1",
+    "ask:answers": "node scripts/build-ask-answers.mjs"
   },
   "devDependencies": {
     "cheerio": "1.2.0",

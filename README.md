@@ -21,6 +21,7 @@ Open http://localhost:5173/.
 
 - `scripts/create-editorial-site.mjs`: page templates, report metadata, and content. Run `npm run generate` after edits.
 - `scripts/about.mjs`: studio introduction, services, recognition, and research areas; the official university logo appears in the shared footer.
+- `scripts/events.mjs` and `public/events.css`: event archive with a featured panel, readable date and venue details, an upcoming-event contact link, and related AI research.
 - `scripts/publication-home.mjs`: homepage with a featured report, varied publication hierarchy, and project overview.
 - `scripts/trusted-by.mjs` and `public/trusted-by.js`: original 11 partner and press logos with explicitly enabled automatic scrolling, plus the four original award logos. This row scrolls independently of the page motion preference; it pauses on hover, offscreen, or when the tab is hidden. Without JavaScript, all logos appear in a static layout.
 - `scripts/podcast.mjs`: SCAD Signal episode page and homepage feature with original artwork and four verified listening destinations.
@@ -51,5 +52,22 @@ Responsive layouts use available browser width, including the effective width pr
 Site animations are explicitly enabled for this design. Offscreen sections reveal once over 320 ms, starting before they enter the viewport. Initial content is immediately visible. The Trusted by row scrolls automatically; publication and podcast links use short hover and keyboard feedback. Animations stop when the tab is hidden; content remains available without JavaScript.
 
 The live SplatGarden loads only after the visitor chooses Enter. It requires an internet connection. The original SCAD PDF reports and contributor profiles remain external links. The event listing is an archive; it does not imply registration or future scheduling. No contact submission backend is configured; contact links open an email application.
+
+## Ask chat
+
+Every page has a floating **Ask** chat in the bottom-right corner (`public/ask.js`, `public/ask.css`). It answers from `public/ask-answers.json`: about 80 pre-written questions and answers about the site, each linking its source pages and report PDFs. The chat matches a visitor's question to the closest answer in the browser. Nothing is sent to a server, and no API key is in the site. Questions it cannot match get related suggestions and the studio email; unrelated questions are declined. The conversation lasts for the browser tab, across pages.
+
+The chat has an introductory screen, readable source links, related questions, and a new-conversation control. `public/ask-engine.js` handles local matching: exact question matches take priority, report years are respected, broad questions offer choices, and short follow-ups stay with the previous answer's topic. It retrieves pre-written answers rather than generating live responses. `npm run check` verifies every primary question and regression cases for follow-ups, downloads, ambiguous queries, and unrelated questions.
+
+The answers were written with OpenAI from the site's page text, using only that text. Regenerate them after content changes:
+
+```sh
+npm run generate
+npm run ask:answers                                        # all sections (about 15 API calls)
+node scripts/build-ask-answers.mjs --only=essentials       # just the must-have questions, merged in
+npm run check
+```
+
+`scripts/build-ask-answers.mjs` reads `OPENAI_API_KEY` from the environment or from `.env` (ignored by git) and uses `OPENAI_MODEL` (default `gpt-6-astra`). Must-have questions, including the chat's three starter buttons, are listed in `essentials` in that script; `npm run check` fails if a starter question has no answer or an answer links a missing page. To improve matching for a question, add phrasings to its `alt` list in the JSON file.
 
 The previous captured-site styling and implementation remain as historical references in `public/redesign.*`, `public/local-site.js`, `src/`, and `scripts/apply-redesign.mjs`. They are not loaded by the editorial site. The old mirror and reference-preparation commands overwrite generated pages; rerun `npm run generate` if using those commands.

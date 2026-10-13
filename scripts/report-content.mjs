@@ -27,9 +27,8 @@ export function aiReportArticle(source) {
       // aeacb3b79115-ujotM6lxoILAj1Qc_me1L7eyE9gI5gtoVV6RLHIHKro.4azaArVP.mjs.
       if(section.attr('id')==='horizon' && label==='15%')label='15% Creative AI Co-authorship';
       if(section.attr('id')==='horizon' && label==='8%')label='8% Other';
-      if(label) $(item).attr('aria-label',label).attr('title',label);
-      // Local chart animation does not require the original Framer tooltip.
-      $(item).removeAttr('tabindex');
+      if(label) $(item).attr('aria-label',label).attr('tabindex','0');
+      $(item).removeAttr('title');
     });
     if(section.attr('id')==='emergence') {
       const legend=chartItems.map((i,item)=>`<li>${escape($(item).attr('aria-label'))}</li>`).get().join('');
@@ -45,6 +44,7 @@ export function aiReportArticle(source) {
     if(section.attr('id')==='transformation') {
       chartItems.first().parent().attr('role','img').attr('aria-label','63 of 100 practitioners define AI success primarily as time saved');
       chartItems.attr('aria-hidden','true');
+      chartItems.removeAttr('tabindex');
     }
     section.find('svg[role="img"]').each((i,svg)=>{
       // A persistent text key makes every SVG value readable on small screens.
@@ -59,6 +59,11 @@ export function aiReportArticle(source) {
     // Keep the source's geometry/colors; reveal all static marks and text.
     const style=(clean(node).attr('style') || '').split(';').filter(rule=>!/^\s*(?:opacity|transform|transition|cursor)\s*:/.test(rule)).join(';');
     clean(node).attr('style',style);
+  });
+  clean('span').each((i,node)=>{
+    const text=clean(node).text().trim();
+    const size=Number(clean(node).attr('style')?.match(/font-size:(\d+)px/)?.[1] || 0);
+    if(size>=40 && /^\d+$/.test(text))clean(node).attr('data-report-count',text).attr('aria-label',text);
   });
   return `<div class="report-article wrap"><aside class="report-index"><p class="eyebrow">IN THIS REPORT</p><nav aria-label="Report sections">${index}</nav><p class="report-data-source">Source: SCADask AI Insights 2026. Survey of 100+ leaders across design, technology, and enterprise.</p></aside><article class="report-findings">${clean('body').html()}</article></div>`;
 }

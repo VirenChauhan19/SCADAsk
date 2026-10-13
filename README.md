@@ -21,7 +21,8 @@ Open http://localhost:5173/.
 
 - `scripts/create-editorial-site.mjs`: page templates, report metadata, and content. Run `npm run generate` after edits.
 - `scripts/report-content.mjs` and `public/reports.css`: full AI Insights 2026 article, original survey graphics, responsive section index, and visible chart keys. Chart content works without JavaScript or the original Framer runtime. Full report links open PDFs in new tabs.
-- `public/reports.js`: scroll-triggered chart animation: staggered column and bar growth, waffle marks, radar expansion, and bubble reveals. Charts play once as they enter view; report text and legends reveal separately. The section index tracks the current finding. Final data stays visible without JavaScript, and active animations finish when the tab is hidden.
+- `public/reports.js`: coordinated chart entrances, diagonal waffle waves, radar expansion, settling bubbles, and statistic count-ups. Charts play once on entering view and have a replay button. Hover or keyboard focus isolates a category and displays its exact value. Final data stays visible without JavaScript; active animation and counters finish when the tab is hidden.
+- Run `node scripts/create-editorial-site.mjs --reports-only` to regenerate report pages without rewriting other pages.
 - `scripts/about.mjs`: studio introduction, services, recognition, and research areas; the official university logo appears in the shared footer.
 - `scripts/events.mjs` and `public/events.css`: event archive with a featured panel, readable date and venue details, an upcoming-event contact link, and related AI research.
 - `scripts/publication-home.mjs`: homepage with a featured report, varied publication hierarchy, and project overview.

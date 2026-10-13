@@ -20,6 +20,10 @@ Open http://localhost:5173/.
 ## Edit and build
 
 - `scripts/create-editorial-site.mjs`: page templates, report metadata, and content. Run `npm run generate` after edits.
+- `source/content-reference.json`: live capture of text, destinations, chart values, and media across all 17 original pages. `source/client-content-reference.json` records the seven student profiles, supervising professor, and expanded garden pipeline collected from the loaded original website.
+- `scripts/content-reference.mjs` and `scripts/restore-page-content.mjs`: restore page-specific publication descriptions, metadata, awards, original media, complete studio and event copy, and full legal text inside the existing layout.
+- `npm run capture:content`: refresh the server-rendered reference and import missing original media. Browser-loaded contributor and accordion content is retained separately and should be checked in the browser when refreshing it.
+- `npm run check:content`: compare all generated pages with the reference. This also runs as part of `npm run check`. Results are written to `verification/content-coverage.json`. Responsive wording alternatives are matched to their canonical equivalent; decorative marquee SVGs and a social-button gradient are explicitly excluded from media coverage.
 - `scripts/report-content.mjs` and `public/reports.css`: full AI Insights 2026 article, original survey graphics, responsive section index, and visible chart keys. Chart content works without JavaScript or the original Framer runtime. Full report links open PDFs in new tabs.
 - `public/reports.js`: coordinated chart entrances, diagonal waffle waves, radar expansion, settling bubbles, and statistic count-ups. Charts play once on entering view and have a replay button. Hover or keyboard focus isolates a category and displays its exact value. Final data stays visible without JavaScript; active animation and counters finish when the tab is hidden.
 - Run `node scripts/create-editorial-site.mjs --reports-only` to regenerate report pages without rewriting other pages.
@@ -39,7 +43,9 @@ Open http://localhost:5173/.
 - `public/motion-preference.js`: enables the requested site animation profile before first paint. No device or browser settings are changed.
 - `public/garden.js`: on-demand live garden, keyboard-accessible feature tabs, and four demonstration videos.
 - `public/pages/`: generated static pages, available directly through Vite routing.
-- `source/pages/` and `source/modules/`: preserved original captures. Used to recover report PDF destinations, the 2026 feature text, legal text, and garden production details and credits.
+- `source/pages/` and `source/modules/`: preserved original captures. Used to recover the original 2026 chart markup and garden production media. Current copy, links, and loaded component details are verified against the newer content references.
+- `public/content.css`: responsive layouts for restored artwork, awards, production imagery, original overview films, podcast playback, and complete text.
+- `public/podcast.js`: public-platform fallback if the original Dropbox episode file requires authentication or cannot play. The original audio source is preserved alongside all four listening destinations.
 
 ```sh
 npm run generate

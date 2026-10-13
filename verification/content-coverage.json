@@ -1,0 +1,324 @@
+{
+  "referenceCapturedAt": "2026-10-13T21:23:17.347Z",
+  "results": [
+    {
+      "page": "/",
+      "source": "live website",
+      "checkedTextBlocks": 37,
+      "checkedMedia": 15,
+      "excludedDecorativeMedia": [
+        {
+          "src": "https://framerusercontent.com/images/Cri9oignLymHIoKuJ114OYpkc.png?width=1254&height=1254",
+          "reason": "Decorative social-button gradient"
+        }
+      ],
+      "missingText": [],
+      "missingLinks": [],
+      "missingMedia": []
+    },
+    {
+      "page": "/research",
+      "source": "live website",
+      "checkedTextBlocks": 35,
+      "checkedMedia": 12,
+      "excludedDecorativeMedia": [
+        {
+          "src": "https://framerusercontent.com/images/Cri9oignLymHIoKuJ114OYpkc.png?width=1254&height=1254",
+          "reason": "Decorative social-button gradient"
+        }
+      ],
+      "missingText": [],
+      "missingLinks": [],
+      "missingMedia": []
+    },
+    {
+      "page": "/splatgarden",
+      "source": "live website",
+      "checkedTextBlocks": 74,
+      "checkedMedia": 25,
+      "excludedDecorativeMedia": [
+        {
+          "src": "https://framerusercontent.com/images/Cri9oignLymHIoKuJ114OYpkc.png?width=1254&height=1254",
+          "reason": "Decorative social-button gradient"
+        }
+      ],
+      "missingText": [],
+      "missingLinks": [],
+      "missingMedia": []
+    },
+    {
+      "page": "/events",
+      "source": "live website",
+      "checkedTextBlocks": 12,
+      "checkedMedia": 6,
+      "excludedDecorativeMedia": [
+        {
+          "src": "https://framerusercontent.com/images/Cri9oignLymHIoKuJ114OYpkc.png?width=1254&height=1254",
+          "reason": "Decorative social-button gradient"
+        }
+      ],
+      "missingText": [],
+      "missingLinks": [],
+      "missingMedia": []
+    },
+    {
+      "page": "/aboutus",
+      "source": "live website",
+      "checkedTextBlocks": 9,
+      "checkedMedia": 5,
+      "excludedDecorativeMedia": [
+        {
+          "src": "https://framerusercontent.com/images/Cri9oignLymHIoKuJ114OYpkc.png?width=1254&height=1254",
+          "reason": "Decorative social-button gradient"
+        }
+      ],
+      "missingText": [],
+      "missingLinks": [],
+      "missingMedia": []
+    },
+    {
+      "page": "/ai-insights-2026",
+      "source": "live website",
+      "checkedTextBlocks": 77,
+      "checkedMedia": 12,
+      "excludedDecorativeMedia": [
+        {
+          "src": "https://framerusercontent.com/images/6tTbkXggWgQCAJ4DO2QEdXXmgM.svg",
+          "reason": "Repeated decorative brand SVG in original marquee"
+        },
+        {
+          "src": "https://framerusercontent.com/images/11KSGbIZoRSg4pjdnUoif6MKHI.svg",
+          "reason": "Repeated decorative brand SVG in original marquee"
+        },
+        {
+          "src": "https://framerusercontent.com/images/Cri9oignLymHIoKuJ114OYpkc.png?width=1254&height=1254",
+          "reason": "Decorative social-button gradient"
+        }
+      ],
+      "missingText": [],
+      "missingLinks": [],
+      "missingMedia": []
+    },
+    {
+      "page": "/casestudies",
+      "source": "live website",
+      "checkedTextBlocks": 9,
+      "checkedMedia": 5,
+      "excludedDecorativeMedia": [
+        {
+          "src": "https://framerusercontent.com/images/Cri9oignLymHIoKuJ114OYpkc.png?width=1254&height=1254",
+          "reason": "Decorative social-button gradient"
+        }
+      ],
+      "missingText": [],
+      "missingLinks": [],
+      "missingMedia": []
+    },
+    {
+      "page": "/the-future-of-american-dreams",
+      "source": "live website",
+      "checkedTextBlocks": 20,
+      "checkedMedia": 16,
+      "excludedDecorativeMedia": [
+        {
+          "src": "https://framerusercontent.com/images/6tTbkXggWgQCAJ4DO2QEdXXmgM.svg",
+          "reason": "Repeated decorative brand SVG in original marquee"
+        },
+        {
+          "src": "https://framerusercontent.com/images/11KSGbIZoRSg4pjdnUoif6MKHI.svg",
+          "reason": "Repeated decorative brand SVG in original marquee"
+        },
+        {
+          "src": "https://framerusercontent.com/images/Cri9oignLymHIoKuJ114OYpkc.png?width=1254&height=1254",
+          "reason": "Decorative social-button gradient"
+        }
+      ],
+      "missingText": [],
+      "missingLinks": [],
+      "missingMedia": []
+    },
+    {
+      "page": "/from-collections-to-communities",
+      "source": "live website",
+      "checkedTextBlocks": 20,
+      "checkedMedia": 12,
+      "excludedDecorativeMedia": [
+        {
+          "src": "https://framerusercontent.com/images/6tTbkXggWgQCAJ4DO2QEdXXmgM.svg",
+          "reason": "Repeated decorative brand SVG in original marquee"
+        },
+        {
+          "src": "https://framerusercontent.com/images/11KSGbIZoRSg4pjdnUoif6MKHI.svg",
+          "reason": "Repeated decorative brand SVG in original marquee"
+        },
+        {
+          "src": "https://framerusercontent.com/images/Cri9oignLymHIoKuJ114OYpkc.png?width=1254&height=1254",
+          "reason": "Decorative social-button gradient"
+        }
+      ],
+      "missingText": [],
+      "missingLinks": [],
+      "missingMedia": []
+    },
+    {
+      "page": "/the-evolution-of-fashion",
+      "source": "live website",
+      "checkedTextBlocks": 20,
+      "checkedMedia": 12,
+      "excludedDecorativeMedia": [
+        {
+          "src": "https://framerusercontent.com/images/6tTbkXggWgQCAJ4DO2QEdXXmgM.svg",
+          "reason": "Repeated decorative brand SVG in original marquee"
+        },
+        {
+          "src": "https://framerusercontent.com/images/11KSGbIZoRSg4pjdnUoif6MKHI.svg",
+          "reason": "Repeated decorative brand SVG in original marquee"
+        },
+        {
+          "src": "https://framerusercontent.com/images/Cri9oignLymHIoKuJ114OYpkc.png?width=1254&height=1254",
+          "reason": "Decorative social-button gradient"
+        }
+      ],
+      "missingText": [],
+      "missingLinks": [],
+      "missingMedia": []
+    },
+    {
+      "page": "/from-tech-to-pack",
+      "source": "live website",
+      "checkedTextBlocks": 20,
+      "checkedMedia": 12,
+      "excludedDecorativeMedia": [
+        {
+          "src": "https://framerusercontent.com/images/6tTbkXggWgQCAJ4DO2QEdXXmgM.svg",
+          "reason": "Repeated decorative brand SVG in original marquee"
+        },
+        {
+          "src": "https://framerusercontent.com/images/11KSGbIZoRSg4pjdnUoif6MKHI.svg",
+          "reason": "Repeated decorative brand SVG in original marquee"
+        },
+        {
+          "src": "https://framerusercontent.com/images/Cri9oignLymHIoKuJ114OYpkc.png?width=1254&height=1254",
+          "reason": "Decorative social-button gradient"
+        }
+      ],
+      "missingText": [],
+      "missingLinks": [],
+      "missingMedia": []
+    },
+    {
+      "page": "/the-future-of-luxury-experiences",
+      "source": "live website",
+      "checkedTextBlocks": 20,
+      "checkedMedia": 12,
+      "excludedDecorativeMedia": [
+        {
+          "src": "https://framerusercontent.com/images/6tTbkXggWgQCAJ4DO2QEdXXmgM.svg",
+          "reason": "Repeated decorative brand SVG in original marquee"
+        },
+        {
+          "src": "https://framerusercontent.com/images/11KSGbIZoRSg4pjdnUoif6MKHI.svg",
+          "reason": "Repeated decorative brand SVG in original marquee"
+        },
+        {
+          "src": "https://framerusercontent.com/images/Cri9oignLymHIoKuJ114OYpkc.png?width=1254&height=1254",
+          "reason": "Decorative social-button gradient"
+        }
+      ],
+      "missingText": [],
+      "missingLinks": [],
+      "missingMedia": []
+    },
+    {
+      "page": "/ai-insights-2025",
+      "source": "live website",
+      "checkedTextBlocks": 20,
+      "checkedMedia": 16,
+      "excludedDecorativeMedia": [
+        {
+          "src": "https://framerusercontent.com/images/6tTbkXggWgQCAJ4DO2QEdXXmgM.svg",
+          "reason": "Repeated decorative brand SVG in original marquee"
+        },
+        {
+          "src": "https://framerusercontent.com/images/11KSGbIZoRSg4pjdnUoif6MKHI.svg",
+          "reason": "Repeated decorative brand SVG in original marquee"
+        },
+        {
+          "src": "https://framerusercontent.com/images/Cri9oignLymHIoKuJ114OYpkc.png?width=1254&height=1254",
+          "reason": "Decorative social-button gradient"
+        }
+      ],
+      "missingText": [],
+      "missingLinks": [],
+      "missingMedia": []
+    },
+    {
+      "page": "/ai-insights-2024",
+      "source": "live website",
+      "checkedTextBlocks": 20,
+      "checkedMedia": 14,
+      "excludedDecorativeMedia": [
+        {
+          "src": "https://framerusercontent.com/images/6tTbkXggWgQCAJ4DO2QEdXXmgM.svg",
+          "reason": "Repeated decorative brand SVG in original marquee"
+        },
+        {
+          "src": "https://framerusercontent.com/images/11KSGbIZoRSg4pjdnUoif6MKHI.svg",
+          "reason": "Repeated decorative brand SVG in original marquee"
+        },
+        {
+          "src": "https://framerusercontent.com/images/Cri9oignLymHIoKuJ114OYpkc.png?width=1254&height=1254",
+          "reason": "Decorative social-button gradient"
+        }
+      ],
+      "missingText": [],
+      "missingLinks": [],
+      "missingMedia": []
+    },
+    {
+      "page": "/privacy",
+      "source": "live website",
+      "checkedTextBlocks": 96,
+      "checkedMedia": 4,
+      "excludedDecorativeMedia": [
+        {
+          "src": "https://framerusercontent.com/images/Cri9oignLymHIoKuJ114OYpkc.png?width=1254&height=1254",
+          "reason": "Decorative social-button gradient"
+        }
+      ],
+      "missingText": [],
+      "missingLinks": [],
+      "missingMedia": []
+    },
+    {
+      "page": "/terms",
+      "source": "live website",
+      "checkedTextBlocks": 119,
+      "checkedMedia": 4,
+      "excludedDecorativeMedia": [
+        {
+          "src": "https://framerusercontent.com/images/Cri9oignLymHIoKuJ114OYpkc.png?width=1254&height=1254",
+          "reason": "Decorative social-button gradient"
+        }
+      ],
+      "missingText": [],
+      "missingLinks": [],
+      "missingMedia": []
+    },
+    {
+      "page": "/podcast",
+      "source": "live website",
+      "checkedTextBlocks": 15,
+      "checkedMedia": 10,
+      "excludedDecorativeMedia": [
+        {
+          "src": "https://framerusercontent.com/images/Cri9oignLymHIoKuJ114OYpkc.png?width=1254&height=1254",
+          "reason": "Decorative social-button gradient"
+        }
+      ],
+      "missingText": [],
+      "missingLinks": [],
+      "missingMedia": []
+    }
+  ]
+}

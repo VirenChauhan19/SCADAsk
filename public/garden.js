@@ -78,13 +78,19 @@
       tabs.append(tab);
     });
     guide.append(tabs, panel); select(0);
-    studio.append(live, guide); section.append(studio);
+    studio.append(live, guide);
+    const filmAnchor=section.querySelector('.garden-films-heading');
+    if(filmAnchor)filmAnchor.before(studio);else section.append(studio);
     const filmsHeading = element('div', 'garden-films-heading');
     filmsHeading.append(element('h3', '', 'See it in action'), element('div', '', 'Four short demonstrations of what the garden can do.'));
-    section.append(filmsHeading);
+    if (!section.querySelector('.garden-films-heading'))section.append(filmsHeading);
     const gallery = element('div','garden-gallery');
     const videos = [];
-    films.forEach(([file, caption], i) => {
+    section.querySelectorAll('.garden-gallery video').forEach(video => {
+      videos.push(video);
+      video.addEventListener('play', () => videos.forEach(other => {if(other!==video)other.pause();}));
+    });
+    if (!section.querySelector('.garden-gallery'))films.forEach(([file, caption], i) => {
       const card = element('article', 'garden-card');
       const media = element('div', 'garden-media');
       const video = element('video', ''); video.src = '/mirror/' + file; video.controls = true; video.playsInline = true; video.preload = 'metadata';
@@ -96,7 +102,7 @@
       const number = element('span', 'garden-number', String(i+1).padStart(2,'0')); number.setAttribute('aria-hidden','true');
       card.append(media, text, number); gallery.append(card);
     });
-    section.append(gallery);
+    if (!section.querySelector('.garden-gallery'))section.append(gallery);
     document.dispatchEvent(new CustomEvent('scadask:ready',{detail:section}));
     document.addEventListener('visibilitychange', () => { if (document.hidden) videos.forEach(video => video.pause()); });
   };

@@ -96,4 +96,8 @@ assert(home('.trust-group[aria-hidden] img').toArray().every(e=>home(e).attr('al
 assert.equal(home('.award-strip a').length,4,'Keep the four original award destinations');
 const podcast=load(await readFile('public/pages/podcast.html','utf8'));
 assert.equal(podcast('.podcast-platforms a').length,4,'Keep every original podcast listening platform');
+assert.equal(podcast('audio[controls]').length,1,'Keep the original podcast audio player');
+const gardenPage=load(await readFile('public/pages/splatgarden.html','utf8'));
+assert.equal(gardenPage('.garden-gallery video').length,4,'Keep four original garden demo films in static HTML');
+assert.equal(gardenPage('.credit-list a').length,8,'Keep all seven student profiles and the supervising professor');
 console.log(`Verified all ${routes.length} pages, ${reportCount} report PDFs, ${imageCount} image placements, navigation, search index, fonts, and garden films.`);

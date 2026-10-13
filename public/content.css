@@ -1,0 +1,45 @@
+/* Complete source content within the existing editorial layout. */
+.report-tags{display:flex;flex-wrap:wrap;gap:5px;min-width:0}
+.report-meta>span:last-child{white-space:nowrap}
+.category-business{background:var(--sand);color:var(--ink)}
+.report-recognition{padding-block:8px 32px}
+.report-awards{display:flex;flex-wrap:wrap;gap:24px 36px;margin-top:20px}
+.report-awards a{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;max-width:160px;min-height:100px;font-size:10px;line-height:1.6;text-align:center}
+.report-awards img{width:auto;max-width:140px;height:64px;object-fit:contain}
+.report-awards a:hover span{color:var(--blue)}
+.library-feature{display:grid;grid-template-columns:1.2fr 1fr;gap:48px;align-items:center;padding-block:32px;margin-bottom:36px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.library-feature .eyebrow{margin-bottom:14px}
+.library-feature h2{font-size:32px;margin-bottom:18px}
+.library-feature p:not(.eyebrow){font-size:14px;line-height:1.8;max-width:580px}
+.library-feature .text-link{margin-top:12px}
+.library-feature img{width:100%;aspect-ratio:16/9;object-fit:cover}
+.garden-description{font-size:14px;line-height:1.9;max-width:850px;margin-bottom:28px}
+.garden-benefits{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:36px;padding-block:0 56px}
+.garden-benefits article{padding-top:20px;border-top:1px solid var(--line)}
+.garden-benefits h3{font-size:19px;line-height:1.4;margin-bottom:16px}
+.garden-benefits p{font-size:13px;line-height:1.8}
+.garden-benefits .eyebrow{font-size:10px;margin-top:16px}
+.production-figure{margin:24px 0;border:1px solid var(--line);padding:8px}
+.production-figure img{width:100%;max-height:720px;object-fit:contain}
+.podcast-audio{display:block;width:100%;max-width:580px;margin-block:24px;accent-color:var(--blue)}
+.podcast-audio-fallback{margin-block:20px;font-size:13px;line-height:1.8}
+.platform-mark{width:24px;height:24px;object-fit:contain;flex:none}
+.signal-art .signal-backdrop{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+.signal-art .signal-wordmark,.signal-art .signal-portrait{z-index:1}
+.home-original-film{margin-bottom:48px}
+.home-original-film video,.garden-overview-film video{display:block;width:100%;max-height:580px;aspect-ratio:16/9;object-fit:contain;background:var(--paper)}
+.garden-overview-film{margin:32px 0 0}
+.garden-tools{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:24px;padding-block:24px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.garden-tools img{width:auto;max-width:180px;height:34px;object-fit:contain}
+.garden-tools .tool-name{font-size:11px;color:var(--muted)}
+.about-title>p{max-width:330px;font-size:14px;line-height:1.8;margin-top:20px}
+.about-source-art{margin:24px 0 0;width:100%}
+.about-source-art img{max-height:520px;object-fit:contain;width:100%}
+.event-original-banner{display:block;width:65%;max-width:640px;height:auto;margin-bottom:24px}
+.event-facts{font-size:12px;line-height:1.8}
+.legal-page .article-prose ul,.legal-page .article-prose ol{padding-left:24px;margin-block:24px}
+.legal-page .article-prose li{margin-block:12px;color:var(--muted);line-height:1.9;overflow-wrap:anywhere}
+.legal-page .article-prose p,.legal-page .article-prose li,.legal-page .article-prose h2,.legal-page .article-prose h3{word-break:break-word;overflow-wrap:anywhere}
+.site-footer .footer-top h2{max-width:510px;text-wrap:balance}
+@media(max-width:760px){.library-feature{grid-template-columns:1fr;gap:24px}.library-feature h2{font-size:27px}.garden-benefits{grid-template-columns:1fr;gap:24px}.report-awards{gap:16px}.report-awards a{max-width:120px}.report-awards img{max-width:100px;height:56px}.report-meta{gap:8px}.report-tags{gap:4px}.site-footer .footer-email{overflow-wrap:anywhere}.podcast-audio{min-width:0}.production-figure{padding:4px}}
+@media(max-width:760px){.about-source-art{max-width:360px}.event-original-banner{width:100%}.garden-tools{justify-content:center;gap:24px}.garden-tools img{max-width:120px;height:28px}}

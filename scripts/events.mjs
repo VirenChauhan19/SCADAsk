@@ -1,3 +1,4 @@
+import {sourceParagraphs,escape} from './content-reference.mjs';
 export function eventsPage({reports, card, arrow}) {
   return `<section class="wrap events-hero">
     <div><p class="eyebrow">EVENTS & CONVERSATIONS</p><h1>Events &<br><span>conversations.</span></h1></div>
@@ -11,8 +12,8 @@ export function eventsPage({reports, card, arrow}) {
       <div class="event-story"><div class="event-kicker"><span>Panel conversation</span><span class="event-status">Past event</span></div>
         <p class="event-host">QS Back to School Summit</p>
         <h3 id="featured-event-title">Research Reimagined:<br>AI, IP & the New Rules of Discovery</h3>
-        <dl class="event-facts"><div><dt class="sr-only">Time</dt><dd>2:00 PM–2:30 PM</dd></div><div><dt class="sr-only">Location</dt><dd>New York City</dd></div></dl>
-        <p class="event-summary">SCADask Executive Director Munkhtsetseg Nandigjav joined Dr. Maali Alabdulhafith and Sanjay Goel for a panel exploring how AI-enabled research is evaluated and how institutions can use AI to enhance discovery.</p>
+        <p class="event-facts">${escape(sourceParagraphs('events')[2])}</p>
+        <p class="event-summary">${escape(sourceParagraphs('events')[3])}</p>
         <a class="event-agenda" href="https://www.qs.com/conferences/back-to-school/agenda" target="_blank" rel="noopener noreferrer">View the summit agenda ${arrow}</a>
       </div>
     </article>

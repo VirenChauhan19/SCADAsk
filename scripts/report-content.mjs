@@ -1,4 +1,5 @@
 import {load} from 'cheerio';
+import {sourcePage} from './content-reference.mjs';
 
 const escape = value => String(value).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');
 
@@ -65,6 +66,7 @@ export function aiReportArticle(source) {
     const size=Number(clean(node).attr('style')?.match(/font-size:(\d+)px/)?.[1] || 0);
     if(size>=40 && /^\d+$/.test(text))clean(node).attr('data-report-count',text).attr('aria-label',text);
   });
-  return `<div class="report-article wrap"><aside class="report-index"><p class="eyebrow">IN THIS REPORT</p><nav aria-label="Report sections">${index}</nav><p class="report-data-source">Source: SCADask AI Insights 2026. Survey of 100+ leaders across design, technology, and enterprise.</p></aside><article class="report-findings">${clean('body').html()}</article></div>`;
+  const updated=sourcePage('ai-insights-2026').blocks.find(block=>block.text.startsWith('Last updated'))?.text;
+  return `<div class="report-article wrap"><aside class="report-index"><p class="eyebrow">${escape(updated || 'Index')}</p><p class="report-data-source">Understanding AI’s effect on the economy.</p><nav aria-label="Report sections">${index}</nav><p class="report-data-source">Source: SCADask AI Insights 2026. Survey of 100+ leaders across design, technology, and enterprise.</p></aside><article class="report-findings">${clean('body').html()}</article></div>`;
 }
 

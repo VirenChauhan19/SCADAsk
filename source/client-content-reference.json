@@ -1,0 +1,27 @@
+{
+  "source": "https://www.scadask.com/splatgarden",
+  "captureMethod": "Live browser after contributor data loaded and all three pipeline panels were expanded",
+  "capturedOn": "2026-10-13",
+  "splatgarden": {
+    "contributors": [
+      {"name":"Ben Jones","detail":"B.F.A. visual effects","href":"https://www.linkedin.com/in/benjamin-jones-a6a233255/"},
+      {"name":"Itim Kongsakulvatanasook","detail":"M.F.A. visual effects","href":"https://www.linkedin.com/in/itim-kongsakulvatanasook/"},
+      {"name":"Xinyi Liang","detail":"M.F.A. interactive design and game development","href":"https://www.linkedin.com/in/xinyi-liang-9b8974349/"},
+      {"name":"Yiyi Long","detail":"M.F.A. animation","href":"https://www.linkedin.com/in/yiyi-long-230120153/"},
+      {"name":"Danci Shen","detail":"M.A. interactive design and game development","href":"https://www.linkedin.com/in/dancishen/"},
+      {"name":"Yichen Shi","detail":"M.F.A. visual effects","href":"https://www.linkedin.com/in/yichen1999/"},
+      {"name":"Yiqi Zheng","detail":"M.F.A. visual effects","href":"https://www.linkedin.com/in/yiqi-zheng-399a992a9/"},
+      {"name":"Dr. Deborah R. Fowler","detail":"","href":"https://www.scad.edu/academics/faculty/deborah-r-fowler"}
+    ],
+    "pipeline": [
+      {"title":"Capturing the Scene","paragraphs":["To capture the scene, a camera was set up directly within the original Unreal Engine environment and used to render an image sequence from hundreds of different angles covering the full garden from every perspective needed for accurate, highly detailed Gaussian Splat training."]},
+      {"title":"Training Gaussian Splats","paragraphs":["The captured image sequence — 990 images spanning the full scene — was trained into a Gaussian Splat using PostShot, resulting in approximately 3 million Gaussians optimized for real-time playback."]},
+      {"title":"Building WebGL","paragraphs":["The interactive experience is built through four technical layers."],"layers":[
+        {"title":"The 3DGS Foundation","text":"Rendering runs on @sparkjsdev/spark, a Three.js-native splat renderer, alongside Three.js for camera and post-processing, Vite 6 for builds, and OpenUSD for scene data. Assets like gazebo, vines, daffodils, and grape hyacinths were authored in Houdini and Unreal Engine 5, captured through a 990-camera rig, reconstructed via COLMAP, and trained in Postshot and Lichtfeld Studio into a 96 MB .splat file of roughly 3 million Gaussians."},
+        {"title":"Hand Tracking","text":"MediaPipe handles in-browser gesture recognition, mapping hand movement to scene controls: a single-hand pinch orbits the scene, a quick pinch-tap fires a click effect, and a two-hand spread or contract adjusts zoom."},
+        {"title":"Interactive Particle and Click FX","text":"GPU shader effects apply spatially to the Gaussian field, triggered by clicks or gestures. Eight effects span generative techniques: FBM-warped dissolves, Physarum-based slime molds, curl-noise vortex drift, chromatic ripples, scan lines, and more."},
+        {"title":"Post-FX and Cinematic Styling","text":"The rendered frame passes through an EffectComposer for full-screen shader effects, including three painterly modes: Monet's anisotropic Kuwahara filter for a wet-paint look, Matisse's posterized color with bold edges, and Seurat's pointillist dot-grid sampling."}
+      ]}
+    ]
+  }
+}

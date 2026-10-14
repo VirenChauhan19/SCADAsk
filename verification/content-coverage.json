@@ -5,11 +5,21 @@
       "page": "/",
       "source": "live website",
       "checkedTextBlocks": 37,
-      "checkedMedia": 15,
+      "checkedMedia": 13,
       "excludedDecorativeMedia": [
         {
           "src": "https://framerusercontent.com/images/Cri9oignLymHIoKuJ114OYpkc.png?width=1254&height=1254",
           "reason": "Decorative social-button gradient"
+        }
+      ],
+      "editorialOmissions": [
+        {
+          "src": "https://framerusercontent.com/assets/P2jTll2ZTpEr5jep4802rW1AOLA.mp4",
+          "reason": "Removed homepage overview film and poster"
+        },
+        {
+          "src": "https://framerusercontent.com/images/pL934KOHQA1Rr8juoAnYV1PKEW4.jpg?width=4308&height=2424",
+          "reason": "Removed homepage overview film and poster"
         }
       ],
       "missingText": [],
@@ -20,11 +30,17 @@
       "page": "/research",
       "source": "live website",
       "checkedTextBlocks": 35,
-      "checkedMedia": 12,
+      "checkedMedia": 11,
       "excludedDecorativeMedia": [
         {
           "src": "https://framerusercontent.com/images/Cri9oignLymHIoKuJ114OYpkc.png?width=1254&height=1254",
           "reason": "Decorative social-button gradient"
+        }
+      ],
+      "editorialOmissions": [
+        {
+          "src": "https://framerusercontent.com/images/TX0mqP3mBYTReEa6TLIAD87c.png?width=2944&height=2173",
+          "reason": "Removed duplicate featured report artwork; report remains in library"
         }
       ],
       "missingText": [],
@@ -34,12 +50,98 @@
     {
       "page": "/splatgarden",
       "source": "live website",
-      "checkedTextBlocks": 74,
-      "checkedMedia": 25,
+      "checkedTextBlocks": 70,
+      "checkedMedia": 8,
       "excludedDecorativeMedia": [
         {
           "src": "https://framerusercontent.com/images/Cri9oignLymHIoKuJ114OYpkc.png?width=1254&height=1254",
           "reason": "Decorative social-button gradient"
+        }
+      ],
+      "editorialOmissions": [
+        {
+          "src": "https://framerusercontent.com/images/iRwvC3mfFYBV8WLlAk4Hd0Zo8c.png?width=3840&height=2397",
+          "reason": "Removed extra overview film and poster; live experience and four demos remain"
+        },
+        {
+          "src": "https://framerusercontent.com/assets/9YhOuQGgJHYztOtp0gcHqI9sAfk.mp4",
+          "reason": "Removed extra overview film and poster; live experience and four demos remain"
+        },
+        {
+          "src": "https://framerusercontent.com/images/KycNv6ihsttS9aYUP8gWPURxgfo.png?width=3840&height=531",
+          "reason": "Removed decorative production tool logo strip"
+        },
+        {
+          "src": "https://framerusercontent.com/images/aD7wvG7Wgk8iFnc9badOecEXF38.png?width=1512&height=254",
+          "reason": "Removed decorative production tool logo strip"
+        },
+        {
+          "src": "https://framerusercontent.com/images/P20gwIcltq0KUlSiB45kJ2nYd0.png?width=758&height=200",
+          "reason": "Removed decorative production tool logo strip"
+        },
+        {
+          "src": "https://framerusercontent.com/images/pQhK9wlA7uP76IzZStpnhBqNw.png?width=1020&height=230",
+          "reason": "Removed decorative production tool logo strip"
+        },
+        {
+          "src": "https://framerusercontent.com/images/V2fO2kw2JS7UFHVKMnFAyAyrJk.png?width=1028&height=92",
+          "reason": "Removed decorative production tool logo strip"
+        },
+        {
+          "src": "https://framerusercontent.com/assets/JliqR0s7m8UmVsuuer7hZMLc5os.mp4",
+          "reason": "Removed extra production players; production text and credits remain"
+        },
+        {
+          "src": "https://framerusercontent.com/assets/BMWuYi3TuaaWrC4XB15cxezpyPI.mp4",
+          "reason": "Removed extra production players; production text and credits remain"
+        },
+        {
+          "src": "https://framerusercontent.com/assets/GwXY04eHpehT5qYE03zPrYzWCYw.mp4",
+          "reason": "Removed extra production players; production text and credits remain"
+        },
+        {
+          "src": "https://framerusercontent.com/assets/5Voe31fwNSER3F28s4DuquDc.mp4",
+          "reason": "Removed extra production players; production text and credits remain"
+        },
+        {
+          "src": "https://framerusercontent.com/assets/C4dnoOPRKReU5vC1uaCLDeEt0c.mp4",
+          "reason": "Removed extra production players; production text and credits remain"
+        },
+        {
+          "src": "https://framerusercontent.com/assets/gRS5ZDRC8XHNzGvm8Zp4U0Cyfa4.mp4",
+          "reason": "Removed extra production players; production text and credits remain"
+        },
+        {
+          "src": "https://framerusercontent.com/assets/fP0Pst9FJJyeX0eIscPIlWzC4.mp4",
+          "reason": "Removed extra production players; production text and credits remain"
+        },
+        {
+          "src": "https://framerusercontent.com/assets/jOyRDo1MSJe8Lc7PA7cYYkfkM.mp4",
+          "reason": "Removed extra production players; production text and credits remain"
+        },
+        {
+          "src": "https://framerusercontent.com/assets/HZlgIn6bxvxGDyAFe79F5knSIU.mp4",
+          "reason": "Removed extra production players; production text and credits remain"
+        },
+        {
+          "src": "https://framerusercontent.com/assets/K8Z2QhKAn6Qkn6A2TrvbE5sxJAI.mp4",
+          "reason": "Removed extra production players; production text and credits remain"
+        },
+        {
+          "text": "No installation, no reel",
+          "reason": "Removed benefit cards; useful descriptions are consolidated in project overview"
+        },
+        {
+          "text": "Work in context",
+          "reason": "Removed benefit cards; useful descriptions are consolidated in project overview"
+        },
+        {
+          "text": "Interactive by design",
+          "reason": "Removed benefit cards; useful descriptions are consolidated in project overview"
+        },
+        {
+          "text": "Opens in a browser",
+          "reason": "Removed benefit cards; useful descriptions are consolidated in project overview"
         }
       ],
       "missingText": [],
@@ -50,11 +152,17 @@
       "page": "/events",
       "source": "live website",
       "checkedTextBlocks": 12,
-      "checkedMedia": 6,
+      "checkedMedia": 5,
       "excludedDecorativeMedia": [
         {
           "src": "https://framerusercontent.com/images/Cri9oignLymHIoKuJ114OYpkc.png?width=1254&height=1254",
           "reason": "Decorative social-button gradient"
+        }
+      ],
+      "editorialOmissions": [
+        {
+          "src": "https://framerusercontent.com/images/Lnv4Zg1EpPuDzdKh2bAXzdRsA8.png?width=2048&height=585",
+          "reason": "Removed redundant event banner"
         }
       ],
       "missingText": [],
@@ -65,11 +173,17 @@
       "page": "/aboutus",
       "source": "live website",
       "checkedTextBlocks": 9,
-      "checkedMedia": 5,
+      "checkedMedia": 4,
       "excludedDecorativeMedia": [
         {
           "src": "https://framerusercontent.com/images/Cri9oignLymHIoKuJ114OYpkc.png?width=1254&height=1254",
           "reason": "Decorative social-button gradient"
+        }
+      ],
+      "editorialOmissions": [
+        {
+          "src": "https://framerusercontent.com/images/6t9K8EUtMBskXQr95FAM1EdQjQ.png?width=2800&height=3500",
+          "reason": "Removed decorative studio artwork"
         }
       ],
       "missingText": [],
@@ -95,6 +209,7 @@
           "reason": "Decorative social-button gradient"
         }
       ],
+      "editorialOmissions": [],
       "missingText": [],
       "missingLinks": [],
       "missingMedia": []
@@ -110,6 +225,7 @@
           "reason": "Decorative social-button gradient"
         }
       ],
+      "editorialOmissions": [],
       "missingText": [],
       "missingLinks": [],
       "missingMedia": []
@@ -133,6 +249,7 @@
           "reason": "Decorative social-button gradient"
         }
       ],
+      "editorialOmissions": [],
       "missingText": [],
       "missingLinks": [],
       "missingMedia": []
@@ -156,6 +273,7 @@
           "reason": "Decorative social-button gradient"
         }
       ],
+      "editorialOmissions": [],
       "missingText": [],
       "missingLinks": [],
       "missingMedia": []
@@ -179,6 +297,7 @@
           "reason": "Decorative social-button gradient"
         }
       ],
+      "editorialOmissions": [],
       "missingText": [],
       "missingLinks": [],
       "missingMedia": []
@@ -202,6 +321,7 @@
           "reason": "Decorative social-button gradient"
         }
       ],
+      "editorialOmissions": [],
       "missingText": [],
       "missingLinks": [],
       "missingMedia": []
@@ -225,6 +345,7 @@
           "reason": "Decorative social-button gradient"
         }
       ],
+      "editorialOmissions": [],
       "missingText": [],
       "missingLinks": [],
       "missingMedia": []
@@ -248,6 +369,7 @@
           "reason": "Decorative social-button gradient"
         }
       ],
+      "editorialOmissions": [],
       "missingText": [],
       "missingLinks": [],
       "missingMedia": []
@@ -271,6 +393,7 @@
           "reason": "Decorative social-button gradient"
         }
       ],
+      "editorialOmissions": [],
       "missingText": [],
       "missingLinks": [],
       "missingMedia": []
@@ -286,6 +409,7 @@
           "reason": "Decorative social-button gradient"
         }
       ],
+      "editorialOmissions": [],
       "missingText": [],
       "missingLinks": [],
       "missingMedia": []
@@ -301,6 +425,7 @@
           "reason": "Decorative social-button gradient"
         }
       ],
+      "editorialOmissions": [],
       "missingText": [],
       "missingLinks": [],
       "missingMedia": []
@@ -316,6 +441,7 @@
           "reason": "Decorative social-button gradient"
         }
       ],
+      "editorialOmissions": [],
       "missingText": [],
       "missingLinks": [],
       "missingMedia": []

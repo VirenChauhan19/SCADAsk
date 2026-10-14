@@ -26,10 +26,9 @@
     if (!section || section.querySelector('.garden-studio')) return;
     const studio = element('div', 'garden-studio');
     const live = element('div', 'garden-live garden-stage');
-    const cover = element('video', 'garden-live-preview'); cover.src = '/mirror/' + films[0][0];
-    cover.poster = '/mirror/24aa90fc33b5-h4vANWyA617zy5Anzcc8z1kZ0w.jpg';
-    cover.muted = true; cover.playsInline = true; cover.preload = 'metadata'; cover.setAttribute('aria-hidden', 'true');
-    cover.addEventListener('loadedmetadata', () => { cover.currentTime = .1; }, {once:true});
+    const cover = element('img', 'garden-live-preview');
+    cover.src = '/mirror/24aa90fc33b5-h4vANWyA617zy5Anzcc8z1kZ0w.jpg';
+    cover.alt = ''; cover.loading = 'lazy'; cover.setAttribute('aria-hidden', 'true');
     const overlay = element('div', 'garden-live-overlay');
     overlay.append(element('span', 'garden-eyebrow', 'LIVE · INTERACTIVE 3D'), element('strong', '', 'One garden. Endless ways to explore.'), element('div', '', 'Walk through the work. Shape the scene. Discover how it was made.'), element('small', 'garden-connection-note', 'Live experience hosted on splatgarden.com · Internet connection required'));
     const toolbar = element('div', 'garden-controls'); toolbar.hidden = true;

@@ -145,8 +145,9 @@ function plainSection(node) {
   root('h1,h2,h3,h4,p,li,video,img,div').each((i,e)=>{
     if(e.tagName==='div' && (root(e).children().length || !root(e).text().trim()))return;
     if(e.tagName==='video') {
-      const src=root(e).attr('src'); if(!src || known.has(src)) return; known.add(src);
-      blocks.push(`<video controls playsinline preload="none" src="${esc(src)}" aria-label="SplatGarden production demonstration"></video>`); return;
+      // Keep the production explanation; the four experience demos already
+      // show the project without another set of embedded video players.
+      return;
     }
     if(e.tagName==='img') {
       const src=root(e).attr('src')?.split('?')[0];

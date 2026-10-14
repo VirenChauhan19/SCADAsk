@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import {readFile,writeFile} from 'node:fs/promises';
 import {load} from 'cheerio';
 import {reference,sourceHref,localAsset,clientReference} from './content-reference.mjs';
+import {omittedMediaReason,omittedTextReason} from './content-selection.mjs';
 
 // Ignore typographic punctuation and responsive line breaks, not missing words.
 const comparable=text=>text.toLowerCase().normalize('NFKC').replace(/[^\p{L}\p{N}]/gu,'');
@@ -24,7 +25,7 @@ for(const [name,page] of Object.entries(reference.pages)){
   const html=await readFile(`public/pages/${name}.html`,'utf8');
   const $=load(html);$('script,style,dialog').remove();
   const text=comparable($('body').text());
-  const required=page.blocks.filter(block=>!ui.has(block.text) && !(block.text==='0:00' && $('audio[controls]').length));
+  const required=page.blocks.filter(block=>!ui.has(block.text) && !omittedTextReason(name,block) && !(block.text==='0:00' && $('audio[controls]').length));
   const missing=required.filter(block=>!text.includes(comparable(variants.get(block.text)||block.text))).map(block=>block.text);
   const destinations=new Set($('a[href]').map((i,e)=>canonical($(e).attr('href'),name)).get());
   const missingLinks=page.links.filter(link=>!destinations.has(canonical(link.href,name))).map(link=>link.href);
@@ -33,7 +34,7 @@ for(const [name,page] of Object.entries(reference.pages)){
   // These assets carry no additional information: a social-button gradient
   // and the repeated decorative brand SVGs used in the original marquee.
   const decorative=media=>media.src.includes('Cri9oignLymHIoKuJ114OYpkc') || media.context.includes('Horizontal animation');
-  const expectedMedia=page.media.filter(media=>!decorative(media));
+  const expectedMedia=page.media.filter(media=>!decorative(media) && !omittedMediaReason(name,media));
   const missingMedia=expectedMedia.filter(media=>!presentMedia.has(localAsset(media.src).split('?')[0])).map(media=>media.src);
   for(const chart of page.charts || []){
     const restored=$(`.report-finding[id="${chart.id}"]`);
@@ -46,7 +47,7 @@ for(const [name,page] of Object.entries(reference.pages)){
     missing.push(...clientTexts.filter(value=>!text.includes(comparable(value))));
     missingLinks.push(...clientReference.splatgarden.contributors.filter(person=>!destinations.has(canonical(person.href,name))).map(person=>person.href));
   }
-  results.push({page:page.route,source:page.source,checkedTextBlocks:required.length,checkedMedia:expectedMedia.length,excludedDecorativeMedia:page.media.filter(decorative).map(media=>({src:media.src,reason:media.context.includes('Horizontal animation')?'Repeated decorative brand SVG in original marquee':'Decorative social-button gradient'})),missingText:missing,missingLinks,missingMedia});
+  results.push({page:page.route,source:page.source,checkedTextBlocks:required.length,checkedMedia:expectedMedia.length,excludedDecorativeMedia:page.media.filter(decorative).map(media=>({src:media.src,reason:media.context.includes('Horizontal animation')?'Repeated decorative brand SVG in original marquee':'Decorative social-button gradient'})),editorialOmissions:[...page.media.filter(media=>omittedMediaReason(name,media)).map(media=>({src:media.src,reason:omittedMediaReason(name,media)})),...page.blocks.filter(block=>omittedTextReason(name,block)).map(block=>({text:block.text,reason:omittedTextReason(name,block)}))],missingText:missing,missingLinks,missingMedia});
 }
 await writeFile('verification/content-coverage.json',JSON.stringify({referenceCapturedAt:reference.capturedAt,results},null,2)+'\n');
 for(const result of results){

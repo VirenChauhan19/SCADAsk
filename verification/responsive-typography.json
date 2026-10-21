@@ -1,0 +1,15 @@
+{
+  "checkedAt": "2026-10-21T23:01:49.392Z",
+  "method": "Chrome viewport checks of all 17 routes; document overflow and scrollWidth/clientWidth checks of main headings and paragraphs, plus visual inspection of phone homepage and tablet research library.",
+  "widths": [
+    320,
+    768,
+    1280
+  ],
+  "pagesPerWidth": 17,
+  "horizontalPageOverflow": 0,
+  "clippedHeadingOrParagraphElements": 0,
+  "forcedHeadingBreaksRemoved": true,
+  "typography": "Fluid rem/vw clamps; heading phrases use inline flow; no fixed breakpoint font-size overrides in design.css.",
+  "followup": "Legal page titles were moved onto the shared title scale after this sweep."
+}

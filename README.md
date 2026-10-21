@@ -8,6 +8,12 @@ GitHub Actions runs `npm ci`, `npm run check`, and `npm run build` on every push
 
 An editorial website for the applied research studio at SCAD. The site has 17 pages, a searchable research library, a shared site search, eight report pages with original SCAD PDFs that open in a new tab, a studio introduction, case studies, an event archive, and an interactive SplatGarden guide. AI Insights 2026 also preserves all five detailed findings, survey charts, statistic captions, and contributor quotes directly in HTML.
 
+## Design refresh
+
+`public/design.css` is the final shared visual layer: a full-width original SCADask motion backdrop, a smaller black hero headline, white reading surfaces, open publication layouts, and responsive spacing. Edit the generator to change shared markup, then run `npm run generate`. Motion is enabled by default, with a persistent footer switch. Cross-page transitions require browser support and otherwise fall back to ordinary navigation. Cover artwork drifts slowly; offscreen sections enter once, and search, filters, menus, and disclosures have coordinated transitions.
+
+All 17 routes were checked at 320 and 1280 px after this refresh, with no horizontal overflow. Main sections were also checked at 360 px. This is viewport testing, not physical-device certification.
+
 ## Run locally
 
 ```sh
@@ -40,7 +46,7 @@ Open http://localhost:5173/.
 - `public/brand/`: original SCADask and SCAD logos, social icons, and footer source metadata. `node scripts/import-footer-brand.mjs` refreshes footer assets from scadask.com.
 - `public/site.js`: accessible search dialog, mobile navigation, research search, topic/year filters, and URL state.
 - `public/motion.css` and `public/motion.js`: short, one-time scroll reveals and hover feedback, and quick search and filter fades. Initial content appears immediately. Positions are read in a batch; there is no JavaScript scroll handler or reading progress line. Pointer tilt, hero parallax, word-by-word entrances, full-page view transitions, and animated accordion layout were removed to keep interactions responsive.
-- `public/motion-preference.js`: enables the requested site animation profile before first paint. No device or browser settings are changed.
+- `public/motion-preference.js`: enables site animations before first paint and restores the visitor’s saved choice. The footer Motion on/off button persists across pages; no device or browser settings are changed.
 - `public/garden.js`: on-demand live garden, keyboard-accessible feature tabs, and four demonstration videos.
 - `public/pages/`: generated static pages, available directly through Vite routing.
 - `source/pages/` and `source/modules/`: preserved original captures. Used to recover the original 2026 chart markup and garden production media. Current copy, links, and loaded component details are verified against the newer content references.
@@ -58,7 +64,7 @@ The build provides both directory `index.html` and `.html` versions of every rou
 
 Responsive layouts use available browser width, including the effective width produced by browser zoom. Phone forms use 16 px input text; footer links have 44 px minimum touch height. All 17 routes were checked at 320, 360, 430, and 820 px, with the main layouts additionally checked at 600, 768, 1024, 1280, 1920, and 2560 px. No horizontal page or header overflow was found. Phone navigation and search were verified in the browser; these are viewport checks, not a physical-device certification.
 
-Site animations are explicitly enabled for this design. Offscreen sections reveal once over 320 ms, starting before they enter the viewport. Initial content is immediately visible. The Trusted by row scrolls automatically; publication and podcast links use short hover and keyboard feedback. Animations stop when the tab is hidden; content remains available without JavaScript.
+Site animations are enabled by default and can be disabled using the footer control. Offscreen sections reveal once over 700 ms with short group delays; opening content animates without depending on hidden markup. The Trusted by row scrolls automatically. Page transitions, artwork drift, and link feedback use the shared motion profile. Animations pause or finish when the tab is hidden; content remains available without JavaScript.
 
 The live SplatGarden loads only after the visitor chooses Enter. It requires an internet connection. Full report links open original publications from scad.edu in a new tab. AI Insights 2026's HTML article and charts are local. Contributor profiles remain external links. The event listing is an archive; it does not imply registration or future scheduling. No contact submission backend is configured; contact links open an email application.
 

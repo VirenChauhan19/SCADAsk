@@ -38,12 +38,12 @@ export function restorePageContent(name,body,reports){
     $('.garden-experience h2').text('Inside the Garden');
     $('.garden-experience>.section-heading').after(`<p class="garden-description">${escape(exact('Every interaction'))}</p>`);
     const films=[
-      ['15e4bc40e1c2-2ZOH4zbYzssOJUFkwVPaU4Hrl0.mp4','Navigate freely with a mouse or hand gesture'],
-      ['2d970c1c8509-xoRBOMx68gb3vaAgFIqypc1uE.mp4','Touch anywhere in the scene to trigger live effects'],
-      ['985cf1043203-07s0fJzYMkyJcqYf80k05omEdEU.mp4','Art direct the scene across multiple display modes: Gaussian splat, USD Voxel, point clouds, and painterly styles'],
-      ['2e405feab273-cavpwCkX3uvKStSVkbIFwRFZh0.mp4','Technical breakdown: camera specs and asset credits']
+      ['15e4bc40e1c2-2ZOH4zbYzssOJUFkwVPaU4Hrl0.mp4','Navigate freely with a mouse or hand gesture', 'navigate'],
+      ['2d970c1c8509-xoRBOMx68gb3vaAgFIqypc1uE.mp4','Touch anywhere in the scene to trigger live effects', 'effects'],
+      ['985cf1043203-07s0fJzYMkyJcqYf80k05omEdEU.mp4','Art direct the scene across multiple display modes: Gaussian splat, USD Voxel, point clouds, and painterly styles', 'display-modes'],
+      ['2e405feab273-cavpwCkX3uvKStSVkbIFwRFZh0.mp4','Technical breakdown: camera specs and asset credits', 'technical-details']
     ];
-    $('.garden-experience').append(`<div class="garden-films-heading"><h3>See it in action</h3><div>Four short demonstrations of what the garden can do.</div></div><div class="garden-gallery">${films.map(([file,caption],index)=>`<article class="garden-card"><div class="garden-media"><video controls playsinline preload="none" src="/mirror/${file}" aria-label="${escape(caption)}" aria-describedby="garden-caption-${index}"></video></div><p class="garden-caption" id="garden-caption-${index}">${escape(caption)}</p><span class="garden-number" aria-hidden="true">${String(index+1).padStart(2,'0')}</span></article>`).join('')}</div>`);
+    $('.garden-experience').append(`<div class="garden-films-heading"><h3>See it in action</h3><div>Four short demonstrations of what the garden can do.</div></div><div class="garden-gallery">${films.map(([file,caption,poster],index)=>`<article class="garden-card"><div class="garden-media"><video controls playsinline preload="none" width="1920" height="1150" poster="/garden-posters/${poster}.jpg" src="/mirror/${file}" aria-label="${escape(caption)}" aria-describedby="garden-caption-${index}"></video></div><p class="garden-caption" id="garden-caption-${index}"><span class="garden-number" aria-hidden="true">${String(index+1).padStart(2,'0')}</span><span>${escape(caption)}</span></p></article>`).join('')}</div>`);
     // Production copy and credits are already recovered from the original
     // component captures. Preserve their technical language, images and films.
     $('.making-section').attr('data-source-section','production');

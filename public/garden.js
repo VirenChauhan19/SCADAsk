@@ -1,10 +1,10 @@
 ﻿// One live garden, a feature guide, and four original demonstration films.
 (() => {
   const films = [
-    ['15e4bc40e1c2-2ZOH4zbYzssOJUFkwVPaU4Hrl0.mp4', 'Navigate freely with a mouse or hand gesture'],
-    ['2d970c1c8509-xoRBOMx68gb3vaAgFIqypc1uE.mp4', 'Touch anywhere in the scene to trigger live effects'],
-    ['985cf1043203-07s0fJzYMkyJcqYf80k05omEdEU.mp4', 'Art direct the scene across multiple display modes: Gaussian splat, USD Voxel, point clouds, and painterly styles'],
-    ['2e405feab273-cavpwCkX3uvKStSVkbIFwRFZh0.mp4', 'Technical breakdown: camera specs and asset credits']
+    ['15e4bc40e1c2-2ZOH4zbYzssOJUFkwVPaU4Hrl0.mp4', 'Navigate freely with a mouse or hand gesture', 'navigate'],
+    ['2d970c1c8509-xoRBOMx68gb3vaAgFIqypc1uE.mp4', 'Touch anywhere in the scene to trigger live effects', 'effects'],
+    ['985cf1043203-07s0fJzYMkyJcqYf80k05omEdEU.mp4', 'Art direct the scene across multiple display modes: Gaussian splat, USD Voxel, point clouds, and painterly styles', 'display-modes'],
+    ['2e405feab273-cavpwCkX3uvKStSVkbIFwRFZh0.mp4', 'Technical breakdown: camera specs and asset credits', 'technical-details']
   ];
   const features = [
     ['Navigate', 'Make the garden your own viewpoint.', 'Drag to orbit, scroll to zoom, and right-drag to pan. Use W, A, S, D to walk; Q and E to move down and up. Hold Shift to move faster.', 'Try the Front, Center, and Zoom viewpoints. Press R to reset your view.'],
@@ -89,17 +89,16 @@
       videos.push(video);
       video.addEventListener('play', () => videos.forEach(other => {if(other!==video)other.pause();}));
     });
-    if (!section.querySelector('.garden-gallery'))films.forEach(([file, caption], i) => {
+    if (!section.querySelector('.garden-gallery'))films.forEach(([file, caption, poster], i) => {
       const card = element('article', 'garden-card');
       const media = element('div', 'garden-media');
-      const video = element('video', ''); video.src = '/mirror/' + file; video.controls = true; video.playsInline = true; video.preload = 'metadata';
+      const video = element('video', ''); video.src = '/mirror/' + file; video.controls = true; video.playsInline = true; video.preload = 'none'; video.poster = '/garden-posters/' + poster + '.jpg'; video.width = 1920; video.height = 1150;
       video.setAttribute('aria-label', caption); video.setAttribute('aria-describedby', `garden-caption-${i}`);
-      video.addEventListener('loadedmetadata', () => { video.currentTime = .1; }, {once:true});
       video.addEventListener('play', () => videos.forEach(other => { if (other !== video) other.pause(); })); videos.push(video);
       media.append(video);
-      const text = element('p', 'garden-caption', caption); text.id = `garden-caption-${i}`;
+      const text = element('p', 'garden-caption'); text.id = `garden-caption-${i}`;
       const number = element('span', 'garden-number', String(i+1).padStart(2,'0')); number.setAttribute('aria-hidden','true');
-      card.append(media, text, number); gallery.append(card);
+      text.append(number, element('span','',caption)); card.append(media, text); gallery.append(card);
     });
     if (!section.querySelector('.garden-gallery'))section.append(gallery);
     document.dispatchEvent(new CustomEvent('scadask:ready',{detail:section}));

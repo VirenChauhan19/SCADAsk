@@ -1,0 +1,1233 @@
+{
+  "auditedAt": "2026-10-21T21:48:57.325Z",
+  "source": "https://www.scadask.com",
+  "replica": "local public/pages and GitHub Pages",
+  "results": [
+    {
+      "route": "/",
+      "status": 200,
+      "hostedStatus": 200,
+      "blocks": 37,
+      "links": 25,
+      "media": 16,
+      "newSinceSavedCapture": [],
+      "missingText": [],
+      "omittedText": [],
+      "missingLinks": [],
+      "missingMedia": [
+        {
+          "tag": "img",
+          "src": "https://framerusercontent.com/images/3CiaY96iRzUNcoKSNeCOdjldM.png?width=4167&height=736",
+          "alt": "SCADask logo",
+          "anchor": "./",
+          "context": [
+            "SCADask-LOGO-Primary-2026 1",
+            "ScadaskLogo",
+            "Logo + Search + Menu",
+            "Content"
+          ],
+          "reason": null
+        },
+        {
+          "tag": "video",
+          "src": "https://framerusercontent.com/assets/P2jTll2ZTpEr5jep4802rW1AOLA.mp4",
+          "alt": "",
+          "anchor": "",
+          "context": [
+            "Landing",
+            "Body"
+          ],
+          "reason": "Removed homepage overview film and poster"
+        },
+        {
+          "tag": "img",
+          "src": "https://framerusercontent.com/images/pL934KOHQA1Rr8juoAnYV1PKEW4.jpg?width=4308&height=2424",
+          "alt": "",
+          "anchor": "./ai-insights-2026",
+          "context": [
+            "AI2026Cover",
+            "CoverImage",
+            "Phone",
+            "Body"
+          ],
+          "reason": "Removed homepage overview film and poster"
+        },
+        {
+          "tag": "img",
+          "src": "https://framerusercontent.com/images/Cri9oignLymHIoKuJ114OYpkc.png?width=1254&height=1254",
+          "alt": "",
+          "anchor": "https://www.linkedin.com/showcase/scadask/",
+          "context": [
+            "linkedin",
+            "Social Links",
+            "Text + SocialIcons",
+            "Content"
+          ],
+          "reason": "Decorative asset"
+        }
+      ],
+      "charts": [],
+      "hostedMissingText": [],
+      "hostedMatchesLocalText": true
+    },
+    {
+      "route": "/research",
+      "status": 200,
+      "hostedStatus": 200,
+      "blocks": 35,
+      "links": 23,
+      "media": 13,
+      "newSinceSavedCapture": [],
+      "missingText": [],
+      "omittedText": [],
+      "missingLinks": [],
+      "missingMedia": [
+        {
+          "tag": "img",
+          "src": "https://framerusercontent.com/images/3CiaY96iRzUNcoKSNeCOdjldM.png?width=4167&height=736",
+          "alt": "SCADask logo",
+          "anchor": "./",
+          "context": [
+            "SCADask-LOGO-Primary-2026 1",
+            "ScadaskLogo",
+            "Logo + Search + Menu",
+            "Content"
+          ],
+          "reason": null
+        },
+        {
+          "tag": "img",
+          "src": "https://framerusercontent.com/images/TX0mqP3mBYTReEa6TLIAD87c.png?width=2944&height=2173",
+          "alt": "",
+          "anchor": "./ai-insights-2026",
+          "context": [
+            "Image",
+            "Frame 52",
+            "Variant 2",
+            "Body"
+          ],
+          "reason": "Removed duplicate featured report artwork; report remains in library"
+        },
+        {
+          "tag": "img",
+          "src": "https://framerusercontent.com/images/Cri9oignLymHIoKuJ114OYpkc.png?width=1254&height=1254",
+          "alt": "",
+          "anchor": "https://www.linkedin.com/showcase/scadask/",
+          "context": [
+            "linkedin",
+            "Social Links",
+            "Text + SocialIcons",
+            "Content"
+          ],
+          "reason": "Decorative asset"
+        }
+      ],
+      "charts": [],
+      "hostedMissingText": [],
+      "hostedMatchesLocalText": true
+    },
+    {
+      "route": "/splatgarden",
+      "status": 200,
+      "hostedStatus": 200,
+      "blocks": 74,
+      "links": 25,
+      "media": 26,
+      "newSinceSavedCapture": [],
+      "missingText": [
+        "No installation, no reel",
+        "Work in context",
+        "Interactive by design",
+        "Opens in a browser"
+      ],
+      "omittedText": [
+        "No installation, no reel",
+        "Work in context",
+        "Interactive by design",
+        "Opens in a browser"
+      ],
+      "missingLinks": [],
+      "missingMedia": [
+        {
+          "tag": "img",
+          "src": "https://framerusercontent.com/images/3CiaY96iRzUNcoKSNeCOdjldM.png?width=4167&height=736",
+          "alt": "SCADask logo",
+          "anchor": "./",
+          "context": [
+            "SCADask-LOGO-Primary-2026 1",
+            "ScadaskLogo",
+            "Logo + Search + Menu",
+            "Content"
+          ],
+          "reason": null
+        },
+        {
+          "tag": "img",
+          "src": "https://framerusercontent.com/images/iRwvC3mfFYBV8WLlAk4Hd0Zo8c.png?width=3840&height=2397",
+          "alt": "",
+          "anchor": "",
+          "context": [
+            "Hero",
+            "Main"
+          ],
+          "reason": "Removed extra overview film and poster; live experience and four demos remain"
+        },
+        {
+          "tag": "video",
+          "src": "https://framerusercontent.com/assets/9YhOuQGgJHYztOtp0gcHqI9sAfk.mp4",
+          "alt": "",
+          "anchor": "",
+          "context": [
+            "Hero",
+            "Main"
+          ],
+          "reason": "Removed extra overview film and poster; live experience and four demos remain"
+        },
+        {
+          "tag": "img",
+          "src": "https://framerusercontent.com/images/KycNv6ihsttS9aYUP8gWPURxgfo.png?width=3840&height=531",
+          "alt": "Unreal Engine",
+          "anchor": "",
+          "context": [
+            "UE-Secondary-Logo-2023-Horizontal-Black 1",
+            "Company",
+            "Main"
+          ],
+          "reason": "Removed decorative production tool logo strip"
+        },
+        {
+          "tag": "img",
+          "src": "https://framerusercontent.com/images/aD7wvG7Wgk8iFnc9badOecEXF38.png?width=1512&height=254",
+          "alt": "Houdini",
+          "anchor": "",
+          "context": [
+            "Houdini_black_color 1",
+            "Company",
+            "Main"
+          ],
+          "reason": "Removed decorative production tool logo strip"
+        },
+        {
+          "tag": "img",
+          "src": "https://framerusercontent.com/images/P20gwIcltq0KUlSiB45kJ2nYd0.png?width=758&height=200",
+          "alt": "Open USD",
+          "anchor": "",
+          "context": [
+            "OpenUSD_Dark_Horizontal 1",
+            "Company",
+            "Main"
+          ],
+          "reason": "Removed decorative production tool logo strip"
+        },
+        {
+          "tag": "img",
+          "src": "https://framerusercontent.com/images/pQhK9wlA7uP76IzZStpnhBqNw.png?width=1020&height=230",
+          "alt": "Postshot",
+          "anchor": "",
+          "context": [
+            "PostShot_Logo 1",
+            "Company",
+            "Main"
+          ],
+          "reason": "Removed decorative production tool logo strip"
+        },
+        {
+          "tag": "img",
+          "src": "https://framerusercontent.com/images/V2fO2kw2JS7UFHVKMnFAyAyrJk.png?width=1028&height=92",
+          "alt": "",
+          "anchor": "",
+          "context": [
+            "LichtfeldStudio_Logo_NoBG 1",
+            "Company",
+            "Main"
+          ],
+          "reason": "Removed decorative production tool logo strip"
+        },
+        {
+          "tag": "video",
+          "src": "https://framerusercontent.com/assets/JliqR0s7m8UmVsuuer7hZMLc5os.mp4",
+          "alt": "",
+          "anchor": "",
+          "context": [
+            "Asset Creation",
+            "Body",
+            "Main"
+          ],
+          "reason": "Removed extra production players; production text and credits remain"
+        },
+        {
+          "tag": "video",
+          "src": "https://framerusercontent.com/assets/BMWuYi3TuaaWrC4XB15cxezpyPI.mp4",
+          "alt": "",
+          "anchor": "",
+          "context": [
+            "Asset Creation",
+            "Body",
+            "Main"
+          ],
+          "reason": "Removed extra production players; production text and credits remain"
+        },
+        {
+          "tag": "video",
+          "src": "https://framerusercontent.com/assets/GwXY04eHpehT5qYE03zPrYzWCYw.mp4",
+          "alt": "",
+          "anchor": "",
+          "context": [
+            "Asset Creation",
+            "Body",
+            "Main"
+          ],
+          "reason": "Removed extra production players; production text and credits remain"
+        },
+        {
+          "tag": "video",
+          "src": "https://framerusercontent.com/assets/5Voe31fwNSER3F28s4DuquDc.mp4",
+          "alt": "",
+          "anchor": "",
+          "context": [
+            "Asset Creation",
+            "Body",
+            "Main"
+          ],
+          "reason": "Removed extra production players; production text and credits remain"
+        },
+        {
+          "tag": "video",
+          "src": "https://framerusercontent.com/assets/C4dnoOPRKReU5vC1uaCLDeEt0c.mp4",
+          "alt": "",
+          "anchor": "",
+          "context": [
+            "Asset Creation",
+            "Body",
+            "Main"
+          ],
+          "reason": "Removed extra production players; production text and credits remain"
+        },
+        {
+          "tag": "video",
+          "src": "https://framerusercontent.com/assets/gRS5ZDRC8XHNzGvm8Zp4U0Cyfa4.mp4",
+          "alt": "",
+          "anchor": "",
+          "context": [
+            "Asset Creation",
+            "Body",
+            "Main"
+          ],
+          "reason": "Removed extra production players; production text and credits remain"
+        },
+        {
+          "tag": "video",
+          "src": "https://framerusercontent.com/assets/fP0Pst9FJJyeX0eIscPIlWzC4.mp4",
+          "alt": "",
+          "anchor": "",
+          "context": [
+            "Asset Creation",
+            "Body",
+            "Main"
+          ],
+          "reason": "Removed extra production players; production text and credits remain"
+        },
+        {
+          "tag": "video",
+          "src": "https://framerusercontent.com/assets/jOyRDo1MSJe8Lc7PA7cYYkfkM.mp4",
+          "alt": "",
+          "anchor": "",
+          "context": [
+            "Asset Creation",
+            "Body",
+            "Main"
+          ],
+          "reason": "Removed extra production players; production text and credits remain"
+        },
+        {
+          "tag": "video",
+          "src": "https://framerusercontent.com/assets/HZlgIn6bxvxGDyAFe79F5knSIU.mp4",
+          "alt": "",
+          "anchor": "",
+          "context": [
+            "Experience",
+            "Asset Creation",
+            "Body",
+            "Main"
+          ],
+          "reason": "Removed extra production players; production text and credits remain"
+        },
+        {
+          "tag": "video",
+          "src": "https://framerusercontent.com/assets/K8Z2QhKAn6Qkn6A2TrvbE5sxJAI.mp4",
+          "alt": "",
+          "anchor": "",
+          "context": [
+            "Experience",
+            "Asset Creation",
+            "Body",
+            "Main"
+          ],
+          "reason": "Removed extra production players; production text and credits remain"
+        },
+        {
+          "tag": "img",
+          "src": "https://framerusercontent.com/images/Cri9oignLymHIoKuJ114OYpkc.png?width=1254&height=1254",
+          "alt": "",
+          "anchor": "https://www.linkedin.com/showcase/scadask/",
+          "context": [
+            "linkedin",
+            "Social Links",
+            "Text + SocialIcons",
+            "Content"
+          ],
+          "reason": "Decorative asset"
+        }
+      ],
+      "charts": [],
+      "hostedMissingText": [
+        "No installation, no reel",
+        "Work in context",
+        "Interactive by design",
+        "Opens in a browser"
+      ],
+      "hostedMatchesLocalText": true
+    },
+    {
+      "route": "/events",
+      "status": 200,
+      "hostedStatus": 200,
+      "blocks": 9,
+      "links": 16,
+      "media": 7,
+      "newSinceSavedCapture": [],
+      "missingText": [],
+      "omittedText": [],
+      "missingLinks": [],
+      "missingMedia": [
+        {
+          "tag": "img",
+          "src": "https://framerusercontent.com/images/3CiaY96iRzUNcoKSNeCOdjldM.png?width=4167&height=736",
+          "alt": "SCADask logo",
+          "anchor": "./",
+          "context": [
+            "SCADask-LOGO-Primary-2026 1",
+            "ScadaskLogo",
+            "Logo + Search + Menu",
+            "Content"
+          ],
+          "reason": null
+        },
+        {
+          "tag": "img",
+          "src": "https://framerusercontent.com/images/Lnv4Zg1EpPuDzdKh2bAXzdRsA8.png?width=2048&height=585",
+          "alt": "",
+          "anchor": "https://www.qs.com/conferences/back-to-school/agenda",
+          "context": [
+            "Image",
+            "Variant 2",
+            "Content",
+            "Body"
+          ],
+          "reason": "Removed redundant event banner"
+        },
+        {
+          "tag": "img",
+          "src": "https://framerusercontent.com/images/Cri9oignLymHIoKuJ114OYpkc.png?width=1254&height=1254",
+          "alt": "",
+          "anchor": "https://www.linkedin.com/showcase/scadask/",
+          "context": [
+            "linkedin",
+            "Social Links",
+            "Text + SocialIcons",
+            "Content"
+          ],
+          "reason": "Decorative asset"
+        }
+      ],
+      "charts": [],
+      "hostedMissingText": [],
+      "hostedMatchesLocalText": true
+    },
+    {
+      "route": "/aboutus",
+      "status": 200,
+      "hostedStatus": 200,
+      "blocks": 9,
+      "links": 15,
+      "media": 6,
+      "newSinceSavedCapture": [],
+      "missingText": [],
+      "omittedText": [],
+      "missingLinks": [],
+      "missingMedia": [
+        {
+          "tag": "img",
+          "src": "https://framerusercontent.com/images/3CiaY96iRzUNcoKSNeCOdjldM.png?width=4167&height=736",
+          "alt": "SCADask logo",
+          "anchor": "./",
+          "context": [
+            "SCADask-LOGO-Primary-2026 1",
+            "ScadaskLogo",
+            "Logo + Search + Menu",
+            "Content"
+          ],
+          "reason": null
+        },
+        {
+          "tag": "img",
+          "src": "https://framerusercontent.com/images/6t9K8EUtMBskXQr95FAM1EdQjQ.png?width=2800&height=3500",
+          "alt": "",
+          "anchor": "",
+          "context": [
+            "Image",
+            "Summary",
+            "Body"
+          ],
+          "reason": "Removed decorative studio artwork"
+        },
+        {
+          "tag": "img",
+          "src": "https://framerusercontent.com/images/Cri9oignLymHIoKuJ114OYpkc.png?width=1254&height=1254",
+          "alt": "",
+          "anchor": "https://www.linkedin.com/showcase/scadask/",
+          "context": [
+            "linkedin",
+            "Social Links",
+            "Text + SocialIcons",
+            "Content"
+          ],
+          "reason": "Decorative asset"
+        }
+      ],
+      "charts": [],
+      "hostedMissingText": [],
+      "hostedMatchesLocalText": true
+    },
+    {
+      "route": "/ai-insights-2026",
+      "status": 200,
+      "hostedStatus": 200,
+      "blocks": 76,
+      "links": 23,
+      "media": 15,
+      "newSinceSavedCapture": [],
+      "missingText": [],
+      "omittedText": [],
+      "missingLinks": [],
+      "missingMedia": [
+        {
+          "tag": "img",
+          "src": "https://framerusercontent.com/images/3CiaY96iRzUNcoKSNeCOdjldM.png?width=4167&height=736",
+          "alt": "SCADask logo",
+          "anchor": "./",
+          "context": [
+            "SCADask-LOGO-Primary-2026 1",
+            "ScadaskLogo",
+            "Logo + Search + Menu",
+            "Content"
+          ],
+          "reason": null
+        },
+        {
+          "tag": "img",
+          "src": "https://framerusercontent.com/images/6tTbkXggWgQCAJ4DO2QEdXXmgM.svg",
+          "alt": "",
+          "anchor": "",
+          "context": [
+            "Horizontal animation"
+          ],
+          "reason": "Decorative asset"
+        },
+        {
+          "tag": "img",
+          "src": "https://framerusercontent.com/images/11KSGbIZoRSg4pjdnUoif6MKHI.svg",
+          "alt": "",
+          "anchor": "",
+          "context": [
+            "Horizontal animation"
+          ],
+          "reason": "Decorative asset"
+        },
+        {
+          "tag": "img",
+          "src": "https://framerusercontent.com/images/Cri9oignLymHIoKuJ114OYpkc.png?width=1254&height=1254",
+          "alt": "",
+          "anchor": "https://www.linkedin.com/showcase/scadask/",
+          "context": [
+            "linkedin",
+            "Social Links",
+            "Text + SocialIcons",
+            "Content"
+          ],
+          "reason": "Decorative asset"
+        }
+      ],
+      "charts": [
+        {
+          "id": "emergence",
+          "originalMarks": 5,
+          "replicaMarks": 5,
+          "missingValues": []
+        },
+        {
+          "id": "acceleration",
+          "originalMarks": 5,
+          "replicaMarks": 5,
+          "missingValues": []
+        },
+        {
+          "id": "transformation",
+          "originalMarks": 100,
+          "replicaMarks": 100,
+          "missingValues": []
+        },
+        {
+          "id": "foundation",
+          "originalMarks": 5,
+          "replicaMarks": 5,
+          "missingValues": []
+        },
+        {
+          "id": "horizon",
+          "originalMarks": 5,
+          "replicaMarks": 5,
+          "missingValues": []
+        }
+      ],
+      "hostedMissingText": [],
+      "hostedMatchesLocalText": true
+    },
+    {
+      "route": "/casestudies",
+      "status": 200,
+      "hostedStatus": 200,
+      "blocks": 9,
+      "links": 16,
+      "media": 6,
+      "newSinceSavedCapture": [],
+      "missingText": [],
+      "omittedText": [],
+      "missingLinks": [],
+      "missingMedia": [
+        {
+          "tag": "img",
+          "src": "https://framerusercontent.com/images/3CiaY96iRzUNcoKSNeCOdjldM.png?width=4167&height=736",
+          "alt": "SCADask logo",
+          "anchor": "./",
+          "context": [
+            "SCADask-LOGO-Primary-2026 1",
+            "ScadaskLogo",
+            "Logo + Search + Menu",
+            "Content"
+          ],
+          "reason": null
+        },
+        {
+          "tag": "img",
+          "src": "https://framerusercontent.com/images/Cri9oignLymHIoKuJ114OYpkc.png?width=1254&height=1254",
+          "alt": "",
+          "anchor": "https://www.linkedin.com/showcase/scadask/",
+          "context": [
+            "linkedin",
+            "Social Links",
+            "Text + SocialIcons",
+            "Content"
+          ],
+          "reason": "Decorative asset"
+        }
+      ],
+      "charts": [],
+      "hostedMissingText": [],
+      "hostedMatchesLocalText": true
+    },
+    {
+      "route": "/the-future-of-american-dreams",
+      "status": 200,
+      "hostedStatus": 200,
+      "blocks": 19,
+      "links": 27,
+      "media": 19,
+      "newSinceSavedCapture": [],
+      "missingText": [],
+      "omittedText": [],
+      "missingLinks": [],
+      "missingMedia": [
+        {
+          "tag": "img",
+          "src": "https://framerusercontent.com/images/3CiaY96iRzUNcoKSNeCOdjldM.png?width=4167&height=736",
+          "alt": "SCADask logo",
+          "anchor": "./",
+          "context": [
+            "SCADask-LOGO-Primary-2026 1",
+            "ScadaskLogo",
+            "Logo + Search + Menu",
+            "Content"
+          ],
+          "reason": null
+        },
+        {
+          "tag": "img",
+          "src": "https://framerusercontent.com/images/6tTbkXggWgQCAJ4DO2QEdXXmgM.svg",
+          "alt": "",
+          "anchor": "",
+          "context": [
+            "Horizontal animation"
+          ],
+          "reason": "Decorative asset"
+        },
+        {
+          "tag": "img",
+          "src": "https://framerusercontent.com/images/11KSGbIZoRSg4pjdnUoif6MKHI.svg",
+          "alt": "",
+          "anchor": "",
+          "context": [
+            "Horizontal animation"
+          ],
+          "reason": "Decorative asset"
+        },
+        {
+          "tag": "img",
+          "src": "https://framerusercontent.com/images/Cri9oignLymHIoKuJ114OYpkc.png?width=1254&height=1254",
+          "alt": "",
+          "anchor": "https://www.linkedin.com/showcase/scadask/",
+          "context": [
+            "linkedin",
+            "Social Links",
+            "Text + SocialIcons",
+            "Content"
+          ],
+          "reason": "Decorative asset"
+        }
+      ],
+      "charts": [],
+      "hostedMissingText": [],
+      "hostedMatchesLocalText": true
+    },
+    {
+      "route": "/from-collections-to-communities",
+      "status": 200,
+      "hostedStatus": 200,
+      "blocks": 19,
+      "links": 23,
+      "media": 15,
+      "newSinceSavedCapture": [],
+      "missingText": [],
+      "omittedText": [],
+      "missingLinks": [],
+      "missingMedia": [
+        {
+          "tag": "img",
+          "src": "https://framerusercontent.com/images/3CiaY96iRzUNcoKSNeCOdjldM.png?width=4167&height=736",
+          "alt": "SCADask logo",
+          "anchor": "./",
+          "context": [
+            "SCADask-LOGO-Primary-2026 1",
+            "ScadaskLogo",
+            "Logo + Search + Menu",
+            "Content"
+          ],
+          "reason": null
+        },
+        {
+          "tag": "img",
+          "src": "https://framerusercontent.com/images/6tTbkXggWgQCAJ4DO2QEdXXmgM.svg",
+          "alt": "",
+          "anchor": "",
+          "context": [
+            "Horizontal animation",
+            "Body"
+          ],
+          "reason": "Decorative asset"
+        },
+        {
+          "tag": "img",
+          "src": "https://framerusercontent.com/images/11KSGbIZoRSg4pjdnUoif6MKHI.svg",
+          "alt": "",
+          "anchor": "",
+          "context": [
+            "Horizontal animation",
+            "Body"
+          ],
+          "reason": "Decorative asset"
+        },
+        {
+          "tag": "img",
+          "src": "https://framerusercontent.com/images/Cri9oignLymHIoKuJ114OYpkc.png?width=1254&height=1254",
+          "alt": "",
+          "anchor": "https://www.linkedin.com/showcase/scadask/",
+          "context": [
+            "linkedin",
+            "Social Links",
+            "Text + SocialIcons",
+            "Content"
+          ],
+          "reason": "Decorative asset"
+        }
+      ],
+      "charts": [],
+      "hostedMissingText": [],
+      "hostedMatchesLocalText": true
+    },
+    {
+      "route": "/the-evolution-of-fashion",
+      "status": 200,
+      "hostedStatus": 200,
+      "blocks": 19,
+      "links": 23,
+      "media": 15,
+      "newSinceSavedCapture": [],
+      "missingText": [],
+      "omittedText": [],
+      "missingLinks": [],
+      "missingMedia": [
+        {
+          "tag": "img",
+          "src": "https://framerusercontent.com/images/3CiaY96iRzUNcoKSNeCOdjldM.png?width=4167&height=736",
+          "alt": "SCADask logo",
+          "anchor": "./",
+          "context": [
+            "SCADask-LOGO-Primary-2026 1",
+            "ScadaskLogo",
+            "Logo + Search + Menu",
+            "Content"
+          ],
+          "reason": null
+        },
+        {
+          "tag": "img",
+          "src": "https://framerusercontent.com/images/6tTbkXggWgQCAJ4DO2QEdXXmgM.svg",
+          "alt": "",
+          "anchor": "",
+          "context": [
+            "Horizontal animation",
+            "Body"
+          ],
+          "reason": "Decorative asset"
+        },
+        {
+          "tag": "img",
+          "src": "https://framerusercontent.com/images/11KSGbIZoRSg4pjdnUoif6MKHI.svg",
+          "alt": "",
+          "anchor": "",
+          "context": [
+            "Horizontal animation",
+            "Body"
+          ],
+          "reason": "Decorative asset"
+        },
+        {
+          "tag": "img",
+          "src": "https://framerusercontent.com/images/Cri9oignLymHIoKuJ114OYpkc.png?width=1254&height=1254",
+          "alt": "",
+          "anchor": "https://www.linkedin.com/showcase/scadask/",
+          "context": [
+            "linkedin",
+            "Social Links",
+            "Text + SocialIcons",
+            "Content"
+          ],
+          "reason": "Decorative asset"
+        }
+      ],
+      "charts": [],
+      "hostedMissingText": [],
+      "hostedMatchesLocalText": true
+    },
+    {
+      "route": "/from-tech-to-pack",
+      "status": 200,
+      "hostedStatus": 200,
+      "blocks": 19,
+      "links": 23,
+      "media": 15,
+      "newSinceSavedCapture": [],
+      "missingText": [],
+      "omittedText": [],
+      "missingLinks": [],
+      "missingMedia": [
+        {
+          "tag": "img",
+          "src": "https://framerusercontent.com/images/3CiaY96iRzUNcoKSNeCOdjldM.png?width=4167&height=736",
+          "alt": "SCADask logo",
+          "anchor": "./",
+          "context": [
+            "SCADask-LOGO-Primary-2026 1",
+            "ScadaskLogo",
+            "Logo + Search + Menu",
+            "Content"
+          ],
+          "reason": null
+        },
+        {
+          "tag": "img",
+          "src": "https://framerusercontent.com/images/6tTbkXggWgQCAJ4DO2QEdXXmgM.svg",
+          "alt": "",
+          "anchor": "",
+          "context": [
+            "Horizontal animation",
+            "Body"
+          ],
+          "reason": "Decorative asset"
+        },
+        {
+          "tag": "img",
+          "src": "https://framerusercontent.com/images/11KSGbIZoRSg4pjdnUoif6MKHI.svg",
+          "alt": "",
+          "anchor": "",
+          "context": [
+            "Horizontal animation",
+            "Body"
+          ],
+          "reason": "Decorative asset"
+        },
+        {
+          "tag": "img",
+          "src": "https://framerusercontent.com/images/Cri9oignLymHIoKuJ114OYpkc.png?width=1254&height=1254",
+          "alt": "",
+          "anchor": "https://www.linkedin.com/showcase/scadask/",
+          "context": [
+            "linkedin",
+            "Social Links",
+            "Text + SocialIcons",
+            "Content"
+          ],
+          "reason": "Decorative asset"
+        }
+      ],
+      "charts": [],
+      "hostedMissingText": [],
+      "hostedMatchesLocalText": true
+    },
+    {
+      "route": "/the-future-of-luxury-experiences",
+      "status": 200,
+      "hostedStatus": 200,
+      "blocks": 19,
+      "links": 23,
+      "media": 15,
+      "newSinceSavedCapture": [],
+      "missingText": [],
+      "omittedText": [],
+      "missingLinks": [],
+      "missingMedia": [
+        {
+          "tag": "img",
+          "src": "https://framerusercontent.com/images/3CiaY96iRzUNcoKSNeCOdjldM.png?width=4167&height=736",
+          "alt": "SCADask logo",
+          "anchor": "./",
+          "context": [
+            "SCADask-LOGO-Primary-2026 1",
+            "ScadaskLogo",
+            "Logo + Search + Menu",
+            "Content"
+          ],
+          "reason": null
+        },
+        {
+          "tag": "img",
+          "src": "https://framerusercontent.com/images/6tTbkXggWgQCAJ4DO2QEdXXmgM.svg",
+          "alt": "",
+          "anchor": "",
+          "context": [
+            "Horizontal animation",
+            "Body"
+          ],
+          "reason": "Decorative asset"
+        },
+        {
+          "tag": "img",
+          "src": "https://framerusercontent.com/images/11KSGbIZoRSg4pjdnUoif6MKHI.svg",
+          "alt": "",
+          "anchor": "",
+          "context": [
+            "Horizontal animation",
+            "Body"
+          ],
+          "reason": "Decorative asset"
+        },
+        {
+          "tag": "img",
+          "src": "https://framerusercontent.com/images/Cri9oignLymHIoKuJ114OYpkc.png?width=1254&height=1254",
+          "alt": "",
+          "anchor": "https://www.linkedin.com/showcase/scadask/",
+          "context": [
+            "linkedin",
+            "Social Links",
+            "Text + SocialIcons",
+            "Content"
+          ],
+          "reason": "Decorative asset"
+        }
+      ],
+      "charts": [],
+      "hostedMissingText": [],
+      "hostedMatchesLocalText": true
+    },
+    {
+      "route": "/ai-insights-2025",
+      "status": 200,
+      "hostedStatus": 200,
+      "blocks": 19,
+      "links": 27,
+      "media": 19,
+      "newSinceSavedCapture": [],
+      "missingText": [],
+      "omittedText": [],
+      "missingLinks": [],
+      "missingMedia": [
+        {
+          "tag": "img",
+          "src": "https://framerusercontent.com/images/3CiaY96iRzUNcoKSNeCOdjldM.png?width=4167&height=736",
+          "alt": "SCADask logo",
+          "anchor": "./",
+          "context": [
+            "SCADask-LOGO-Primary-2026 1",
+            "ScadaskLogo",
+            "Logo + Search + Menu",
+            "Content"
+          ],
+          "reason": null
+        },
+        {
+          "tag": "img",
+          "src": "https://framerusercontent.com/images/6tTbkXggWgQCAJ4DO2QEdXXmgM.svg",
+          "alt": "",
+          "anchor": "",
+          "context": [
+            "Horizontal animation",
+            "Body"
+          ],
+          "reason": "Decorative asset"
+        },
+        {
+          "tag": "img",
+          "src": "https://framerusercontent.com/images/11KSGbIZoRSg4pjdnUoif6MKHI.svg",
+          "alt": "",
+          "anchor": "",
+          "context": [
+            "Horizontal animation",
+            "Body"
+          ],
+          "reason": "Decorative asset"
+        },
+        {
+          "tag": "img",
+          "src": "https://framerusercontent.com/images/Cri9oignLymHIoKuJ114OYpkc.png?width=1254&height=1254",
+          "alt": "",
+          "anchor": "https://www.linkedin.com/showcase/scadask/",
+          "context": [
+            "linkedin",
+            "Social Links",
+            "Text + SocialIcons",
+            "Content"
+          ],
+          "reason": "Decorative asset"
+        }
+      ],
+      "charts": [],
+      "hostedMissingText": [],
+      "hostedMatchesLocalText": true
+    },
+    {
+      "route": "/ai-insights-2024",
+      "status": 200,
+      "hostedStatus": 200,
+      "blocks": 19,
+      "links": 25,
+      "media": 17,
+      "newSinceSavedCapture": [],
+      "missingText": [],
+      "omittedText": [],
+      "missingLinks": [],
+      "missingMedia": [
+        {
+          "tag": "img",
+          "src": "https://framerusercontent.com/images/3CiaY96iRzUNcoKSNeCOdjldM.png?width=4167&height=736",
+          "alt": "SCADask logo",
+          "anchor": "./",
+          "context": [
+            "SCADask-LOGO-Primary-2026 1",
+            "ScadaskLogo",
+            "Logo + Search + Menu",
+            "Content"
+          ],
+          "reason": null
+        },
+        {
+          "tag": "img",
+          "src": "https://framerusercontent.com/images/6tTbkXggWgQCAJ4DO2QEdXXmgM.svg",
+          "alt": "",
+          "anchor": "",
+          "context": [
+            "Horizontal animation",
+            "Body"
+          ],
+          "reason": "Decorative asset"
+        },
+        {
+          "tag": "img",
+          "src": "https://framerusercontent.com/images/11KSGbIZoRSg4pjdnUoif6MKHI.svg",
+          "alt": "",
+          "anchor": "",
+          "context": [
+            "Horizontal animation",
+            "Body"
+          ],
+          "reason": "Decorative asset"
+        },
+        {
+          "tag": "img",
+          "src": "https://framerusercontent.com/images/Cri9oignLymHIoKuJ114OYpkc.png?width=1254&height=1254",
+          "alt": "",
+          "anchor": "https://www.linkedin.com/showcase/scadask/",
+          "context": [
+            "linkedin",
+            "Social Links",
+            "Text + SocialIcons",
+            "Content"
+          ],
+          "reason": "Decorative asset"
+        }
+      ],
+      "charts": [],
+      "hostedMissingText": [],
+      "hostedMatchesLocalText": true
+    },
+    {
+      "route": "/podcast",
+      "status": 200,
+      "hostedStatus": 200,
+      "blocks": 23,
+      "links": 19,
+      "media": 12,
+      "newSinceSavedCapture": [
+        "E1 · Latest",
+        "Episode 1",
+        "September 16, 2026",
+        "54 min",
+        "Publishing Outside the Academy with Dr. Priya Nair",
+        "How scholars are building audiences and influence through independent publishing channels without sacrificing rigor. A conversation about the courage it takes to write for everyone."
+      ],
+      "missingText": [
+        "E1 · Latest",
+        "Episode 1",
+        "September 16, 2026",
+        "54 min",
+        "Publishing Outside the Academy with Dr. Priya Nair",
+        "How scholars are building audiences and influence through independent publishing channels without sacrificing rigor. A conversation about the courage it takes to write for everyone."
+      ],
+      "omittedText": [],
+      "missingLinks": [],
+      "missingMedia": [
+        {
+          "tag": "img",
+          "src": "https://framerusercontent.com/images/3CiaY96iRzUNcoKSNeCOdjldM.png?width=4167&height=736",
+          "alt": "SCADask logo",
+          "anchor": "./",
+          "context": [
+            "SCADask-LOGO-Primary-2026 1",
+            "ScadaskLogo",
+            "Logo + Search + Menu",
+            "Content"
+          ],
+          "reason": null
+        },
+        {
+          "tag": "img",
+          "src": "https://framerusercontent.com/images/UEiLoUWGa1hLuugjGChgXz7ak.png?width=2174&height=2167",
+          "alt": "",
+          "anchor": "",
+          "context": [
+            "Container",
+            "FeaturedEpisode",
+            "Body"
+          ],
+          "reason": null
+        },
+        {
+          "tag": "img",
+          "src": "https://framerusercontent.com/images/Cri9oignLymHIoKuJ114OYpkc.png?width=1254&height=1254",
+          "alt": "",
+          "anchor": "https://www.linkedin.com/showcase/scadask/",
+          "context": [
+            "linkedin",
+            "Social Links",
+            "Text + SocialIcons",
+            "Content"
+          ],
+          "reason": "Decorative asset"
+        }
+      ],
+      "charts": [],
+      "hostedMissingText": [
+        "E1 · Latest",
+        "Episode 1",
+        "September 16, 2026",
+        "54 min",
+        "Publishing Outside the Academy with Dr. Priya Nair",
+        "How scholars are building audiences and influence through independent publishing channels without sacrificing rigor. A conversation about the courage it takes to write for everyone."
+      ],
+      "hostedMatchesLocalText": true
+    },
+    {
+      "route": "/privacy",
+      "status": 200,
+      "hostedStatus": 200,
+      "blocks": 0,
+      "links": 0,
+      "media": 0,
+      "newSinceSavedCapture": [],
+      "missingText": [],
+      "omittedText": [],
+      "missingLinks": [],
+      "missingMedia": [],
+      "charts": [],
+      "hostedMissingText": [],
+      "hostedMatchesLocalText": true
+    },
+    {
+      "route": "/terms",
+      "status": 200,
+      "hostedStatus": 200,
+      "blocks": 0,
+      "links": 0,
+      "media": 0,
+      "newSinceSavedCapture": [],
+      "missingText": [],
+      "omittedText": [],
+      "missingLinks": [],
+      "missingMedia": [],
+      "charts": [],
+      "hostedMissingText": [],
+      "hostedMatchesLocalText": true
+    },
+    {
+      "route": "/zenith",
+      "status": 200,
+      "extraSitemapPage": true,
+      "title": "SCADask",
+      "headings": [],
+      "sample": []
+    },
+    {
+      "route": "/nexa",
+      "status": 200,
+      "extraSitemapPage": true,
+      "title": "SCADask",
+      "headings": [],
+      "sample": []
+    },
+    {
+      "route": "/aether",
+      "status": 200,
+      "extraSitemapPage": true,
+      "title": "SCADask",
+      "headings": [],
+      "sample": []
+    },
+    {
+      "route": "/horizon",
+      "status": 200,
+      "extraSitemapPage": true,
+      "title": "SCADask",
+      "headings": [],
+      "sample": []
+    }
+  ]
+}

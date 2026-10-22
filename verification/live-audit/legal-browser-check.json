@@ -1,0 +1,59 @@
+{
+  "method": "Normalized paragraph fingerprints from live browser DOM compared with local page paragraphs. Footer heading/link segmentation differences checked separately.",
+  "results": [
+    {
+      "name": "privacy",
+      "liveParagraphFingerprints": 104,
+      "missingLegalParagraphs": [],
+      "footerSegmentationDifferences": [
+        {
+          "hash": 818975092,
+          "text": "Bring your question."
+        },
+        {
+          "hash": 3118405398,
+          "text": "We’ll turn it into actionable research."
+        },
+        {
+          "hash": 1387607631,
+          "text": "Email research@scad.edu"
+        },
+        {
+          "hash": 2124834887,
+          "text": "Privacy"
+        },
+        {
+          "hash": 4000988204,
+          "text": "Terms"
+        }
+      ]
+    },
+    {
+      "name": "terms",
+      "liveParagraphFingerprints": 127,
+      "missingLegalParagraphs": [],
+      "footerSegmentationDifferences": [
+        {
+          "hash": 818975092,
+          "text": "Bring your question."
+        },
+        {
+          "hash": 3118405398,
+          "text": "We’ll turn it into actionable research."
+        },
+        {
+          "hash": 1387607631,
+          "text": "Email research@scad.edu"
+        },
+        {
+          "hash": 2124834887,
+          "text": "Privacy"
+        },
+        {
+          "hash": 4000988204,
+          "text": "Terms"
+        }
+      ]
+    }
+  ]
+}
